@@ -11,7 +11,11 @@ const config: Config = {
       backgroundImage: {
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
       },
-      
+      fontFamily: {
+        sans: "var(--font-inter)",
+        roboto: "var(--font-roboto)",
+        montserrat: "var(--font-montserrat)"
+      },
       colors: {
         primary: "#002c6d",
         yellow: "#FFDF42",
