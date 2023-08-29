@@ -3,16 +3,16 @@ import Image from "next/image";
 
 const Hero = () => {
   return (
-    <section className="container my-7 md:my-20">
-      <div className="py-20 xl:relative">
-        <div className="flex flex-col items-start">
+    <section className="container md:my-20">
+      <div className="py-14 md:py-20 xl:relative">
+        <div className="flex flex-col items-center md:items-start">
           <span className="mb-3 text-lg font-semibold text-primary md:text-2xl">
             It{"\u2019"}s time to get decisive!
           </span>
-          <h1 className="w-full max-w-[700px] text-3xl font-semibold text-primary md:text-5xl lg:text-7xl 2xl:max-w-3xl">
+          <h1 className="w-full max-w-[700px] text-center text-3xl font-semibold text-primary md:text-start md:text-5xl lg:text-7xl 2xl:max-w-3xl">
             Start Your Business in the Uzbekistan
           </h1>
-          <p className="my-5 text-base font-normal text-primary md:text-xl">
+          <p className="my-5 text-center text-base font-normal text-primary md:text-start md:text-xl">
             Company setup in Uzbekistan, residency, banking and much more...
           </p>
           <button className="btn-secondary">Calculate Cost</button>

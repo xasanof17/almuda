@@ -15,12 +15,12 @@ const variants = {
 const Navbar = () => {
   const [toggleMenu, setMenu] = useState<boolean>(false);
   return (
-    <header className="sticky left-0 top-0 z-10 w-full py-5 backdrop-blur-lg">
+    <header className="sticky left-0 top-0 z-10 w-full py-3 backdrop-blur-lg sm:py-5">
       <nav className="container flex items-center">
         <Link
           href="/"
           className={`${
-            toggleMenu ? "fixed left-4 top-5 z-20" : ""
+            toggleMenu ? "fixed left-4 top-3 z-20 md:top-5" : ""
           } flex items-center justify-center`}
         >
           <div className="relative h-12 w-[150px]">
@@ -44,7 +44,7 @@ const Navbar = () => {
             <button
               onClick={() => setMenu((prev) => !prev)}
               className={`${
-                toggleMenu ? "fixed right-4 top-7 z-20" : ""
+                toggleMenu ? "fixed right-4 top-5 z-20 md:top-7" : ""
               } ml-4 flex items-center justify-center lg:hidden`}
             >
               {toggleMenu ? (
@@ -65,7 +65,7 @@ const Navbar = () => {
                   </Link>
                 </li>
               ))}
-              <button title="Sign In" className="btn-primary">
+              <button title="Sign In" className="btn-primary md:hidden">
                 Sign In
               </button>
             </ul>
