@@ -15,64 +15,60 @@ const variants = {
 const Navbar = () => {
   const [toggleMenu, setMenu] = useState<boolean>(false);
   return (
-    <header className="sticky top-0 left-0 w-full py-5 z-10 bg-white">
-      <nav className="flex items-center container">
+    <header className="sticky left-0 top-0 z-10 w-full py-5 backdrop-blur-lg">
+      <nav className="container flex items-center">
         <Link
           href="/"
           className={`${
-            toggleMenu ? "fixed top-5 left-4 z-20" : ""
+            toggleMenu ? "fixed left-4 top-5 z-20" : ""
           } flex items-center justify-center`}
         >
-          <div className="relative w-[150px] h-12">
+          <div className="relative h-12 w-[150px]">
             <Image src={Logo} alt="Al-Muda Logo" fill />
           </div>
         </Link>
-        <div className="flex items-center flex-1 lg:ml-[100px] justify-end lg:justify-between">
-          <ul className="hidden lg:flex items-center space-x-8">
+        <div className="flex flex-1 items-center justify-end lg:ml-[100px] lg:justify-between">
+          <ul className="hidden items-center space-x-8 lg:flex">
             {links.map(({ href, title }, i) => (
               <li key={i}>
-                <Link href={href} className="link">
+                <Link title={title} href={href} className="link">
                   {title}
                 </Link>
               </li>
             ))}
           </ul>
-          <div className="hidden sm:flex items-center space-x-6">
-            <Link href="/" className="link">
+          <div className="flex items-center sm:space-x-6">
+            <button title="Sign In" className="btn-primary hidden sm:flex">
               Sign In
-            </Link>
-            <button className="btn-primary uppercase">Calculator</button>
+            </button>
+            <button
+              onClick={() => setMenu((prev) => !prev)}
+              className={`${
+                toggleMenu ? "fixed right-4 top-7 z-20" : ""
+              } ml-4 flex items-center justify-center lg:hidden`}
+            >
+              {toggleMenu ? (
+                <MdClose className="h-7 w-7 text-primary" />
+              ) : (
+                <FiMenu className="h-7 w-7 text-primary" />
+              )}
+            </button>
           </div>
-          <button
-            onClick={() => setMenu((prev) => !prev)}
-            className={`${
-              toggleMenu ? "fixed top-7 right-4 z-20" : ""
-            } lg:hidden flex items-center justify-center ml-4`}
-          >
-            {toggleMenu ? (
-              <MdClose className="w-7 h-7 text-primary" />
-            ) : (
-              <FiMenu className="w-7 h-7 text-primary" />
-            )}
-          </button>
         </div>
         {toggleMenu && (
-          <div className="fixed top-0 left-0 min-h-screen w-screen flex items-center justify-center flex-col bg-white">
-            <ul className="lg:hidden flex flex-col items-center space-y-8">
+          <div className="fixed left-0 top-0 flex min-h-screen w-screen flex-col items-center justify-center bg-white">
+            <ul className="flex flex-col items-center space-y-8 lg:hidden">
               {links.map(({ href, title }, i) => (
                 <li key={i}>
-                  <Link href={href} className="link text-xl">
+                  <Link title={title} href={href} className="link text-xl">
                     {title}
                   </Link>
                 </li>
               ))}
-            </ul>
-            <div className="flex sm:hidden items-center justify-center space-x-6 mt-7">
-              <Link href="/" className="link text-xl">
+              <button title="Sign In" className="btn-primary">
                 Sign In
-              </Link>
-              <button className="btn-primary uppercase">Calculator</button>
-            </div>
+              </button>
+            </ul>
           </div>
         )}
       </nav>

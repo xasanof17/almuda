@@ -15,12 +15,10 @@ const config: Config = {
       colors: {
         primary: "#002c6d",
         secondary: "#10a0e8",
+        bright: "#00ECD0",
       },
     },
   },
-  plugins: [
-    // require("tailwind-scrollbar"),
-    // require("prettier-plugin-tailwindcss"),
-  ],
+  plugins: [],
 };
 export default config;

@@ -4,18 +4,24 @@
 
 @layer base {
   html {
-    @apply scroll-smooth;
+    @apply overflow-x-hidden scroll-smooth;
   }
 }
 
 @layer components {
   .container {
-    @apply max-w-[1320px] w-full mx-auto px-4;
+    @apply mx-auto w-full max-w-[1320px] px-4;
   }
   .link {
-    @apply text-lg text-primary font-medium hover:text-secondary duration-300;
+    @apply text-lg font-medium text-primary duration-300 hover:text-secondary;
   }
   .btn-primary {
-    @apply px-4 py-3 bg-primary text-white rounded-md text-lg font-medium;
+    @apply rounded-md border-2 border-transparent bg-primary px-4 py-3 text-base font-medium text-white transition-all duration-300 ease-in-out hover:border-secondary hover:bg-white hover:text-secondary md:text-lg;
+  }
+  .btn-secondary {
+    @apply rounded-md border-2 border-transparent bg-bright px-4 py-3 text-base font-medium uppercase text-white transition-all duration-300 ease-in hover:border-bright hover:bg-white hover:text-bright md:text-lg;
+  }
+  .heroImg {
+    @apply absolute right-0 top-0 select-none 2xl:-right-20;
   }
 }

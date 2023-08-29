@@ -1,6 +1,6 @@
 const Footer = () => {
   return (
-    <footer className="container text-xl text-black font-normal font-montserrat">
+    <footer className="font-montserrat container text-xl font-normal text-black">
       Footer component will be here...
     </footer>
   );
