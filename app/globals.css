@@ -4,7 +4,7 @@
 
 @layer base {
   html {
-    @apply scroll-smooth leading-normal;
+    @apply scroll-smooth;
   }
 }
 
@@ -13,12 +13,9 @@
     @apply max-w-[1320px] w-full mx-auto px-4;
   }
   .link {
-    @apply px-2 text-base font-bold text-white uppercase hover:text-yellow transition-all duration-200;
+    @apply text-lg text-primary font-medium hover:text-secondary duration-300;
   }
   .btn-primary {
-    @apply outline-none p-3 md:py-3 md:px-6 text-black text-base font-bold uppercase border-2 duration-300 transition-colors ease-in-out bg-yellow border-transparent hover:bg-transparent hover:text-white hover:border-white;
-  }
-  .btn-secondary {
-    @apply outline-none p-3 md:py-3 md:px-6 text-base font-bold uppercase border-2 duration-300 transition-colors ease-in-out bg-transparent text-white border-white hover:bg-white hover:text-black;
+    @apply px-4 py-3 bg-primary text-white rounded-md text-lg font-medium;
   }
 }

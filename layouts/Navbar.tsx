@@ -1,82 +1,81 @@
 "use client";
-import { HeroBg, Logo } from "@/assets";
-import { Hero, Nav, TopInfo } from "@/components";
-import Image from "next/image";
-import Link from "next/link";
-import { useEffect, useState } from "react";
-import { FaAnglesDown } from "react-icons/fa6";
+import { useState } from "react";
+import { Logo } from "@/assets";
+import { links } from "@/constants";
 import { FiMenu } from "react-icons/fi";
 import { MdClose } from "react-icons/md";
+import Image from "next/image";
+import Link from "next/link";
+
+const variants = {
+  base: "",
+  menu: "fixed top-0 left-0 z-20",
+};
 
 const Navbar = () => {
-  const [scroll, setPosition] = useState<number>(0);
-  const [toggleMenu, setToggleMenu] = useState<boolean>(false);
-
-  const handleScroll = () => {
-    const position = window.scrollY;
-    setPosition(position);
-  };
-
-  useEffect(() => {
-    window.addEventListener("scroll", handleScroll);
-  }, []);
-
+  const [toggleMenu, setMenu] = useState<boolean>(false);
   return (
-    <header className="relative min-h-screen w-full font-roboto overflow-x-hidden">
-      <nav
-        className={`${
-          toggleMenu ? "fixed" : "absolute"
-        } top-0 left-0 w-full z-40 py-3 md:py-6 bg-transparent`}
-      >
-        <div className="container">
-          <div className="flex items-center justify-between">
-            <Link
-              href="/"
-              className="flex items-center justify-center"
-              title="Al-Muda Logo"
-            >
-              <div className="relative w-[160px] h-12">
-                <Image fill src={Logo} alt="Al-Muda" objectFit="contain" />
-              </div>
+    <header className="sticky top-0 left-0 w-full py-5 z-10 bg-white">
+      <nav className="flex items-center container">
+        <Link
+          href="/"
+          className={`${
+            toggleMenu ? "fixed top-5 left-4 z-20" : ""
+          } flex items-center justify-center`}
+        >
+          <div className="relative w-[150px] h-12">
+            <Image src={Logo} alt="Al-Muda Logo" fill />
+          </div>
+        </Link>
+        <div className="flex items-center flex-1 lg:ml-[100px] justify-end lg:justify-between">
+          <ul className="hidden lg:flex items-center space-x-8">
+            {links.map(({ href, title }, i) => (
+              <li key={i}>
+                <Link href={href} className="link">
+                  {title}
+                </Link>
+              </li>
+            ))}
+          </ul>
+          <div className="hidden sm:flex items-center space-x-6">
+            <Link href="/" className="link">
+              Sign In
             </Link>
-            <div className="flex items-center md:space-x-3">
-              <button
-                onClick={() => setToggleMenu((prev) => !prev)}
-                className={`md:hidden flex items-center  rounded-full p-3 ${
-                  !toggleMenu ? "bg-primary" : "bg-white"
-                }`}
-              >
-                {!toggleMenu ? (
-                  <FiMenu className="w-6 h-6 text-white" />
-                ) : (
-                  <MdClose className="w-6 h-6 text-primary" />
-                )}
-              </button>
-              <TopInfo />
-              <button className="btn-primary xl:block hidden">
-                Cost Calculator
-              </button>
+            <button className="btn-primary uppercase">Calculator</button>
+          </div>
+          <button
+            onClick={() => setMenu((prev) => !prev)}
+            className={`${
+              toggleMenu ? "fixed top-7 right-4 z-20" : ""
+            } lg:hidden flex items-center justify-center ml-4`}
+          >
+            {toggleMenu ? (
+              <MdClose className="w-7 h-7 text-primary" />
+            ) : (
+              <FiMenu className="w-7 h-7 text-primary" />
+            )}
+          </button>
+        </div>
+        {toggleMenu && (
+          <div className="fixed top-0 left-0 min-h-screen w-screen flex items-center justify-center flex-col bg-white">
+            <ul className="lg:hidden flex flex-col items-center space-y-8">
+              {links.map(({ href, title }, i) => (
+                <li key={i}>
+                  <Link href={href} className="link text-xl">
+                    {title}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+            <div className="flex sm:hidden items-center justify-center space-x-6 mt-7">
+              <Link href="/" className="link text-xl">
+                Sign In
+              </Link>
+              <button className="btn-primary uppercase">Calculator</button>
             </div>
           </div>
-          <Nav toggleMenu={toggleMenu} setToggleMenu={setToggleMenu} />
-        </div>
+        )}
       </nav>
-      <Image
-        src={HeroBg}
-        alt="hero bg"
-        fill
-        className="select-none"
-        objectFit="cover"
-        objectPosition="center"
-        sizes="100vh"
-      />
-      <div className="absolute top-0 left-0 w-full h-full bg-black/40 z-10 select-none" />
-      <Hero />
-      <div className="absolute bottom-3 left-1/2">
-        <button className="animate-bounce flex items-center">
-          <FaAnglesDown className="w-8 md:w-10 h-8 md:h-10 text-white" />
-        </button>
-      </div>
     </header>
   );
 };
