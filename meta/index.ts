@@ -16,6 +16,11 @@ const keywords = [
   "bugalter servis",
   "bugalteriya xizmatlari",
   "buxgalteriya xizmatlari",
+  "xasanov javohir",
+  "web developer",
+  "nextjs applications",
+  "accounting designs",
+  "accounting websites designs",
 ];
 
 export { keywords };

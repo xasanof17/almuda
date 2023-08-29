@@ -28,7 +28,7 @@ const Features = () => {
             </p>
             <Link
               href={href}
-              className="inline-block text-xl font-semibold text-primary transition-colors duration-300 hover:text-bright"
+              className="inline-block text-lg font-semibold text-primary transition-colors duration-300 hover:text-bright md:text-xl"
             >
               Learn More
             </Link>
