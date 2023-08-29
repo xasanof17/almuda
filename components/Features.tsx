@@ -9,7 +9,7 @@ const Features = () => {
         <h2 title="Our special features" className="title">
           Our Special Features
         </h2>
-        <p className="text">
+        <p className="txt">
           We are familiar with offline speed dating flow so we designed out
           online platform considering all the requirements
         </p>
