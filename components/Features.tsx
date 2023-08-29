@@ -6,13 +6,10 @@ const Features = () => {
   return (
     <section className="container my-28">
       <div className="mx-auto mb-12 flex w-full max-w-lg flex-col">
-        <h2
-          title="Our special features"
-          className="mb-4 text-center text-2xl font-semibold text-primary sm:text-4xl xl:text-5xl"
-        >
+        <h2 title="Our special features" className="title">
           Our Special Features
         </h2>
-        <p className="w-full text-center text-base font-medium text-primary sm:text-lg">
+        <p className="text">
           We are familiar with offline speed dating flow so we designed out
           online platform considering all the requirements
         </p>
@@ -26,7 +23,9 @@ const Features = () => {
             <h3 className="mb-3 text-xl font-semibold text-primary sm:text-2xl">
               {title}
             </h3>
-            <p className="mb-7 text-base font-normal text-primary">{text}</p>
+            <p className="mb-3 text-base font-normal text-primary md:mb-7">
+              {text}
+            </p>
             <Link
               href={href}
               className="inline-block text-xl font-semibold text-primary transition-colors duration-300 hover:text-bright"
