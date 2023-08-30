@@ -18,24 +18,27 @@ const PriceCard = ({ popular, title, price, text, href, list }: PriceList) => {
           Most Popular
         </span>
       ) : null}
-      <h3 title={title} className="mb-4 text-xl md:text-2xl font-medium text-primary">
+      <h3
+        title={title}
+        className="mb-4 text-xl font-medium text-primary md:text-2xl"
+      >
         {title}
       </h3>
       <span
         title={`$${price}`}
-        className="text-4xl md:text-5xl font-extrabold text-primary"
+        className="text-4xl font-extrabold text-primary md:text-5xl"
       >
         ${price}
       </span>
-      <p title={text} className="muted mb-2 mt-3 text-base font-normal">
+      <p title={text} className="muted mb-2 mt-3 text-lg font-normal">
         {text}
       </p>
       <Link
         href={href}
         title="Go to annual plan"
-        className="flex items-center space-x-2 text-lg text-blue-500"
+        className="flex items-center space-x-2"
       >
-        <p>Go to annual plan</p>
+        <p className="text-lg font-medium text-blue-500">Go to annual plan</p>
         <BsArrowRight className="h-5 w-5 text-blue-500" />
       </Link>
       <button
@@ -47,12 +50,16 @@ const PriceCard = ({ popular, title, price, text, href, list }: PriceList) => {
       </button>
       <ul className="flex flex-col space-y-3">
         {list.map((item, i) => (
-          <li title={item.text} key={i} className="flex items-start md:items-center space-x-2">
+          <li
+            title={item.text}
+            key={i}
+            className="flex items-start space-x-2 md:items-center"
+          >
             <item.icon
               className={`h-6 w-6 ${item.not ? "muted" : "text-primary"}`}
             />
             <p
-              className={`text-base font-medium ${
+              className={`text-lg font-medium ${
                 item.not ? "muted line-through" : "text-primary"
               }`}
             >

@@ -7,12 +7,12 @@ const Pricing = () => {
       <div className="container">
         <div className="flex flex-col">
           <h2 className="title">Flexible Pricing Plan</h2>
-          <p className="txt text-center">
+          <p className="txt">
             We are familiar with offline speed dating flow so we designed out
             online platform considering all the requirements
           </p>
         </div>
-        <div className="mt-10 grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-5">
+        <div className="mt-10 grid grid-cols-1 gap-5 md:grid-cols-2 xl:grid-cols-3">
           {priceList.map(({ popular, title, price, text, href, list }, i) => (
             <PriceCard
               popular={popular}

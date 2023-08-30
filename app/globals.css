@@ -16,7 +16,7 @@
     @apply text-lg font-medium text-primary duration-300 hover:text-secondary;
   }
   .btn-primary {
-    @apply rounded-md border-2 border-transparent bg-primary px-4 py-3 text-base font-medium text-white transition-all duration-300 ease-in-out hover:border-secondary hover:bg-white hover:text-secondary md:text-lg;
+    @apply rounded-md border-2 border-transparent bg-primary px-4 py-3 text-base font-semibold text-white transition-all duration-300 ease-in-out hover:border-secondary hover:bg-white hover:text-secondary md:text-lg;
   }
   .btn-secondary {
     @apply rounded-md border-2 border-transparent bg-bright px-4 py-3 text-base font-medium uppercase text-white transition-all duration-300 ease-in hover:border-bright hover:bg-white hover:text-bright md:text-lg;
@@ -28,7 +28,7 @@
     @apply mb-4 text-center text-2xl font-semibold text-primary sm:text-4xl xl:text-5xl;
   }
   .txt {
-    @apply muted w-full text-center text-base font-medium sm:text-lg;
+    @apply muted w-full max-w-xl text-center text-base font-medium sm:text-xl;
   }
   .muted {
     @apply text-primary opacity-60;
