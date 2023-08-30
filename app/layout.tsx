@@ -12,8 +12,9 @@ const inter = Inter({
 
 export const metadata: Metadata = {
   title: {
-    default: "Almuda - Start Your Business in the Uzbekistan.",
+    default: "Almuda",
     template: "%s | Almuda",
+    absolute: "Almuda - Start Your Business in the Uzbekistan.",
   },
   generator: "Next.js",
   description:
@@ -25,22 +26,22 @@ export const metadata: Metadata = {
     },
   ],
   keywords: keywords,
-  robots: {
-    index: false,
-    follow: true,
-    nocache: true,
-    googleBot: {
-      index: true,
-      follow: false,
-      noimageindex: true,
-      "max-video-preview": -1,
-      "max-image-preview": "large",
-      "max-snippet": -1,
-    },
-  },
+  // robots: {
+  //   index: false,
+  //   follow: true,
+  //   nocache: true,
+  //   googleBot: {
+  //     index: true,
+  //     follow: false,
+  //     noimageindex: true,
+  //     "max-video-preview": -1,
+  //     "max-image-preview": "large",
+  //     "max-snippet": -1,
+  //   },
+  // },
   // metadataBase: new URL(`${process.env.VERCEL_URL}`),
   applicationName: "Almuda",
-  category: "accounting",
+  category: "accounting website",
   creator: "Xasanov Javohir",
   publisher: "Xasanov Javohir",
   openGraph: {
@@ -51,7 +52,7 @@ export const metadata: Metadata = {
     phoneNumbers: ["+998900186644", "+998900198505"],
     siteName: "Almuda",
     title: "Almuda",
-    url: process.env.VERCEL_URL,
+    url: "https://almuda.vercel.app",
     images: "/vercel.svg",
   },
   formatDetection: {
