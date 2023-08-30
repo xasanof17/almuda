@@ -28,6 +28,9 @@
     @apply mb-4 text-center text-2xl font-semibold text-primary sm:text-4xl xl:text-5xl;
   }
   .txt {
-    @apply w-full text-center text-base font-medium text-primary sm:text-lg;
+    @apply muted w-full text-center text-base font-medium sm:text-lg;
+  }
+  .muted {
+    @apply text-primary opacity-60;
   }
 }

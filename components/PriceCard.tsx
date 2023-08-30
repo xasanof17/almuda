@@ -1,0 +1,68 @@
+import Link from "next/link";
+import { PriceList } from "@/types";
+import { BsArrowRight } from "react-icons/bs";
+
+const PriceCard = ({ popular, title, price, text, href, list }: PriceList) => {
+  return (
+    <div
+      className={`group flex w-full flex-col items-center rounded-xl border-2 ${
+        popular ? "border-blue-500" : "border-slate-200"
+      } px-5 py-7 transition-all duration-200 ease-out ${
+        popular
+          ? "shadow-md hover:border-bright hover:bg-transparent"
+          : "shadow hover:border-bright"
+      }`}
+    >
+      {popular ? (
+        <span className="text-normal mb-3 rounded-md bg-blue-100 px-2 py-1 text-sm text-blue-400">
+          Most Popular
+        </span>
+      ) : null}
+      <h3 title={title} className="mb-4 text-xl md:text-2xl font-medium text-primary">
+        {title}
+      </h3>
+      <span
+        title={`$${price}`}
+        className="text-4xl md:text-5xl font-extrabold text-primary"
+      >
+        ${price}
+      </span>
+      <p title={text} className="muted mb-2 mt-3 text-base font-normal">
+        {text}
+      </p>
+      <Link
+        href={href}
+        title="Go to annual plan"
+        className="flex items-center space-x-2 text-lg text-blue-500"
+      >
+        <p>Go to annual plan</p>
+        <BsArrowRight className="h-5 w-5 text-blue-500" />
+      </Link>
+      <button
+        type="button"
+        title="Get Started"
+        className="group-hover:btn-secondary my-6 w-full rounded-lg !border-2 bg-slate-800 !py-2 text-center !text-lg font-medium !normal-case text-white"
+      >
+        Get Started
+      </button>
+      <ul className="flex flex-col space-y-3">
+        {list.map((item, i) => (
+          <li title={item.text} key={i} className="flex items-start md:items-center space-x-2">
+            <item.icon
+              className={`h-6 w-6 ${item.not ? "muted" : "text-primary"}`}
+            />
+            <p
+              className={`text-base font-medium ${
+                item.not ? "muted line-through" : "text-primary"
+              }`}
+            >
+              {item.text}
+            </p>
+          </li>
+        ))}
+      </ul>
+    </div>
+  );
+};
+
+export default PriceCard;
