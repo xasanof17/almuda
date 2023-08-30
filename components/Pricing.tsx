@@ -5,9 +5,14 @@ const Pricing = () => {
   return (
     <section className="py-20" id="pricing">
       <div className="container">
-        <div className="flex flex-col">
-          <h2 className="title">Flexible Pricing Plan</h2>
-          <p className="txt">
+        <div className="flex flex-col items-center justify-center">
+          <h2 title="Flexible Pricing Plan" className="title">
+            Flexible Pricing Plan
+          </h2>
+          <p
+            title="We are familiar with offline speed dating flow so we designed out online platform considering all the requirements"
+            className="txt"
+          >
             We are familiar with offline speed dating flow so we designed out
             online platform considering all the requirements
           </p>

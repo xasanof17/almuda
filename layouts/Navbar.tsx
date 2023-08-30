@@ -46,7 +46,6 @@ const Navbar = () => {
               Sign In
             </button>
             <button
-              type="button"
               onClick={() => setMenu((prev) => !prev)}
               className={`${
                 toggleMenu ? "fixed right-4 top-5 z-20 md:top-7" : ""
@@ -61,7 +60,7 @@ const Navbar = () => {
           </div>
         </div>
         {toggleMenu && (
-          <div className="fixed left-0 top-0 flex min-h-screen w-screen flex-col items-center justify-center bg-white">
+          <div className="fixed left-0 top-0 flex min-h-screen w-screen flex-col items-center justify-center bg-white transition-all duration-300">
             <ul className="flex flex-col items-center space-y-8 lg:hidden">
               {links.map(({ href, title }, i) => (
                 <li key={i}>
