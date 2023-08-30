@@ -1,3 +1,4 @@
+"use client";
 import { Logo } from "@/assets";
 import { Waveform } from "@uiball/loaders";
 import Image from "next/image";

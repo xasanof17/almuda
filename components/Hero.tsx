@@ -15,7 +15,7 @@ const Hero = () => {
           <p className="my-5 text-center text-base font-normal text-primary md:text-start md:text-xl">
             Company setup in Uzbekistan, residency, banking and much more...
           </p>
-          <button className="btn-secondary">Calculate Cost</button>
+          <button type="button" className="btn-secondary">Calculate Cost</button>
         </div>
         <div className="hidden md:inline">
           <Image

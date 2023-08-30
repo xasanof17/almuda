@@ -38,10 +38,15 @@ const Navbar = () => {
             ))}
           </ul>
           <div className="flex items-center sm:space-x-6">
-            <button title="Sign In" className="btn-primary hidden sm:flex">
+            <button
+              type="button"
+              title="Sign In"
+              className="btn-primary hidden sm:flex"
+            >
               Sign In
             </button>
             <button
+              type="button"
               onClick={() => setMenu((prev) => !prev)}
               className={`${
                 toggleMenu ? "fixed right-4 top-5 z-20 md:top-7" : ""
@@ -65,7 +70,11 @@ const Navbar = () => {
                   </Link>
                 </li>
               ))}
-              <button title="Sign In" className="btn-primary md:hidden">
+              <button
+                type="button"
+                title="Sign In"
+                className="btn-primary md:hidden"
+              >
                 Sign In
               </button>
             </ul>
