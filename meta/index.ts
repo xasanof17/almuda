@@ -21,6 +21,9 @@ const keywords = [
   "nextjs applications",
   "accounting designs",
   "accounting websites designs",
+  "accounting website with nextjs",
+  "web developer",
+  "nextjs developer",
 ];
 
 export { keywords };

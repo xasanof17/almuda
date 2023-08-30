@@ -1,7 +1,7 @@
 import "./globals.css";
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
-import { Navbar } from "@/layouts";
+import { Footer, Navbar } from "@/layouts";
 import { Phone } from "@/components";
 import { keywords } from "@/meta";
 
@@ -34,7 +34,7 @@ export default function RootLayout({
         <Navbar />
         {children}
         <Phone />
-        {/* <Footer /> */}
+        <Footer />
       </body>
     </html>
   );
