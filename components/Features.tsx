@@ -4,7 +4,7 @@ import Link from "next/link";
 
 const Features = () => {
   return (
-    <section className="container my-28">
+    <section className="container my-40">
       <div className="mx-auto mb-12 flex w-full max-w-lg flex-col">
         <h2 title="Our special features" className="title">
           Our Special Features
