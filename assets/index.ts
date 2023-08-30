@@ -14,3 +14,4 @@ export { default as AnorBankLogo } from "./anorbank-logo.svg";
 export { default as IpakBankLogo } from "./ipakbank.svg";
 export { default as HamkorBankLogo } from "./hamkorbank.svg";
 export { default as DavrBankLogo } from "./davrbank.svg";
+export { default as JXLogo } from "./jx.svg";

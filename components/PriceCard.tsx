@@ -44,7 +44,7 @@ const PriceCard = ({ popular, title, price, text, href, list }: PriceList) => {
       <button
         type="button"
         title="Get Started"
-        className="group-hover:btn-secondary my-6 w-full rounded-lg !border-2 bg-slate-800 !py-2 text-center !text-lg font-medium !normal-case text-white"
+        className="group-hover:btn-secondary my-6 w-full rounded-lg !border-2 bg-slate-600 !py-2 text-center !text-lg font-medium !normal-case text-white"
       >
         Get Started
       </button>
