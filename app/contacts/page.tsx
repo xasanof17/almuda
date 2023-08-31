@@ -1,5 +1,10 @@
-"use state";
 import { Contacts } from "@/components";
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Contacts",
+  description: "Contact to our company",
+};
 
 export default function Contact() {
   return (
