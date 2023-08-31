@@ -1,4 +1,3 @@
-"use client";
 import type { Metadata } from "next";
 import { useState } from "react";
 import { ChevronDownIcon } from "@heroicons/react/20/solid";
