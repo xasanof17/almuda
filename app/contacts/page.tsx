@@ -1,8 +1,13 @@
 "use client";
-
+import type { Metadata } from "next";
 import { useState } from "react";
 import { ChevronDownIcon } from "@heroicons/react/20/solid";
 import { Switch } from "@headlessui/react";
+
+export const metadata: Metadata = {
+  title: "Contact",
+  description: "Contact to our company",
+};
 
 function classNames(...classes: string[]) {
   return classes.filter(Boolean).join(" ");

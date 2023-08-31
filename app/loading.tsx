@@ -4,7 +4,7 @@ import Image from "next/image";
 export default function Loading() {
   return (
     <section className="max-w-screen fixed left-0 top-0 z-50 flex h-full min-h-screen w-full flex-col items-center justify-center bg-white">
-      <div className="relative h-12 w-[150px] mb-5">
+      <div className="relative mb-5 h-12 w-[150px]">
         <Image
           src={Logo}
           alt="Al-Muda"
@@ -13,7 +13,9 @@ export default function Loading() {
           loading="lazy"
         />
       </div>
-      <p className="text-xl font-semibold text-primary">Loading...</p>
+      <p className="text-lg font-semibold text-primary md:text-xl">
+        Loading...
+      </p>
     </section>
   );
 }

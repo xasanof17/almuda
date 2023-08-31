@@ -1,4 +1,4 @@
-import { AdliyaLogo, Discount, Reliability, Secure } from "@/assets";
+import { Discount, Reliability, Secure } from "@/assets";
 import { PriceList } from "@/types";
 import { BiSolidCreditCardFront } from "react-icons/bi";
 import { BsBoxFill, BsFillChatDotsFill, BsFire } from "react-icons/bs";

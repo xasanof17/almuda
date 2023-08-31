@@ -12,9 +12,8 @@ const inter = Inter({
 
 export const metadata: Metadata = {
   title: {
-    default: "Almuda",
+    default: "Almuda - Start Your Business in the Uzbekistan.",
     template: "%s | Almuda",
-    absolute: "Almuda - Start Your Business in the Uzbekistan.",
   },
   generator: "Next.js",
   description:
