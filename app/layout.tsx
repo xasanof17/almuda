@@ -44,22 +44,17 @@ export const metadata: Metadata = {
   category: "accounting website",
   creator: "Xasanov Javohir",
   publisher: "Xasanov Javohir",
-  openGraph: {
-    type: "website",
-    countryName: "Uzbekistan",
-    emails: ["info@almuda.uz", "xasanof17@gmail.com"],
-    description: "Start Your Business in the Uzbekistan.",
-    phoneNumbers: ["+998900186644", "+998900198505"],
-    siteName: "Almuda",
-    title: "Almuda",
-    url: "https://almuda.vercel.app",
-    images: "/vercel.svg",
-  },
-  formatDetection: {
-    email: true,
-    address: true,
-    telephone: true,
-  },
+  // openGraph: {
+  //   type: "website",
+  //   countryName: "Uzbekistan",
+  //   emails: ["info@almuda.uz", "xasanof17@gmail.com"],
+  //   description: "Start Your Business in the Uzbekistan.",
+  //   phoneNumbers: ["+998900186644", "+998900198505"],
+  //   siteName: "Almuda",
+  //   title: "Almuda",
+  //   url: "https://almuda.vercel.app",
+  //   images: "/vercel.svg",
+  // },
 };
 
 export default function RootLayout({

@@ -33,4 +33,7 @@
   .muted {
     @apply text-primary opacity-60;
   }
+  .objectContain {
+    @apply object-contain
+  }
 }

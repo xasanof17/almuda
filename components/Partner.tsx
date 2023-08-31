@@ -37,15 +37,15 @@ const Partner = () => {
         <div className="mt-10 grid grid-cols-2 gap-3 md:grid-cols-3 md:gap-5 lg:grid-cols-4">
           {partners.map((item, i) => (
             <div
-              className="flex items-center justify-center rounded-xl border border-slate-100 bg-white p-2 hover:border-transparent hover:shadow-lg sm:p-3 lg:p-5"
+              className="flex items-center justify-center rounded-xl border border-slate-100 bg-white px-3 md:px-2 py-4 hover:border-transparent hover:shadow-lg"
               key={i}
             >
-              <div className="relative h-20 w-full">
+              <div className="relative h-10 w-full md:w-2/3">
                 <Image
                   src={item}
                   alt="partner-logo"
                   fill
-                  className="select-none grayscale transition-all duration-300 hover:cursor-pointer hover:grayscale-0"
+                  className="objectContain select-none grayscale transition-all duration-300 hover:cursor-pointer hover:grayscale-0"
                 />
               </div>
             </div>

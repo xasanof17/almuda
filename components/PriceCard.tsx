@@ -6,7 +6,7 @@ const PriceCard = ({ popular, title, price, text, href, list }: PriceList) => {
   return (
     <div
       className={`group flex w-full flex-col items-center rounded-xl border-2 ${
-        popular ? "border-blue-500" : "border-slate-200"
+        popular ? "border-secondary" : "border-slate-200"
       } px-5 py-7 transition-all duration-200 ease-out ${
         popular
           ? "shadow-md hover:border-bright hover:bg-transparent"
@@ -38,8 +38,8 @@ const PriceCard = ({ popular, title, price, text, href, list }: PriceList) => {
         title="Go to annual plan"
         className="flex items-center space-x-2"
       >
-        <p className="text-lg font-medium text-blue-500">Go to annual plan</p>
-        <BsArrowRight className="h-5 w-5 text-blue-500" />
+        <p className="text-lg font-medium text-secondary">Go to annual plan</p>
+        <BsArrowRight className="h-5 w-5 text-secondary" />
       </Link>
       <button
         type="button"

@@ -54,7 +54,12 @@ const Footer = () => {
         <div className="flex flex-col items-start">
           <Link href="/" title="Al-Muda Logo">
             <div className="relative h-12 w-[150px]">
-              <Image src={Logo} alt="Al-Muda logo" fill />
+              <Image
+                src={Logo}
+                alt="Al-Muda logo"
+                fill
+                className="objectContain"
+              />
             </div>
           </Link>
           <ul className="mt-4 flex items-center space-x-3">
@@ -82,7 +87,7 @@ const Footer = () => {
           className="text-base font-medium md:text-lg"
           target="_blank"
         >
-          Maked by <span className="font-bold text-blue-500 underline">JX</span>
+          Made by <span className="font-bold text-secondary underline">JX</span>
         </Link>
       </div>
     </footer>

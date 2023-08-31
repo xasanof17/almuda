@@ -4,16 +4,14 @@ import { Logo } from "@/assets";
 import { links } from "@/constants";
 import { FiMenu } from "react-icons/fi";
 import { MdClose } from "react-icons/md";
+import { usePathname } from "next/navigation";
 import Image from "next/image";
 import Link from "next/link";
 
-const variants = {
-  base: "",
-  menu: "fixed top-0 left-0 z-20",
-};
-
 const Navbar = () => {
   const [toggleMenu, setMenu] = useState<boolean>(false);
+  const pathname = usePathname();
+
   return (
     <header className="sticky left-0 top-0 z-10 w-full py-3 backdrop-blur-lg sm:py-5">
       <nav className="container flex items-center">
@@ -24,14 +22,20 @@ const Navbar = () => {
           } flex items-center justify-center`}
         >
           <div className="relative h-12 w-[150px]">
-            <Image src={Logo} alt="Al-Muda Logo" fill />
+            <Image src={Logo} alt="Al-Muda Logo" fill className="objectContain" />
           </div>
         </Link>
         <div className="flex flex-1 items-center justify-end lg:ml-[100px] lg:justify-between">
           <ul className="hidden items-center space-x-8 lg:flex">
             {links.map(({ href, title }, i) => (
               <li key={i}>
-                <Link title={title} href={href} className="link">
+                <Link
+                  title={title}
+                  href={href}
+                  className={`${
+                    pathname == href ? "link text-secondary" : "link"
+                  }`}
+                >
                   {title}
                 </Link>
               </li>
@@ -41,7 +45,7 @@ const Navbar = () => {
             <button
               type="button"
               title="Sign In"
-              className="btn-primary hidden sm:flex"
+              className="btn-primary hidden py-2 sm:flex"
             >
               Sign In
             </button>
@@ -64,7 +68,14 @@ const Navbar = () => {
             <ul className="flex flex-col items-center space-y-8 lg:hidden">
               {links.map(({ href, title }, i) => (
                 <li key={i}>
-                  <Link title={title} href={href} className="link text-xl">
+                  <Link
+                    onClick={() => setMenu((prev) => !prev)}
+                    title={title}
+                    href={href}
+                    className={`${
+                      pathname == href ? "link text-secondary" : "link"
+                    } text-xl`}
+                  >
                     {title}
                   </Link>
                 </li>
@@ -72,7 +83,7 @@ const Navbar = () => {
               <button
                 type="button"
                 title="Sign In"
-                className="btn-primary md:hidden"
+                className="btn-primary py-2 md:hidden text-xl"
               >
                 Sign In
               </button>

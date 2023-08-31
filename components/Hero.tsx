@@ -25,7 +25,7 @@ const Hero = () => {
           />
         </div>
         <div className="relative block h-[400px] w-full sm:h-[600px] md:hidden">
-          <Image src={Illustration} alt="illustration" fill />
+          <Image src={Illustration} alt="illustration" fill className="objectContain"/>
         </div>
       </div>
     </section>
