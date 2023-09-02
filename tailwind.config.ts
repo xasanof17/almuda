@@ -20,7 +20,6 @@ const config: Config = {
     },
   },
   plugins: [
-    // require("prettier-plugin-tailwindcss"),
     // require("tailwind-scrollbar")
   ],
 };
