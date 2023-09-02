@@ -1,4 +1,5 @@
 import { JXLogo, Logo } from "@/assets";
+import { links } from "@/constants";
 import Image from "next/image";
 import Link from "next/link";
 import { IconType } from "react-icons";
@@ -9,6 +10,7 @@ import {
   FaTelegramPlane,
   FaTwitter,
 } from "react-icons/fa";
+import { FiMail, FiMapPin, FiPhone } from "react-icons/fi";
 
 type Social = {
   Icon: IconType;
@@ -50,7 +52,14 @@ const Footer = () => {
 
   return (
     <footer className="shadow">
-      <div className="container grid grid-cols-4 gap-5">
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d95942.48002518046!2d69.19696640291602!3d41.282697074634214!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x38ae8b0cc379e9c3%3A0xa5a9323b4aa5cb98!2sTashkent%2C%20Uzbekistan!5e0!3m2!1sen!2s!4v1693639724123!5m2!1sen!2s"
+        style={{ border: 0, width: "100%", height: 500 }}
+        allowFullScreen={true}
+        loading="lazy"
+        referrerPolicy="no-referrer-when-downgrade"
+      ></iframe>
+      <div className="container grid grid-cols-3 gap-5 pt-6">
         <div className="flex flex-col items-start">
           <Link href="/" title="Al-Muda Logo">
             <div className="relative h-12 w-[150px]">
@@ -75,6 +84,47 @@ const Footer = () => {
                 </Link>
               </li>
             ))}
+          </ul>
+        </div>
+        <div className="flex flex-col">
+          <h3 className="mb-6 text-xl font-semibold text-secondary">Company</h3>
+          <ul className="flex flex-col items-start space-y-2">
+            {links.map(({ href, title }, i) => (
+              <li key={i}>
+                <Link href={href} className="link">
+                  {title}
+                </Link>
+              </li>
+            ))}
+          </ul>
+        </div>
+        <div className="flex flex-col">
+          <h3 className="mb-6 text-xl font-semibold text-secondary">
+            Contact Us
+          </h3>
+          <ul className="flex flex-col items-start">
+            <li className="flex items-center space-x-3">
+              <FiMail className="h-6 w-6 text-primary" />
+              <Link href="mailto:info@almuda.uz" className="link">
+                info@almuda.uz
+              </Link>
+            </li>
+            <li className="flex items-center space-x-3">
+              <FiPhone className="h-6 w-6 text-primary" />
+              <Link href="tel:+998900198505" className="link">
+                +998900198505
+              </Link>
+            </li>
+            <li className="flex items-center space-x-3">
+              <FiMapPin className="h-6 w-6 text-primary" />
+              <Link
+                href="https://goo.gl/maps/Rsm4ZGvht66GDrJcA"
+                className="link"
+                target="_blank"
+              >
+                View on Google Map
+              </Link>
+            </li>
           </ul>
         </div>
       </div>

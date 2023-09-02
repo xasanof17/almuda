@@ -26,7 +26,7 @@ const PriceCard = ({ popular, title, price, text, href, list }: PriceList) => {
       </h3>
       <span
         title={`$${price}`}
-        className="text-4xl font-extrabold text-primary md:text-5xl"
+        className="text-4xl font-black text-primary md:text-5xl"
       >
         ${price}
       </span>
