@@ -59,7 +59,7 @@ const Footer = () => {
         loading="lazy"
         referrerPolicy="no-referrer-when-downgrade"
       ></iframe>
-      <div className="container grid grid-cols-3 gap-5 pt-6">
+      <div className="container grid grid-cols-1 gap-5 pt-6 md:grid-cols-3">
         <div className="flex flex-col items-start">
           <Link href="/" title="Al-Muda Logo">
             <div className="relative h-12 w-[150px]">

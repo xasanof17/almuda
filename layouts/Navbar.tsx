@@ -4,13 +4,14 @@ import { Logo } from "@/assets";
 import { links } from "@/constants";
 import { FiMenu } from "react-icons/fi";
 import { MdClose } from "react-icons/md";
-import { usePathname } from "next/navigation";
+import { usePathname, useRouter } from "next/navigation";
 import Image from "next/image";
 import Link from "next/link";
 
 const Navbar = () => {
   const [toggleMenu, setMenu] = useState<boolean>(false);
   const pathname = usePathname();
+  const router = useRouter();
 
   return (
     <header className="sticky left-0 top-0 z-10 w-full py-3 backdrop-blur-lg sm:py-5">
@@ -22,7 +23,12 @@ const Navbar = () => {
           } flex items-center justify-center`}
         >
           <div className="relative h-12 w-[150px]">
-            <Image src={Logo} alt="Al-Muda Logo" fill className="objectContain" />
+            <Image
+              src={Logo}
+              alt="Al-Muda Logo"
+              fill
+              className="objectContain"
+            />
           </div>
         </Link>
         <div className="flex flex-1 items-center justify-end lg:ml-[100px] lg:justify-between">
@@ -43,6 +49,7 @@ const Navbar = () => {
           </ul>
           <div className="flex items-center sm:space-x-6">
             <button
+              onClick={() => router.push("/sign-in")}
               type="button"
               title="Sign In"
               className="btn-primary hidden py-2 sm:flex"
@@ -81,9 +88,13 @@ const Navbar = () => {
                 </li>
               ))}
               <button
+                onClick={() => {
+                  setMenu((prev) => !prev);
+                  router.push("/sign-in");
+                }}
                 type="button"
                 title="Sign In"
-                className="btn-primary py-2 md:hidden text-xl"
+                className="btn-primary py-2 text-xl md:hidden"
               >
                 Sign In
               </button>

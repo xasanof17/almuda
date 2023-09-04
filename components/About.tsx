@@ -1,12 +1,11 @@
 const About = () => {
   return (
-    <div className="flex w-full flex-col">
+    <div className="flex flex-col items-center justify-center">
       <h1 className="title" title="About">
         About
       </h1>
-      <p>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium,
-        eius?
+      <p className="txt" title="Welcome to our about page">
+        Welcome to our About page
       </p>
     </div>
   );
