@@ -4,6 +4,7 @@ import { Inter } from "next/font/google";
 import { Footer, Navbar } from "@/layouts";
 import { Analytics, Phone } from "@/components";
 import { keywords } from "@/meta";
+import { Toaster } from "react-hot-toast";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -71,6 +72,7 @@ export default function RootLayout({
         {children}
         <Phone />
         <Footer />
+        <Toaster position="top-right" reverseOrder gutter={1.5} />
       </body>
     </html>
   );

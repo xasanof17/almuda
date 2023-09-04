@@ -19,7 +19,7 @@ export default function Error({
     console.error(error);
   }, [error]);
   return (
-    <section className="max-w-screen flex h-full max-h-screen w-full flex-col items-center justify-center bg-white">
+    <section className="max-w-screen flex h-full min-h-screen w-full flex-col items-center justify-center bg-white">
       <h1 className="text-5xl font-bold text-black">
         500! Something went wrong!
       </h1>
