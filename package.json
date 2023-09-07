@@ -28,18 +28,19 @@
     "react-dom": "18.2.0",
     "react-hook-form": "^7.46.0",
     "react-select": "^5.7.4",
+    "react-select-country-list": "^2.2.3",
     "sharp": "^0.32.5",
     "tailwindcss": "3.3.3",
     "typescript": "5.2.2"
   },
   "devDependencies": {
+    "@types/react-select-country-list": "^2.2.1",
     "nextjs-progressbar": "^0.0.16",
     "prettier": "^3.0.3",
     "prettier-plugin-tailwindcss": "^0.5.4",
     "react-hot-toast": "^2.4.1",
     "react-icons": "^4.10.1",
     "react-phone-input-2": "^2.15.1",
-    "react-phone-number-input": "^3.3.6",
     "tailwind-scrollbar": "^3.0.5"
   }
 }

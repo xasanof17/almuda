@@ -1,18 +1,56 @@
+"use client";
 import { Dialog } from "@headlessui/react";
 import { motion, AnimatePresence } from "framer-motion";
 import { SelectComponent } from "./Select";
 import { MdClose } from "react-icons/md";
+import { HTMLInputTypeAttribute, useState } from "react";
+// import countryList from "react-select-country-list";
+import PhoneInput from "react-phone-input-2";
+import "react-phone-input-2/lib/style.css";
 
 type ModalProps = {
   isOpen: boolean;
   setIsOpen: React.Dispatch<React.SetStateAction<boolean>>;
 };
 
+type Field = {
+  label: string;
+  type: HTMLInputTypeAttribute;
+  placeholder?: string;
+};
+
+const CustomField = ({ label, type, placeholder }: Field) => {
+  return (
+    <div className="flex flex-col">
+      <label htmlFor={label} className={variants.label}>
+        {label}
+      </label>
+      <input
+        type={type}
+        placeholder={placeholder}
+        className="rounded border border-gray-200 px-2 py-1.5 outline-none placeholder:text-gray-500"
+      />
+    </div>
+  );
+};
+
+const variants = {
+  label: "text-sm md:text-base font-medium text-black mb-1",
+};
+
 export const Modal = ({ isOpen, setIsOpen }: ModalProps) => {
+  const [tab, setTab] = useState(false);
   const businness_activity = [
     { value: "accounting_auditing", label: "Accounting & Auditing" },
     { value: "advertising", label: "Advertising" },
     { value: "business_consultancy", label: "Business Consultancy" },
+  ];
+  const premises = [
+    { value: "virtual_office", label: "Virtual Office" },
+    { value: "warehouse", label: "Warehouse" },
+    { value: "business_centre", label: "Business Centre" },
+    { value: "physical_office", label: "Physical Office" },
+    { value: "shop_front", label: "Shop front" },
   ];
 
   return (
@@ -34,7 +72,7 @@ export const Modal = ({ isOpen, setIsOpen }: ModalProps) => {
             </div>
 
             <motion.div
-              className="flex min-h-screen items-end justify-center px-4 pb-20 pt-4 text-center sm:block sm:p-0"
+              className="flex min-h-screen items-center justify-center px-4 pb-20 pt-4 text-center sm:block sm:p-0"
               initial={{
                 opacity: 0,
                 scale: 0.75,
@@ -69,7 +107,7 @@ export const Modal = ({ isOpen, setIsOpen }: ModalProps) => {
                 aria-modal="true"
                 aria-labelledby="modal-headline"
               >
-                <form className="flex h-auto w-[500px] flex-col bg-white p-6">
+                <form className="flex h-auto flex-col overflow-y-visible bg-white p-3 shadow-xl sm:w-[400px] sm:p-6 md:w-[500px]">
                   <div className="mb-3 flex items-center justify-end">
                     <button
                       onClick={() => setIsOpen((prev) => !prev)}
@@ -78,20 +116,106 @@ export const Modal = ({ isOpen, setIsOpen }: ModalProps) => {
                       <MdClose className="h-7 w-7 text-black" />
                     </button>
                   </div>
-                  <div className="flex w-full items-center justify-between border-b-2 border-black pb-4">
-                    <h3 className="text-xl font-medium text-slate-800">
+                  <div className="mb-3 flex w-full items-center justify-between border-b-2 border-gray-200 pb-4">
+                    <h3 className="text-base font-medium text-gray-800 sm:text-xl">
                       Cost Calculator
                     </h3>
-                    <p className="text-lg font-normal text-slate-700">
-                      Step 1 of 2
+                    <p className="text-sm font-normal text-slate-700 sm:text-lg">
+                      Step {!tab ? "1 of 2" : "2 of 2"}
                     </p>
                   </div>
-                  <div className="flex w-full flex-col py-4">
-                    <label htmlFor="text-lg font-medium text-slate-100 mb-3">
-                      Choose your business activity
-                    </label>
-                    <SelectComponent options={businness_activity} />
-                  </div>
+                  {!tab ? (
+                    <div className="flex flex-col space-y-5">
+                      <div className="flex w-full flex-col">
+                        <label htmlFor="" className={variants.label}>
+                          Choose your business activity
+                        </label>
+                        <SelectComponent options={businness_activity} />
+                      </div>
+                      <div className="flex w-full flex-col">
+                        <label htmlFor="" className={variants.label}>
+                          What type of premises would you require?
+                        </label>
+                        <SelectComponent options={premises} />
+                      </div>
+                      <div className="grid grid-cols-2 gap-6">
+                        <CustomField label="Number of owners" type="number" />
+                        <CustomField label="Number of vizas" type="number" />
+                      </div>
+                      <button
+                        type="button"
+                        onClick={() => setTab((prev) => !prev)}
+                        className="btn-secondary mt-5 w-full !p-2"
+                      >
+                        Next
+                      </button>
+                    </div>
+                  ) : (
+                    <div className="flex flex-col space-y-5">
+                      <div className="grid grid-cols-2 gap-6">
+                        <CustomField label="First Name" type="text" />
+                        <CustomField label="Last Name" type="text" />
+                      </div>
+                      <div className="flex flex-col">
+                        <label htmlFor="" className={variants.label}>
+                          Phone Number:
+                        </label>
+                        <PhoneInput
+                          autoFormat
+                          containerStyle={{
+                            display: "flex",
+                            alignItems: "center",
+                          }}
+                          inputStyle={{
+                            flex: 1,
+                            padding: "6px 8px",
+                            paddingLeft: 60,
+                            fontFamily: "var(--font-inter)",
+                            fontSize: 18,
+                            fontWeight: 500,
+                          }}
+                          buttonStyle={{
+                            fontSize: 16,
+                            fontWeight: 500,
+                            padding: "4px 6px",
+                          }}
+                          dropdownStyle={{
+                            padding: 10,
+                            border: "1px solid #bbb",
+                            fontFamily: "var(--font-inter)",
+                            fontSize: 18,
+                            fontWeight: 500,
+                            marginTop: 0,
+                            minWidth: "400px",
+                            width: "100%",
+                          }}
+                          countryCodeEditable
+                          country="uz"
+                        />
+                      </div>
+                      <div className="flex flex-col">
+                        <CustomField
+                          label="Email Address"
+                          type="email"
+                          placeholder="info@almuda.uz"
+                        />
+                      </div>
+                      <div className="grid grid-cols-2 gap-6">
+                        <button
+                          onClick={() => setTab((prev) => !prev)}
+                          className="bg-black py-2 text-lg font-semibold uppercase text-white"
+                        >
+                          Previous
+                        </button>
+                        <button
+                          type="submit"
+                          className="btn-secondary rounded-none !py-2"
+                        >
+                          Submit
+                        </button>
+                      </div>
+                    </div>
+                  )}
                 </form>
               </div>
             </motion.div>

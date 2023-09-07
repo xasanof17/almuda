@@ -5,5 +5,7 @@ type SelectProps = {
 };
 
 export const SelectComponent = ({ options }: SelectProps) => {
-  return <Select options={options} closeMenuOnSelect isSearchable className="mt-3"/>;
+  return (
+    <Select options={options} closeMenuOnSelect isSearchable />
+  );
 };
