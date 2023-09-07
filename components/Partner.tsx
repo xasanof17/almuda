@@ -1,3 +1,4 @@
+"use client";
 import {
   AdliyaLogo,
   AloqaBankLogo,
@@ -11,6 +12,7 @@ import {
   SoliqLogo,
 } from "@/assets";
 import Image from "next/image";
+import { motion } from "framer-motion";
 
 const Partner = () => {
   const partners = [
@@ -36,8 +38,10 @@ const Partner = () => {
         </div>
         <div className="mt-10 grid grid-cols-2 gap-3 md:grid-cols-3 md:gap-5 lg:grid-cols-4">
           {partners.map((item, i) => (
-            <div
-              className="flex items-center justify-center rounded-xl border border-slate-100 bg-white px-3 md:px-2 py-4 hover:border-transparent hover:shadow-lg"
+            <motion.div
+              initial={{ opacity: 0, y: "-20%" }}
+              animate={{ opacity: 1, y: 0 }}
+              className="flex items-center justify-center rounded-xl border border-slate-100 bg-white px-3 py-4 hover:border-transparent hover:shadow-lg md:px-2"
               key={i}
             >
               <div className="relative h-10 w-full md:w-2/3">
@@ -48,7 +52,7 @@ const Partner = () => {
                   className="objectContain select-none grayscale transition-all duration-300 hover:cursor-pointer hover:grayscale-0"
                 />
               </div>
-            </div>
+            </motion.div>
           ))}
         </div>
       </div>

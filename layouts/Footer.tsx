@@ -7,6 +7,7 @@ import {
   FaFacebook,
   FaGithub,
   FaInstagram,
+  FaLinkedinIn,
   FaTelegramPlane,
   FaTwitter,
 } from "react-icons/fa";
@@ -14,7 +15,7 @@ import { FiMail, FiMapPin, FiPhone } from "react-icons/fi";
 
 type Social = {
   Icon: IconType;
-  name: "Telegram" | "Instagram" | "Facebook" | "Twitter" | "Github";
+  name: "Telegram" | "Instagram" | "Facebook" | "Linkedin" | "Github";
   href: string;
 };
 
@@ -22,17 +23,17 @@ const socials: Social[] = [
   {
     Icon: FaFacebook,
     name: "Facebook",
-    href: "https://facebook.com/xasanof17",
+    href: "https://facebook.com/almuda",
   },
   {
     Icon: FaInstagram,
     name: "Instagram",
-    href: "https://instagram.com/1henotorious_",
+    href: "https://instagram.com/almuda",
   },
   {
-    Icon: FaTwitter,
-    name: "Twitter",
-    href: "https://x.com/xasanof17",
+    Icon: FaLinkedinIn,
+    name: "Linkedin",
+    href: "https://linkedin.com/almuda",
   },
   {
     Icon: FaTelegramPlane,

@@ -1,11 +1,21 @@
+"use client";
 import { HeroBg, Illustration } from "@/assets";
+import { motion } from "framer-motion";
 import Image from "next/image";
+import { useState } from "react";
+import { Modal } from "./Modal";
 
 const Hero = () => {
+  const [isOpen, setIsOpen] = useState(false);
   return (
     <section className="container md:my-20">
       <div className="py-14 md:py-20 xl:relative">
-        <div className="flex flex-col items-center md:items-start">
+        <motion.div
+          animate={{ x: 0, opacity: 1 }}
+          initial={{ x: "-50%", opacity: 0 }}
+          transition={{ bounce: 0.25, delay: 0.2 }}
+          className="flex flex-col items-center md:items-start"
+        >
           <span className="mb-3 text-lg font-semibold text-primary md:text-2xl">
             It{"\u2019"}s time to get decisive!
           </span>
@@ -15,19 +25,40 @@ const Hero = () => {
           <p className="my-5 text-center text-base font-normal text-primary md:text-start md:text-xl">
             Company setup in Uzbekistan, residency, banking and much more...
           </p>
-          <button type="button" className="btn-secondary">Calculate Cost</button>
-        </div>
-        <div className="hidden md:inline">
+          <button
+            onClick={() => setIsOpen((prev) => !prev)}
+            type="button"
+            className="btn-secondary"
+          >
+            Calculate Cost
+          </button>
+        </motion.div>
+        <motion.div
+          transition={{ bounce: 0.25, delay: 0.2 }}
+          animate={{ y: 0, opacity: 1 }}
+          initial={{ y: "-30%", opacity: 0 }}
+          className="hidden md:inline"
+        >
           <Image
             className="xl:heroImg pointer-events-none mt-5"
             src={HeroBg}
             alt="hero"
           />
-        </div>
-        <div className="relative block h-[400px] w-full sm:h-[600px] md:hidden">
-          <Image src={Illustration} alt="illustration" fill className="objectContain"/>
-        </div>
+        </motion.div>
+        <motion.div
+          animate={{ y: 0, opacity: 1 }}
+          initial={{ y: "-30%", opacity: 0 }}
+          className="relative block h-[400px] w-full sm:h-[600px] md:hidden"
+        >
+          <Image
+            src={Illustration}
+            alt="illustration"
+            fill
+            className="objectContain"
+          />
+        </motion.div>
       </div>
+      {isOpen && <Modal isOpen={isOpen} setIsOpen={setIsOpen} />}
     </section>
   );
 };

@@ -47,28 +47,18 @@ const Navbar = () => {
               </li>
             ))}
           </ul>
-          <div className="flex items-center sm:space-x-6">
-            <button
-              onClick={() => router.push("/sign-in")}
-              type="button"
-              title="Sign In"
-              className="btn-primary hidden py-2 sm:flex"
-            >
-              Sign In
-            </button>
-            <button
-              onClick={() => setMenu((prev) => !prev)}
-              className={`${
-                toggleMenu ? "fixed right-4 top-5 z-20 md:top-7" : ""
-              } ml-4 flex items-center justify-center lg:hidden`}
-            >
-              {toggleMenu ? (
-                <MdClose className="h-7 w-7 text-primary" />
-              ) : (
-                <FiMenu className="h-7 w-7 text-primary" />
-              )}
-            </button>
-          </div>
+          <button
+            onClick={() => setMenu((prev) => !prev)}
+            className={`${
+              toggleMenu ? "fixed right-4 top-5 z-20 md:top-7" : ""
+            } ml-4 flex items-center justify-center lg:hidden`}
+          >
+            {toggleMenu ? (
+              <MdClose className="h-7 w-7 text-primary" />
+            ) : (
+              <FiMenu className="h-7 w-7 text-primary" />
+            )}
+          </button>
         </div>
         {toggleMenu && (
           <div className="fixed left-0 top-0 flex min-h-screen w-screen flex-col items-center justify-center bg-white transition-all duration-300">
@@ -87,17 +77,6 @@ const Navbar = () => {
                   </Link>
                 </li>
               ))}
-              <button
-                onClick={() => {
-                  setMenu((prev) => !prev);
-                  router.push("/sign-in");
-                }}
-                type="button"
-                title="Sign In"
-                className="btn-primary py-2 text-xl md:hidden"
-              >
-                Sign In
-              </button>
             </ul>
           </div>
         )}
