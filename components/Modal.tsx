@@ -3,18 +3,35 @@ import { Dialog } from "@headlessui/react";
 import { motion, AnimatePresence } from "framer-motion";
 import { SelectComponent } from "./Select";
 import { MdClose } from "react-icons/md";
-import { HTMLInputTypeAttribute, useState } from "react";
-// import countryList from "react-select-country-list";
 import PhoneInput from "react-phone-input-2";
 import "react-phone-input-2/lib/style.css";
 import CustomField from "./CustomField";
+import { useState } from "react";
+import { useForm } from "react-hook-form";
 
 type ModalProps = {
   isOpen: boolean;
   setIsOpen: React.Dispatch<React.SetStateAction<boolean>>;
 };
 
+type FormData = {};
+
 export const Modal = ({ isOpen, setIsOpen }: ModalProps) => {
+  const {
+    register,
+    handleSubmit,
+    control,
+    formState: { errors, isLoading, isDirty, isValid },
+    reset,
+  } = useForm<FormData>({
+    defaultValues: {
+      firstName: "",
+      lastName: "",
+      companyName: "",
+      phoneNumber: "",
+      message: "Hi there, ",
+    },
+  });
   const [tab, setTab] = useState(false);
   const businness_activity = [
     { value: "accounting_auditing", label: "Accounting & Auditing" },
@@ -115,8 +132,16 @@ export const Modal = ({ isOpen, setIsOpen }: ModalProps) => {
                         <SelectComponent options={premises} />
                       </div>
                       <div className="grid grid-cols-2 gap-6">
-                        <CustomField label="Number of owners" type="number" />
-                        <CustomField label="Number of vizas" type="number" />
+                        <CustomField
+                          id="owners"
+                          label="Number of owners"
+                          type="number"
+                        />
+                        <CustomField
+                          id="vizas"
+                          label="Number of vizas"
+                          type="number"
+                        />
                       </div>
                       <button
                         type="button"
@@ -129,8 +154,16 @@ export const Modal = ({ isOpen, setIsOpen }: ModalProps) => {
                   ) : (
                     <div className="flex flex-col space-y-5">
                       <div className="grid grid-cols-2 gap-6">
-                        <CustomField label="First Name" type="text" />
-                        <CustomField label="Last Name" type="text" />
+                        <CustomField
+                          id="firstName"
+                          label="First Name"
+                          type="text"
+                        />
+                        <CustomField
+                          id="lastName"
+                          label="Last Name"
+                          type="text"
+                        />
                       </div>
                       <div className="flex flex-col">
                         <label htmlFor="" className="label">
@@ -170,6 +203,7 @@ export const Modal = ({ isOpen, setIsOpen }: ModalProps) => {
                       </div>
                       <div className="flex flex-col">
                         <CustomField
+                          id="email"
                           label="Email Address"
                           type="email"
                           placeholder="info@almuda.uz"
@@ -183,6 +217,7 @@ export const Modal = ({ isOpen, setIsOpen }: ModalProps) => {
                           Previous
                         </button>
                         <button
+                        disabled={!isDirty || !isValid}
                           type="submit"
                           className="btn-secondary rounded-none !py-2"
                         >

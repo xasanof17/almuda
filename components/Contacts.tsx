@@ -62,7 +62,7 @@ const Contacts = () => {
     register,
     handleSubmit,
     control,
-    formState: { errors, isLoading, isSubmitSuccessful, isSubmitting },
+    formState: { isLoading, isDirty, isValid },
     reset,
   } = useForm<FormData>({
     defaultValues: {
@@ -96,29 +96,30 @@ const Contacts = () => {
         // Add any other template parameters here
       };
 
-      await emailjs
-        .send(
-          "service_v2ruypg",
-          "template_5b1a3fm",
-          emailData,
-          "V3PSiNNlWPKjEFKEj",
-        )
-        .then(
-          (result) => {
-            console.log("Your messages status:", result.text);
-          },
-          (error) => {
-            toast.error(error);
+      // await emailjs
+      //   .send(
+      //     "service_v2ruypg",
+      //     "template_5b1a3fm",
+      //     emailData,
+      //     "V3PSiNNlWPKjEFKEj",
+      //   )
+      //   .then(
+      //     (result) => {
+      //       console.log("Your messages status:", result.text);
+      //     },
+      //     (error) => {
+      //       toast.error(error);
 
-            console.log(error.text);
-          },
-        );
+      //       console.log(error.text);
+      //     },
+      //   );
       toast.success("Your message send");
       reset();
     } catch (error) {
       toast.error("Something went wrong");
       console.log("Error when sending email", error);
     }
+    console.log(firstName, phoneNumber);
   };
   return (
     <div className="flex flex-col items-center justify-center">
@@ -131,26 +132,30 @@ const Contacts = () => {
       >
         <div className="grid grid-cols-1 gap-x-8 gap-y-6 sm:grid-cols-2">
           <CustomField
+            id="firstName"
             label="First Name"
             type="text"
-            {...register("firstName")}
+            {...register("firstName", { required: true })}
           />
           <CustomField
+            id="lastName"
             label="Last Name"
             type="text"
-            {...register("lastName")}
+            {...register("lastName", { required: true })}
           />
           <CustomField
+            id="companyName"
             label="Company"
             type="text"
             className="sm:col-span-2"
-            {...register("companyName")}
+            {...register("companyName", { required: true })}
           />
           <CustomField
+            id="email"
             label="Email"
             type="email"
             className="sm:col-span-2"
-            {...register("email")}
+            {...register("email", { required: true })}
           />
 
           <div className="sm:col-span-2">
@@ -161,6 +166,7 @@ const Contacts = () => {
               <Controller
                 name="phoneNumber"
                 control={control}
+                rules={{ required: true }}
                 render={({ field }) => (
                   <PhoneInput
                     {...field}
@@ -196,18 +202,19 @@ const Contacts = () => {
                   />
                 )}
               />
-              {errors.phoneNumber && (
-                <span className="text-base font-medium text-red-500">
-                  Please enter your phone
-                </span>
-              )}
             </div>
           </div>
-          <CustomField label="Message" textarea />
+          <CustomField
+            id="message"
+            label="Message"
+            textarea
+            className="sm:col-span-2"
+            {...register("message", { required: true })}
+          />
         </div>
         <div className="mt-6">
           <button
-            disabled={isSubmitting}
+            disabled={!isDirty || !isValid}
             type="submit"
             className="btn-secondary w-full disabled:opacity-70"
           >

@@ -1,6 +1,7 @@
 import { HTMLInputTypeAttribute } from "react";
 
 type Field = {
+  id: string;
   label: string;
   type?: HTMLInputTypeAttribute;
   placeholder?: string;
@@ -9,6 +10,7 @@ type Field = {
 };
 
 const CustomField = ({
+  id,
   label,
   type,
   placeholder,
@@ -17,18 +19,23 @@ const CustomField = ({
 }: Field) => {
   return (
     <div className={`flex flex-col ${className}`}>
-      <label htmlFor={label} className="label">
+      <label htmlFor={id} className="label">
         {label}
       </label>
       {!textarea ? (
-        <input type={type} placeholder={placeholder} className="input" required />
+        <input
+          id={id}
+          type={type}
+          placeholder={placeholder}
+          className="input"
+          autoComplete="true"
+        />
       ) : (
         <textarea
-          name=""
+          id={id}
           className="input"
           placeholder={placeholder}
           rows={4}
-          defaultValue="Hi there,"
         />
       )}
     </div>
