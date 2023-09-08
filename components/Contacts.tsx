@@ -7,6 +7,7 @@ import { Controller, SubmitHandler, useForm } from "react-hook-form";
 import toast from "react-hot-toast";
 import emailjs from "@emailjs/browser";
 import "react-phone-input-2/lib/style.css";
+import CustomField from "./CustomField";
 
 function classNames(...classes: string[]) {
   return classes.filter(Boolean).join(" ");
@@ -77,6 +78,7 @@ const Contacts = () => {
 
     const { firstName, lastName, companyName, email, phoneNumber, message } =
       data;
+
     try {
       const serviceID = process.env.SERVICE_ID!;
       const templateID = process.env.TEMPLATE_ID!;
@@ -93,6 +95,7 @@ const Contacts = () => {
         `,
         // Add any other template parameters here
       };
+
       await emailjs
         .send(
           "service_v2ruypg",
@@ -102,8 +105,6 @@ const Contacts = () => {
         )
         .then(
           (result) => {
-            toast.loading("Sending...");
-
             console.log("Your messages status:", result.text);
           },
           (error) => {
@@ -129,81 +130,32 @@ const Contacts = () => {
         className="mx-auto mt-16 max-w-xl sm:mt-20"
       >
         <div className="grid grid-cols-1 gap-x-8 gap-y-6 sm:grid-cols-2">
-          <div>
-            <label htmlFor="firstName" className="label">
-              First name
-            </label>
-            <div className="mt-2.5">
-              <input
-                {...register("firstName")}
-                type="text"
-                id="firstName"
-                className="input"
-              />
-              {errors.firstName && (
-                <span className="text-base font-medium text-red-500">
-                  Please enter your first name
-                </span>
-              )}
-            </div>
-          </div>
-          <div>
-            <label htmlFor="lastName" className="label">
-              Last name
-            </label>
-            <div className="mt-2.5">
-              <input
-                {...register("lastName")}
-                type="text"
-                id="lastName"
-                className="input"
-              />
-              {errors.lastName && (
-                <span className="text-base font-medium text-red-500">
-                  Please enter your last name
-                </span>
-              )}
-            </div>
-          </div>
-          <div className="sm:col-span-2">
-            <label htmlFor="companyName" className="label">
-              Company
-            </label>
-            <div className="mt-2.5">
-              <input
-                {...register("companyName")}
-                type="text"
-                id="lastName"
-                className="input"
-              />
-              {errors.companyName && (
-                <span className="text-base font-medium text-red-500">
-                  Please enter your company name
-                </span>
-              )}
-            </div>
-          </div>
-          <div className="sm:col-span-2">
-            <label htmlFor="email" className="label">
-              Email
-            </label>
-            <div className="mt-2.5">
-              <input
-                {...register("email")}
-                type="email"
-                id="email"
-                className="input"
-              />
-              {errors.email && (
-                <span className="text-base font-medium text-red-500">
-                  Please enter your email
-                </span>
-              )}
-            </div>
-          </div>
+          <CustomField
+            label="First Name"
+            type="text"
+            {...register("firstName")}
+          />
+          <CustomField
+            label="Last Name"
+            type="text"
+            {...register("lastName")}
+          />
+          <CustomField
+            label="Company"
+            type="text"
+            className="sm:col-span-2"
+            {...register("companyName")}
+          />
+          <CustomField
+            label="Email"
+            type="email"
+            className="sm:col-span-2"
+            {...register("email")}
+          />
+
           <div className="sm:col-span-2">
             <label htmlFor="phoneNumber" className="label">
-              Phone number
+              Phone Number
             </label>
             <div className="relative mt-2.5">
               <Controller
@@ -213,11 +165,34 @@ const Contacts = () => {
                   <PhoneInput
                     {...field}
                     autoFormat
+                    containerStyle={{
+                      display: "flex",
+                      alignItems: "center",
+                    }}
+                    inputStyle={{
+                      flex: 1,
+                      padding: "18px 60px",
+                      fontFamily: "var(--font-inter)",
+                      fontSize: 18,
+                      fontWeight: 500,
+                    }}
+                    buttonStyle={{
+                      fontSize: 16,
+                      fontWeight: 500,
+                      padding: "4px 6px",
+                    }}
+                    dropdownStyle={{
+                      padding: 10,
+                      border: "1px solid #bbb",
+                      fontFamily: "var(--font-inter)",
+                      fontSize: 18,
+                      fontWeight: 500,
+                      marginTop: 0,
+                      minWidth: "300px",
+                      width: "100%",
+                    }}
                     countryCodeEditable
-                    inputClass="input"
-                    autocompleteSearch
-                    containerStyle={{ flex: 1 }}
-                    enableSearch
+                    country="uz"
                   />
                 )}
               />
@@ -228,31 +203,13 @@ const Contacts = () => {
               )}
             </div>
           </div>
-          <div className="sm:col-span-2">
-            <label htmlFor="message" className="label">
-              Message
-            </label>
-            <div className="mt-2.5">
-              <textarea
-                {...register("message")}
-                id="message"
-                rows={4}
-                className="input"
-                defaultValue=""
-              />
-              {errors.message && (
-                <span className="text-base font-medium text-red-500">
-                  Please enter your message
-                </span>
-              )}
-            </div>
-          </div>
+          <CustomField label="Message" textarea />
         </div>
-        <div className="mt-10">
+        <div className="mt-6">
           <button
             disabled={isSubmitting}
             type="submit"
-            className="btn-primary w-full disabled:opacity-70"
+            className="btn-secondary w-full disabled:opacity-70"
           >
             {!isLoading ? `Let's talk` : "Loading..."}
           </button>

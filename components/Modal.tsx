@@ -7,35 +7,11 @@ import { HTMLInputTypeAttribute, useState } from "react";
 // import countryList from "react-select-country-list";
 import PhoneInput from "react-phone-input-2";
 import "react-phone-input-2/lib/style.css";
+import CustomField from "./CustomField";
 
 type ModalProps = {
   isOpen: boolean;
   setIsOpen: React.Dispatch<React.SetStateAction<boolean>>;
-};
-
-type Field = {
-  label: string;
-  type: HTMLInputTypeAttribute;
-  placeholder?: string;
-};
-
-const CustomField = ({ label, type, placeholder }: Field) => {
-  return (
-    <div className="flex flex-col">
-      <label htmlFor={label} className={variants.label}>
-        {label}
-      </label>
-      <input
-        type={type}
-        placeholder={placeholder}
-        className="rounded border border-gray-200 px-2 py-1.5 outline-none placeholder:text-gray-500"
-      />
-    </div>
-  );
-};
-
-const variants = {
-  label: "text-sm md:text-base font-medium text-black mb-1",
 };
 
 export const Modal = ({ isOpen, setIsOpen }: ModalProps) => {
@@ -59,7 +35,7 @@ export const Modal = ({ isOpen, setIsOpen }: ModalProps) => {
         <Dialog
           open={isOpen}
           onClose={setIsOpen}
-          as="div"
+          as="section"
           className="fixed inset-0 z-10 flex items-center justify-center overflow-y-hidden"
         >
           <div className="flex flex-col px-4 py-8 text-center">
@@ -81,7 +57,7 @@ export const Modal = ({ isOpen, setIsOpen }: ModalProps) => {
                 opacity: 1,
                 scale: 1,
                 transition: {
-                  ease: "easeOut",
+                  ease: "easeInOut",
                   duration: 0.15,
                 },
               }}
@@ -89,13 +65,13 @@ export const Modal = ({ isOpen, setIsOpen }: ModalProps) => {
                 opacity: 0,
                 scale: 0.75,
                 transition: {
-                  ease: "easeIn",
+                  ease: "easeOut",
                   duration: 0.15,
                 },
               }}
             >
               <span
-                className="hidden sm:inline-block sm:h-screen sm:align-middle"
+                className="inline-block h-screen align-middle"
                 aria-hidden="true"
               >
                 &#8203;
@@ -127,13 +103,13 @@ export const Modal = ({ isOpen, setIsOpen }: ModalProps) => {
                   {!tab ? (
                     <div className="flex flex-col space-y-5">
                       <div className="flex w-full flex-col">
-                        <label htmlFor="" className={variants.label}>
+                        <label htmlFor="" className="label">
                           Choose your business activity
                         </label>
                         <SelectComponent options={businness_activity} />
                       </div>
                       <div className="flex w-full flex-col">
-                        <label htmlFor="" className={variants.label}>
+                        <label htmlFor="" className="label">
                           What type of premises would you require?
                         </label>
                         <SelectComponent options={premises} />
@@ -157,7 +133,7 @@ export const Modal = ({ isOpen, setIsOpen }: ModalProps) => {
                         <CustomField label="Last Name" type="text" />
                       </div>
                       <div className="flex flex-col">
-                        <label htmlFor="" className={variants.label}>
+                        <label htmlFor="" className="label">
                           Phone Number:
                         </label>
                         <PhoneInput
@@ -168,8 +144,7 @@ export const Modal = ({ isOpen, setIsOpen }: ModalProps) => {
                           }}
                           inputStyle={{
                             flex: 1,
-                            padding: "6px 8px",
-                            paddingLeft: 60,
+                            padding: "18px 60px",
                             fontFamily: "var(--font-inter)",
                             fontSize: 18,
                             fontWeight: 500,
@@ -186,7 +161,7 @@ export const Modal = ({ isOpen, setIsOpen }: ModalProps) => {
                             fontSize: 18,
                             fontWeight: 500,
                             marginTop: 0,
-                            minWidth: "400px",
+                            minWidth: "300px",
                             width: "100%",
                           }}
                           countryCodeEditable
@@ -203,7 +178,7 @@ export const Modal = ({ isOpen, setIsOpen }: ModalProps) => {
                       <div className="grid grid-cols-2 gap-6">
                         <button
                           onClick={() => setTab((prev) => !prev)}
-                          className="bg-black py-2 text-lg font-semibold uppercase text-white"
+                          className="bg-black py-2 text-base font-semibold uppercase text-white md:text-lg"
                         >
                           Previous
                         </button>

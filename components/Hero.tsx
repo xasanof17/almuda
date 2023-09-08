@@ -58,7 +58,7 @@ const Hero = () => {
           />
         </motion.div>
       </div>
-      {isOpen && <Modal isOpen={isOpen} setIsOpen={setIsOpen} />}
+      <Modal isOpen={isOpen} setIsOpen={setIsOpen} />
     </section>
   );
 };
