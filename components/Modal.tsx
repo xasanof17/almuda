@@ -14,7 +14,16 @@ type ModalProps = {
   setIsOpen: React.Dispatch<React.SetStateAction<boolean>>;
 };
 
-type FormData = {};
+type FormData = {
+  business_activity: string;
+  premises: string;
+  owners: number | null;
+  vizas: number | null;
+  firstName: string;
+  lastName: string;
+  phoneNumber: string;
+  email: string;
+};
 
 export const Modal = ({ isOpen, setIsOpen }: ModalProps) => {
   const {
@@ -25,11 +34,13 @@ export const Modal = ({ isOpen, setIsOpen }: ModalProps) => {
     reset,
   } = useForm<FormData>({
     defaultValues: {
+      business_activity: "",
+      premises: "",
+      owners: 0,
+      vizas: 0,
       firstName: "",
       lastName: "",
-      companyName: "",
-      phoneNumber: "",
-      message: "Hi there, ",
+      email: "",
     },
   });
   const [tab, setTab] = useState(false);
@@ -131,7 +142,7 @@ export const Modal = ({ isOpen, setIsOpen }: ModalProps) => {
                         </label>
                         <SelectComponent options={premises} />
                       </div>
-                      <div className="grid grid-cols-2 gap-6">
+                      <div className="grid grid-cols-2 gap-4 md:gap-6">
                         <CustomField
                           id="owners"
                           label="Number of owners"
@@ -153,7 +164,7 @@ export const Modal = ({ isOpen, setIsOpen }: ModalProps) => {
                     </div>
                   ) : (
                     <div className="flex flex-col space-y-5">
-                      <div className="grid grid-cols-2 gap-6">
+                      <div className="grid grid-cols-2 gap-4 md:gap-6">
                         <CustomField
                           id="firstName"
                           label="First Name"
@@ -209,7 +220,7 @@ export const Modal = ({ isOpen, setIsOpen }: ModalProps) => {
                           placeholder="info@almuda.uz"
                         />
                       </div>
-                      <div className="grid grid-cols-2 gap-6">
+                      <div className="grid grid-cols-2 gap-4 md:gap-6">
                         <button
                           onClick={() => setTab((prev) => !prev)}
                           className="bg-black py-2 text-base font-semibold uppercase text-white md:text-lg"
@@ -217,7 +228,7 @@ export const Modal = ({ isOpen, setIsOpen }: ModalProps) => {
                           Previous
                         </button>
                         <button
-                        disabled={!isDirty || !isValid}
+                          disabled={!isDirty || !isValid}
                           type="submit"
                           className="btn-secondary rounded-none !py-2"
                         >

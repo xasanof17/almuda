@@ -13,7 +13,7 @@ const Hero = () => {
         <motion.div
           animate={{ x: 0, opacity: 1 }}
           initial={{ x: "-50%", opacity: 0 }}
-          transition={{ bounce: 0.25, delay: 0.2 }}
+          transition={{ bounce: 0.25 }}
           className="flex flex-col items-center md:items-start"
         >
           <span className="mb-3 text-lg font-semibold text-primary md:text-2xl">
@@ -34,7 +34,7 @@ const Hero = () => {
           </button>
         </motion.div>
         <motion.div
-          transition={{ bounce: 0.25, delay: 0.2 }}
+          transition={{ bounce: 0.25 }}
           animate={{ y: 0, opacity: 1 }}
           initial={{ y: "-30%", opacity: 0 }}
           className="hidden md:inline"

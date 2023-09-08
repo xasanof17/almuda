@@ -3,7 +3,7 @@ import PriceCard from "./PriceCard";
 
 const Pricing = () => {
   return (
-    <section className="py-20" id="pricing">
+    <section className="py-14 md:py-20" id="pricing">
       <div className="container">
         <div className="flex flex-col items-center justify-center">
           <h2 title="Flexible Pricing Plan" className="title">
@@ -18,13 +18,11 @@ const Pricing = () => {
           </p>
         </div>
         <div className="mt-10 grid grid-cols-1 gap-5 md:grid-cols-2 xl:grid-cols-3">
-          {priceList.map(({ popular, title, price, text, href, list }, i) => (
+          {priceList.map(({ popular, title, price, list }, i) => (
             <PriceCard
               popular={popular}
               title={title}
               price={price}
-              text={text}
-              href={href}
               list={list}
               key={i}
             />

@@ -40,6 +40,6 @@
     @apply rounded border border-gray-200 px-2 py-1.5 outline-none placeholder:text-gray-500 text-black focus:ring-2 focus:ring-inset focus:ring-bright text-base;
   }
   .label {
-    @apply text-sm md:text-base font-medium text-black/70 mb-1;
+    @apply text-sm md:text-base font-medium text-black/80 mb-1;
   }
 }

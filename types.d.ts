@@ -4,12 +4,10 @@ interface PriceList {
   popular?: boolean;
   title: string;
   price: number;
-  text: string;
-  href: string;
   list: Item[];
 }
 interface Item {
-  icon: IconType;
+  Icon: IconType;
   text: string;
   not?: boolean;
 }

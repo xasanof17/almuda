@@ -28,7 +28,7 @@ const Partner = () => {
     DavrBankLogo,
   ];
   return (
-    <section id="partner" className="my-40">
+    <section id="partner" className="my-32 md:my-40">
       <div className="container">
         <div className="flex flex-col items-center justify-center">
           <h2 className="title">Our Partners</h2>

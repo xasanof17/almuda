@@ -1,52 +1,10 @@
 "use client";
-import { useState } from "react";
-import { ChevronDownIcon } from "@heroicons/react/20/solid";
 import PhoneInput from "react-phone-input-2";
-import { Switch } from "@headlessui/react";
 import { Controller, SubmitHandler, useForm } from "react-hook-form";
 import toast from "react-hot-toast";
 import emailjs from "@emailjs/browser";
 import "react-phone-input-2/lib/style.css";
 import CustomField from "./CustomField";
-
-function classNames(...classes: string[]) {
-  return classes.filter(Boolean).join(" ");
-}
-
-const Sw = () => {
-  const [agreed, setAgreed] = useState(false);
-
-  return (
-    <Switch.Group as="div" className="flex gap-x-4 sm:col-span-2">
-      <div className="flex h-6 items-center">
-        <Switch
-          checked={agreed}
-          onChange={setAgreed}
-          className={classNames(
-            agreed ? "bg-indigo-600" : "bg-gray-200",
-            "flex w-8 flex-none cursor-pointer rounded-full p-px ring-1 ring-inset ring-gray-900/5 transition-colors duration-200 ease-in-out focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600",
-          )}
-        >
-          <span className="sr-only">Agree to policies</span>
-          <span
-            aria-hidden="true"
-            className={classNames(
-              agreed ? "translate-x-3.5" : "translate-x-0",
-              "h-4 w-4 transform rounded-full bg-white shadow-sm ring-1 ring-gray-900/5 transition duration-200 ease-in-out",
-            )}
-          />
-        </Switch>
-      </div>
-      <Switch.Label className="text-sm leading-6 text-gray-600">
-        By selecting this, you agree to our
-        <a href="#" className="font-semibold text-indigo-600">
-          privacy&nbsp;policy
-        </a>
-        .
-      </Switch.Label>
-    </Switch.Group>
-  );
-};
 
 type FormData = {
   firstName: string;
@@ -96,23 +54,23 @@ const Contacts = () => {
         // Add any other template parameters here
       };
 
-      // await emailjs
-      //   .send(
-      //     "service_v2ruypg",
-      //     "template_5b1a3fm",
-      //     emailData,
-      //     "V3PSiNNlWPKjEFKEj",
-      //   )
-      //   .then(
-      //     (result) => {
-      //       console.log("Your messages status:", result.text);
-      //     },
-      //     (error) => {
-      //       toast.error(error);
+      await emailjs
+        .send(
+          "service_v2ruypg",
+          "template_5b1a3fm",
+          emailData,
+          "V3PSiNNlWPKjEFKEj",
+        )
+        .then(
+          (result) => {
+            console.log("Your messages status:", result.text);
+          },
+          (error) => {
+            toast.error(error);
 
-      //       console.log(error.text);
-      //     },
-      //   );
+            console.log(error.text);
+          },
+        );
       toast.success("Your message send");
       reset();
     } catch (error) {

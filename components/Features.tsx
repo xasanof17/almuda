@@ -4,7 +4,7 @@ import Link from "next/link";
 
 const Features = () => {
   return (
-    <section className="container my-40">
+    <section className="container my-20 md:my-40">
       <div className="mx-auto mb-12 flex w-full max-w-lg flex-col">
         <h2 title="Our special features" className="title">
           Our Special Features
@@ -14,7 +14,7 @@ const Features = () => {
           online platform considering all the requirements
         </p>
       </div>
-      <div className="grid grid-cols-1 gap-[80px] sm:grid-cols-2 lg:grid-cols-3">
+      <div className="grid grid-cols-1 gap-12 lg:gap-[80px] sm:grid-cols-2 lg:grid-cols-3">
         {features.map(({ src, title, text, href }, i) => (
           <div className="flex flex-col" key={i}>
             <div className="relative mb-7 h-[50px] w-[50px] sm:h-[70px] sm:w-[70px]">
