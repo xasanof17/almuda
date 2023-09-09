@@ -1,4 +1,9 @@
-import { HTMLInputTypeAttribute } from "react";
+import {
+  ForwardedRef,
+  HTMLInputTypeAttribute,
+  InputHTMLAttributes,
+} from "react";
+import { forwardRef } from "react";
 
 type Field = {
   id: string;
@@ -9,14 +14,12 @@ type Field = {
   textarea?: boolean;
 };
 
-const CustomField = ({
-  id,
-  label,
-  type,
-  placeholder,
-  className,
-  textarea,
-}: Field) => {
+const CustomField = forwardRef<
+  | InputHTMLAttributes<HTMLInputElement>
+  | InputHTMLAttributes<HTMLTextAreaElement>,
+  Field
+>(function CustomField(props, ref) {
+  const { id, label, type, placeholder, className, textarea, ...field } = props;
   return (
     <div className={`flex flex-col ${className}`}>
       <label htmlFor={id} className="label">
@@ -25,21 +28,25 @@ const CustomField = ({
       {!textarea ? (
         <input
           id={id}
+          name={id}
+          ref={ref as ForwardedRef<HTMLInputElement>}
           type={type}
           placeholder={placeholder}
           className="input"
           autoComplete="true"
+          {...field}
         />
       ) : (
         <textarea
-          id={id}
-          className="input"
+          ref={ref as ForwardedRef<HTMLTextAreaElement>}
+          className="input resize-none hover:resize-y focus:resize-y"
           placeholder={placeholder}
           rows={4}
+          {...field}
         />
       )}
     </div>
   );
-};
+});
 
 export default CustomField;

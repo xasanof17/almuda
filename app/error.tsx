@@ -20,7 +20,7 @@ export default function Error({
   }, [error]);
   return (
     <section className="max-w-screen flex h-full min-h-screen w-full flex-col items-center justify-center bg-white">
-      <h1 className="text-5xl font-bold text-black">
+      <h1 className="text-2xl lg:text-5xl font-bold text-black mb-3">
         500! Something went wrong!
       </h1>
       <button

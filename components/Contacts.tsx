@@ -4,7 +4,7 @@ import { Controller, SubmitHandler, useForm } from "react-hook-form";
 import toast from "react-hot-toast";
 import emailjs from "@emailjs/browser";
 import "react-phone-input-2/lib/style.css";
-import CustomField from "./CustomField";
+import { TextFieldController } from "./inputs/TextFieldController";
 
 type FormData = {
   firstName: string;
@@ -17,7 +17,6 @@ type FormData = {
 
 const Contacts = () => {
   const {
-    register,
     handleSubmit,
     control,
     formState: { isLoading, isDirty, isValid },
@@ -26,58 +25,46 @@ const Contacts = () => {
     defaultValues: {
       firstName: "",
       lastName: "",
+      email: "",
       companyName: "",
       phoneNumber: "",
       message: "Hi there, ",
     },
   });
-  const onSubmit: SubmitHandler<FormData> = async (data, event) => {
+
+  const onSubmit: SubmitHandler<FormData> = (data, event) => {
     event?.preventDefault();
 
     const { firstName, lastName, companyName, email, phoneNumber, message } =
       data;
-
     try {
-      const serviceID = process.env.SERVICE_ID!;
-      const templateID = process.env.TEMPLATE_ID!;
-      const publicKey = process.env.PUBLIC_KEY!;
+      const serviceID = process.env.NEXT_PUBLIC_SERVICE_ID!;
+      const templateID = process.env.NEXT_PUBLIC_TEMPLATE_ID!;
+      const serviceKey = process.env.NEXT_PUBLIC_SERVICE_KEY!;
+
       const emailData = {
-        to_name: "oisha.151115@gmail.com", // Replace with your recipient's email
-        from_name: email, // Replace with your sender's email
+        to_name: "xasanof17@gmail.com",
+        from_name: email,
         company: companyName,
         message: `
-          Hi my name is ${firstName} ${lastName}.\n
-          My Company name is ${companyName}.\n
-          My contacts: ${phoneNumber}.
-          Message: ${message}
-        `,
-        // Add any other template parameters here
+        Hi my name is ${firstName} ${lastName}.\n
+        My Company name is ${companyName}.\n
+        My contacts: ${phoneNumber}.
+        Message: ${message}
+      `,
       };
+      const data = emailjs.send(serviceID, templateID, emailData, serviceKey);
 
-      await emailjs
-        .send(
-          "service_v2ruypg",
-          "template_5b1a3fm",
-          emailData,
-          "V3PSiNNlWPKjEFKEj",
-        )
-        .then(
-          (result) => {
-            console.log("Your messages status:", result.text);
-          },
-          (error) => {
-            toast.error(error);
+      toast.promise(data, {
+        loading: "Sending...",
+        success: "Your message sent",
+        error: "Faield to sent",
+      });
 
-            console.log(error.text);
-          },
-        );
-      toast.success("Your message send");
       reset();
     } catch (error) {
-      toast.error("Something went wrong");
-      console.log("Error when sending email", error);
+      console.log(error);
     }
-    console.log(firstName, phoneNumber);
   };
   return (
     <div className="flex flex-col items-center justify-center">
@@ -89,31 +76,28 @@ const Contacts = () => {
         className="mx-auto mt-16 max-w-xl sm:mt-20"
       >
         <div className="grid grid-cols-1 gap-x-8 gap-y-6 sm:grid-cols-2">
-          <CustomField
-            id="firstName"
+          <TextFieldController
             label="First Name"
-            type="text"
-            {...register("firstName", { required: true })}
+            control={control}
+            name="firstName"
           />
-          <CustomField
-            id="lastName"
+
+          <TextFieldController
             label="Last Name"
-            type="text"
-            {...register("lastName", { required: true })}
+            control={control}
+            name="lastName"
           />
-          <CustomField
-            id="companyName"
+          <TextFieldController
             label="Company"
-            type="text"
+            control={control}
+            name="companyName"
             className="sm:col-span-2"
-            {...register("companyName", { required: true })}
           />
-          <CustomField
-            id="email"
+          <TextFieldController
             label="Email"
-            type="email"
+            control={control}
+            name="email"
             className="sm:col-span-2"
-            {...register("email", { required: true })}
           />
 
           <div className="sm:col-span-2">
@@ -162,19 +146,31 @@ const Contacts = () => {
               />
             </div>
           </div>
-          <CustomField
-            id="message"
+          <TextFieldController
             label="Message"
-            textarea
+            control={control}
+            name="message"
             className="sm:col-span-2"
-            {...register("message", { required: true })}
           />
+          {/* <Controller
+            name="message"
+            control={control}
+            rules={{ required: true }}
+            render={({ field }) => (
+              <CustomField
+                {...field}
+                id="message"
+                label="Message"
+                textarea
+                className="sm:col-span-2"
+              />
+            )}
+          /> */}
         </div>
         <div className="mt-6">
           <button
-            disabled={!isDirty || !isValid}
             type="submit"
-            className="btn-secondary w-full disabled:opacity-70"
+            className="btn-secondary w-full disabled:opacity-30"
           >
             {!isLoading ? `Let's talk` : "Loading..."}
           </button>

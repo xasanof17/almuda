@@ -61,7 +61,7 @@ const Navbar = () => {
           </button>
         </div>
         {toggleMenu && (
-          <div className="fixed inset-0 flex min-h-screen min-w-screen flex-col items-center justify-center bg-white transition-all duration-300">
+          <div className="min-w-screen fixed inset-0 z-10 flex min-h-screen flex-col items-center justify-center overflow-y-hidden bg-white transition-all duration-300">
             <ul className="flex flex-col items-center space-y-8 lg:hidden">
               {links.map(({ href, title }, i) => (
                 <li key={i}>

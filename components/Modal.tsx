@@ -25,7 +25,7 @@ type FormData = {
   email: string;
 };
 
-export const Modal = ({ isOpen, setIsOpen }: ModalProps) => {
+export const Modal = ({ isOpen = false, setIsOpen }: ModalProps) => {
   const {
     register,
     handleSubmit,
@@ -43,7 +43,9 @@ export const Modal = ({ isOpen, setIsOpen }: ModalProps) => {
       email: "",
     },
   });
+
   const [tab, setTab] = useState(false);
+
   const businness_activity = [
     { value: "accounting_auditing", label: "Accounting & Auditing" },
     { value: "advertising", label: "Advertising" },
@@ -59,7 +61,6 @@ export const Modal = ({ isOpen, setIsOpen }: ModalProps) => {
 
   return (
     <AnimatePresence>
-      {isOpen && (
         <Dialog
           open={isOpen}
           onClose={setIsOpen}
@@ -131,13 +132,13 @@ export const Modal = ({ isOpen, setIsOpen }: ModalProps) => {
                   {!tab ? (
                     <div className="flex flex-col space-y-5">
                       <div className="flex w-full flex-col">
-                        <label htmlFor="" className="label">
+                        <label className="label">
                           Choose your business activity
                         </label>
                         <SelectComponent options={businness_activity} />
                       </div>
                       <div className="flex w-full flex-col">
-                        <label htmlFor="" className="label">
+                        <label className="label">
                           What type of premises would you require?
                         </label>
                         <SelectComponent options={premises} />
@@ -242,7 +243,6 @@ export const Modal = ({ isOpen, setIsOpen }: ModalProps) => {
             </motion.div>
           </div>
         </Dialog>
-      )}
     </AnimatePresence>
   );
 };
