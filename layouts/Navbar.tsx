@@ -28,7 +28,7 @@ const Navbar = () => {
               src={Logo}
               alt="Al-Muda Logo"
               fill
-              className="objectContain"
+              className="object-contain"
             />
           </div>
         </Link>

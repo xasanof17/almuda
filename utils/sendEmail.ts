@@ -1,31 +1,19 @@
 import toast from "react-hot-toast";
 import emailjs from "@emailjs/browser";
-import { FormData } from "@/types";
+import { DialogData, FormData } from "@/types";
+import { templateBuilder } from ".";
 
-export const sendEmail = ({
-  firstName,
-  lastName,
-  companyName,
-  email,
-  phoneNumber,
-  message,
-}: FormData) => {
+type sendEmailType = FormData | DialogData;
+
+export  const sendEmail = (data:any) => {
   const serviceID = process.env.NEXT_PUBLIC_SERVICE_ID!;
   const templateID = process.env.NEXT_PUBLIC_TEMPLATE_ID!;
   const serviceKey = process.env.NEXT_PUBLIC_SERVICE_KEY!;
 
-  const emailTemplate = {
-    from_name: email,
-    company: companyName,
-    message: `
-    Hi my name is ${firstName} ${lastName}.\n
-    My Company name is ${companyName}.\n
-    My contacts: ${phoneNumber}.
-    Message: ${message}
-  `,
-  };
+  const template = templateBuilder(data);
+
   const emailjsData = emailjs
-    .send(serviceID, templateID, emailTemplate, serviceKey)
+    .send(serviceID, templateID, template, serviceKey)
     .then(
       (result) => {
         console.log(result.text);
@@ -40,4 +28,4 @@ export const sendEmail = ({
     success: "Your message sent",
     error: "Faield to sent",
   });
-};
+}

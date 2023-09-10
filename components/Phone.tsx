@@ -3,7 +3,7 @@ import { FaPhone } from "react-icons/fa";
 
 const Phone = () => {
   return (
-    <div className="fixed bottom-4 right-4 sm:bottom-5 md:bottom-7 md:right-5">
+    <div className="fixed bottom-4 right-4 overflow-y-visible sm:bottom-5 md:bottom-7 md:right-5">
       <Link
         title="+998900186644"
         about="Phone number"

@@ -9,7 +9,7 @@ interface IDialogProps {
 }
 
 export const DialogComponent = ({
-  isOpen = false,
+  isOpen,
   setIsOpen,
 }: IDialogProps) => {
   return (

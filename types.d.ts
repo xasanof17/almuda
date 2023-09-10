@@ -25,9 +25,9 @@ interface FormData {
   firstName: string;
   lastName: string;
   email: string;
-  companyName: string;
+  companyName?: string;
   phoneNumber: string;
-  message: string;
+  message?: string;
 }
 
 type DialogItem = {
@@ -38,8 +38,8 @@ type DialogItem = {
 interface DialogData {
   businness_activity: Array<DialogItem>;
   premises: Array<DialogItem>;
-  owners: number | "";
-  vizas: number | "";
+  owners: number | string;
+  vizas: number | string;
   firstName?: string;
   lastName?: string;
   phoneNumber?: string;

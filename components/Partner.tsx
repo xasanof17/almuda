@@ -49,7 +49,7 @@ const Partner = () => {
                   src={item}
                   alt="partner-logo"
                   fill
-                  className="objectContain select-none grayscale transition-all duration-300 hover:cursor-pointer hover:grayscale-0"
+                  className="object-contain select-none grayscale transition-all duration-300 hover:cursor-pointer hover:grayscale-0"
                 />
               </div>
             </motion.div>

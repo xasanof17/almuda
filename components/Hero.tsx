@@ -55,7 +55,7 @@ const Hero = () => {
             src={Illustration}
             alt="illustration"
             fill
-            className="objectContain"
+            className="object-contain"
           />
         </motion.div>
       </div>

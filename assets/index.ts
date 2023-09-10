@@ -15,5 +15,6 @@ export { default as IpakBankLogo } from "./ipakbank.svg";
 export { default as HamkorBankLogo } from "./hamkorbank.svg";
 export { default as DavrBankLogo } from "./davrbank.svg";
 export { default as JXLogo } from "./jx.svg";
+export { default as CEOlg } from "./ceo-lg.jpg";
 export { default as CEO } from "./ceo.jpg";
 export { default as Quote } from "./quote.svg";

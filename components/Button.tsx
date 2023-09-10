@@ -1,18 +1,11 @@
 "use client";
 
-import {
-  Dispatch,
-  FC,
-  JSXElementConstructor,
-  ReactElement,
-  ReactNode,
-  SetStateAction,
-} from "react";
+import { Dispatch, FC, SetStateAction } from "react";
 import { IconType } from "react-icons";
 
 interface IButtonProps {
   type: "button" | "reset" | "submit" | undefined;
-  onClick?: Dispatch<SetStateAction<boolean>>;
+  onClick?: () => void | Dispatch<SetStateAction<boolean>>;
   className?: string;
   title?: string;
   text?: string;
@@ -31,7 +24,7 @@ export const Button: FC<IButtonProps> = ({
     <button
       title={title}
       type={type}
-      onClick={() => onClick}
+      onClick={onClick}
       className={className}
     >
       {Icon ? <Icon className="h-7 w-7 text-black" /> : text}

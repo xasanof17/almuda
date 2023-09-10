@@ -68,7 +68,7 @@ const Footer = () => {
                 src={Logo}
                 alt="Al-Muda logo"
                 fill
-                className="objectContain"
+                className="object-contain"
               />
             </div>
           </Link>

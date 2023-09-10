@@ -9,7 +9,7 @@ export default function Loading() {
           src={Logo}
           alt="Al-Muda"
           fill
-          className="objectContain"
+          className="object-contain"
           loading="lazy"
         />
       </div>

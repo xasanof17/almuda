@@ -29,14 +29,7 @@ const Contacts = () => {
     const { firstName, lastName, companyName, email, phoneNumber, message } =
       data;
     try {
-      sendEmail({
-        firstName,
-        lastName,
-        companyName,
-        email,
-        phoneNumber,
-        message,
-      });
+      sendEmail(data);
 
       reset();
     } catch (error) {
