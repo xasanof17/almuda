@@ -1,7 +1,8 @@
+import { StaticImport } from "next/dist/shared/lib/get-img-props";
 import { IconType } from "react-icons";
 
 interface Features {
-  src: ImageData;
+  src: string | StaticImport;
   title: string;
   text: string;
   href: string;
