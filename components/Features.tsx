@@ -14,11 +14,11 @@ const Features = () => {
           online platform considering all the requirements
         </p>
       </div>
-      <div className="grid grid-cols-1 gap-12 lg:gap-[80px] sm:grid-cols-2 lg:grid-cols-3">
+      <div className="grid grid-cols-1 gap-12 sm:grid-cols-2 lg:grid-cols-3 lg:gap-[80px]">
         {features.map(({ src, title, text, href }, i) => (
           <div className="flex flex-col" key={i}>
             <div className="relative mb-7 h-[50px] w-[50px] sm:h-[70px] sm:w-[70px]">
-              <Image src={src} alt="icon" fill className="objectContain"/>
+              <Image src={src} alt="icon" fill className="objectContain" />
             </div>
             <h3 className="mb-3 text-xl font-semibold text-primary sm:text-2xl">
               {title}

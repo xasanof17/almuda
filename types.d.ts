@@ -1,4 +1,4 @@
-import { StaticImport } from "next/dist/shared/lib/get-img-props";
+import { StaticImport } from "next/image";
 import { IconType } from "react-icons";
 
 interface Features {
