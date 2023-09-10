@@ -90,7 +90,7 @@ export const Modal = ({ setIsOpen }: IModalProps) => {
               title="Close"
               onClick={() => setIsOpen((prev) => !prev)}
               className="flex items-center justify-center"
-              children={<MdClose className="h-7 w-7 text-black" />}
+              Icon={MdClose}
             />
           </div>
           <div className="mb-3 flex w-full items-center justify-between border-b-2 border-gray-200 pb-4">

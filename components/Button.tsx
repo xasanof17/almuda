@@ -1,6 +1,7 @@
 "use client";
 
 import { Dispatch, FC, ReactNode, SetStateAction } from "react";
+import { IconType } from "react-icons";
 
 interface IButtonProps {
   type: "button" | "reset" | "submit" | undefined;
@@ -8,7 +9,7 @@ interface IButtonProps {
   className?: string;
   title?: string;
   text?: string;
-  children?: ReactNode;
+  Icon?: IconType;
 }
 
 export const Button: FC<IButtonProps> = ({
@@ -17,7 +18,7 @@ export const Button: FC<IButtonProps> = ({
   className,
   title,
   text,
-  children,
+  Icon,
 }) => {
   return (
     <button
@@ -26,7 +27,7 @@ export const Button: FC<IButtonProps> = ({
       onClick={() => onClick}
       className={className}
     >
-      {children ? children : text}
+      {Icon ? <Icon className="h-7 w-7 text-black" /> : text}
     </button>
   );
 };
