@@ -1,11 +1,12 @@
 import { PriceList } from "@/types";
+import { Button } from "./Button";
 
 const PriceCard = ({ popular, title, price, list }: PriceList) => {
   return (
     <div
       className={`group flex w-full flex-col items-center rounded-xl border md:border-2 ${
         popular ? "border-secondary" : "border-slate-200"
-      } px-4 md:px-5 py-5 md:py-7 transition-all duration-200 ease-out ${
+      } px-4 py-5 transition-all duration-200 ease-out md:px-5 md:py-7 ${
         popular
           ? "shadow-md hover:border-bright hover:bg-transparent"
           : "shadow hover:border-bright"
@@ -18,7 +19,7 @@ const PriceCard = ({ popular, title, price, list }: PriceList) => {
       ) : null}
       <h3
         title={title}
-        className="mb-2 text-lg sm:text-xl font-medium text-primary/70 md:text-2xl"
+        className="mb-2 text-lg font-medium text-primary/70 sm:text-xl md:text-2xl"
       >
         {title}
       </h3>
@@ -29,14 +30,14 @@ const PriceCard = ({ popular, title, price, list }: PriceList) => {
         ${price}
       </span>
 
-      <button
+      <Button
         type="button"
         title="Get Started"
-        className="group-hover:btn-secondary my-6 w-full rounded-lg !border-2 bg-slate-600 !py-2 text-center text-base md:!text-lg font-medium !normal-case text-white"
-      >
-        Get Started
-      </button>
-      <ul className="flex flex-col space-y-3 w-full">
+        className="group-hover:btn-secondary my-6 w-full rounded-lg !border-2 bg-slate-600 !py-2 text-center text-base font-medium !normal-case text-white md:!text-lg"
+        text="Get Started"
+      />
+
+      <ul className="flex w-full flex-col space-y-3">
         {list.map(({ Icon, text, not }, i) => (
           <div title={text} key={i} className="flex items-start space-x-2">
             <Icon

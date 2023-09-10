@@ -3,7 +3,8 @@ import { HeroBg, Illustration } from "@/assets";
 import { motion } from "framer-motion";
 import Image from "next/image";
 import { useState } from "react";
-import { Modal } from "./Modal";
+import { DialogComponent } from "./dialog";
+import { Button } from "./Button";
 
 const Hero = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -25,13 +26,13 @@ const Hero = () => {
           <p className="my-5 text-center text-base font-normal text-primary md:text-start md:text-xl">
             Company setup in Uzbekistan, residency, banking and much more...
           </p>
-          <button
-            onClick={() => setIsOpen((prev) => !prev)}
+          <Button
+            title="Calculate Cost"
             type="button"
-            className="btn-secondary"
-          >
-            Calculate Cost
-          </button>
+            onClick={() => setIsOpen((prev) => !prev)}
+            text="Calculate cost"
+            className="btn-secondary uppercase"
+          />
         </motion.div>
         <motion.div
           transition={{ bounce: 0.25 }}
@@ -58,7 +59,7 @@ const Hero = () => {
           />
         </motion.div>
       </div>
-      <Modal isOpen={isOpen} setIsOpen={setIsOpen} />
+      <DialogComponent isOpen={isOpen} setIsOpen={setIsOpen} />
     </section>
   );
 };

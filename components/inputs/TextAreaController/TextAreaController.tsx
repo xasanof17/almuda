@@ -1,7 +1,7 @@
 import { FC } from "react";
 import { Control, Controller } from "react-hook-form";
 
-interface ITextFieldController {
+interface ITextAreaController {
   control: Control<any>;
   name: string;
   label: string;
@@ -9,7 +9,7 @@ interface ITextFieldController {
   className?: string;
 }
 
-export const TextFieldController: FC<ITextFieldController> = ({
+export const TextAreaController: FC<ITextAreaController> = ({
   control,
   name,
   label,
@@ -24,10 +24,11 @@ export const TextFieldController: FC<ITextFieldController> = ({
       render={({ field }) => (
         <div className={`flex flex-col ${className}`}>
           <label className="label">{label}</label>
-          <input
+          <textarea
             {...field}
             placeholder={placeholder}
-            className="input"
+            rows={4}
+            className="input resize-y"
             autoComplete="true"
           />
         </div>

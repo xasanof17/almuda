@@ -7,6 +7,7 @@ import { MdClose } from "react-icons/md";
 import { usePathname, useRouter } from "next/navigation";
 import Image from "next/image";
 import Link from "next/link";
+import { Button } from "@/components/Button";
 
 const Navbar = () => {
   const [toggleMenu, setMenu] = useState<boolean>(false);
@@ -47,18 +48,20 @@ const Navbar = () => {
               </li>
             ))}
           </ul>
-          <button
+          <Button
+            type="button"
             onClick={() => setMenu((prev) => !prev)}
             className={`${
               toggleMenu ? "fixed right-4 top-5 z-20 md:top-7" : ""
             } ml-4 flex items-center justify-center lg:hidden`}
-          >
-            {toggleMenu ? (
-              <MdClose className="h-7 w-7 text-primary" />
-            ) : (
-              <FiMenu className="h-7 w-7 text-primary" />
-            )}
-          </button>
+            children={
+              toggleMenu ? (
+                <MdClose className="h-7 w-7 text-primary" />
+              ) : (
+                <FiMenu className="h-7 w-7 text-primary" />
+              )
+            }
+          />
         </div>
         {toggleMenu && (
           <div className="min-w-screen fixed inset-0 z-10 flex min-h-screen flex-col items-center justify-center overflow-y-hidden bg-white transition-all duration-300">

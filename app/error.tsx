@@ -1,4 +1,5 @@
 "use client";
+import { Button } from "@/components/Button";
 import type { Metadata } from "next";
 import { useEffect } from "react";
 
@@ -20,19 +21,15 @@ export default function Error({
   }, [error]);
   return (
     <section className="max-w-screen flex h-full min-h-screen w-full flex-col items-center justify-center bg-white">
-      <h1 className="text-2xl lg:text-5xl font-bold text-black mb-3">
+      <h1 className="mb-3 text-2xl font-bold text-black lg:text-5xl">
         500! Something went wrong!
       </h1>
-      <button
+      <Button
         type="button"
-        onClick={
-          // Attempt to recover by trying to re-render the segment
-          () => reset()
-        }
+        onClick={() => reset()}
+        text="Try Again"
         className="rounded-lg bg-primary px-4 py-3 text-lg text-white"
-      >
-        Try Again
-      </button>
+      />
     </section>
   );
 }
