@@ -91,10 +91,10 @@ const Contacts = () => {
         </div>
         <div className="mt-6">
           <Button
-            title="Let's Talk"
+            title="Let&apos;s Talk"
             type="submit"
             className="btn-secondary w-full disabled:opacity-30"
-            text="Let's Talk"
+            text="Let&apos;s Talk"
           />
         </div>
       </form>

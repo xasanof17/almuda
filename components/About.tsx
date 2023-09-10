@@ -17,9 +17,9 @@ const About = () => {
           </div>
           <div className="col-span-2 flex flex-col">
             <Image src={Quote} alt="Quote Icon" width={24} height={24} />
-            <p className="">
+            <p className="text-lg leading-8 tracking-wide my-4 text-left text-grey">
               The healthcare industry has never been so advanced, and yet there
-              are still so many patients who don't receive the right care at the
+              are still so many patients who don&apos;t receive the right care at the
               right time. Infermedica thrives in the face of this global
               challenge by focusing on leading-edge technology to create
               patient-oriented solutions, including reliable symptom assessment,
