@@ -54,13 +54,7 @@ const Navbar = () => {
             className={`${
               toggleMenu ? "fixed right-4 top-5 z-20 md:top-7" : ""
             } ml-4 flex items-center justify-center lg:hidden`}
-            children={
-              toggleMenu ? (
-                <MdClose className="h-7 w-7 text-primary" />
-              ) : (
-                <FiMenu className="h-7 w-7 text-primary" />
-              )
-            }
+            Icon={toggleMenu ? MdClose : FiMenu}
           />
         </div>
         {toggleMenu && (

@@ -1,6 +1,13 @@
 "use client";
 
-import { Dispatch, FC, ReactNode, SetStateAction } from "react";
+import {
+  Dispatch,
+  FC,
+  JSXElementConstructor,
+  ReactElement,
+  ReactNode,
+  SetStateAction,
+} from "react";
 import { IconType } from "react-icons";
 
 interface IButtonProps {
