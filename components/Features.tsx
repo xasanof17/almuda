@@ -18,7 +18,7 @@ const Features = () => {
         {features.map(({ src, title, text, href }, i) => (
           <div className="flex flex-col" key={i}>
             <div className="relative mb-7 h-[50px] w-[50px] sm:h-[70px] sm:w-[70px]">
-              <Image src={src} alt="icon" fill className="object-contain" />
+              <Image src={src} alt="icon" fill className="object-contain" priority/>
             </div>
             <h3 className="mb-3 text-xl font-semibold text-primary sm:text-2xl">
               {title}

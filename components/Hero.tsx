@@ -44,6 +44,7 @@ const Hero = () => {
             className="xl:heroImg pointer-events-none mt-5"
             src={HeroBg}
             alt="hero"
+            priority
           />
         </motion.div>
         <motion.div
@@ -56,6 +57,7 @@ const Hero = () => {
             alt="illustration"
             fill
             className="object-contain"
+            priority
           />
         </motion.div>
       </div>

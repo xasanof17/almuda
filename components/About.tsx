@@ -26,11 +26,12 @@ const About = () => {
               alt="CEO of Almuda"
               fill
               className="rounded-3xl bg-top object-contain"
+              priority
             />
           </div>
         </div>
         <div className="flex flex-col justify-center lg:col-span-2">
-          <Image src={Quote} alt="Quote Icon" width={24} height={24} />
+          <Image src={Quote} alt="Quote Icon" width={24} height={24} priority/>
           <p className="text-grey my-4 text-left text-[17px] leading-6 tracking-wide sm:text-lg sm:leading-8">
             The healthcare industry has never been so advanced, and yet there
             are still so many patients who don&apos;t receive the right care at

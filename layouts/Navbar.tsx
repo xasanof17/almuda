@@ -29,6 +29,7 @@ const Navbar = () => {
               alt="Al-Muda Logo"
               fill
               className="object-contain"
+              priority
             />
           </div>
         </Link>

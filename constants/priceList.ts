@@ -1,9 +1,15 @@
 import { PriceList } from "@/types";
-import { BiSolidCreditCardFront } from "react-icons/bi";
-import { BsBoxFill, BsFillChatDotsFill, BsFire } from "react-icons/bs";
+import { BiSupport } from "react-icons/bi";
+import { BsFire, BsBank } from "react-icons/bs";
 import { FaSmileBeam } from "react-icons/fa";
-import { MdOutlineReport, MdSecurity } from "react-icons/md";
-import { TbSend } from "react-icons/tb";
+import {
+  MdLocalActivity,
+  MdSecurity,
+  MdNewReleases,
+  MdPaid,
+  MdWorkHistory,
+} from "react-icons/md";
+import { FaCcVisa, FaCalendarCheck, FaStamp } from "react-icons/fa6";
 
 export const priceList: PriceList[] = [
   {
@@ -11,7 +17,7 @@ export const priceList: PriceList[] = [
     price: 800,
     list: [
       {
-        Icon: BiSolidCreditCardFront,
+        Icon: BsBank,
         text: "Opening bank account",
       },
       {
@@ -23,7 +29,7 @@ export const priceList: PriceList[] = [
         text: "Multiple shareholders permitted",
       },
       {
-        Icon: TbSend,
+        Icon: MdNewReleases,
         text: "Lease agreement",
         not: true,
       },
@@ -33,37 +39,37 @@ export const priceList: PriceList[] = [
         not: true,
       },
       {
-        Icon: MdOutlineReport,
+        Icon: MdLocalActivity,
         text: "1,000+ Professional Activities available",
         not: true,
       },
       {
-        Icon: BsFillChatDotsFill,
+        Icon: FaCcVisa,
         text: "Visa",
         not: true,
       },
       {
-        Icon: BsBoxFill,
+        Icon: MdWorkHistory,
         text: "Valid work permit",
         not: true,
       },
       {
-        Icon: BsBoxFill,
+        Icon: MdPaid,
         text: "No paid-up share capital",
         not: true,
       },
       {
-        Icon: BsBoxFill,
+        Icon: FaCalendarCheck,
         text: "Guaranteed renewal rate for 1 years!",
         not: true,
       },
       {
-        Icon: BsBoxFill,
+        Icon: FaStamp,
         text: "Free company stamp",
         not: true,
       },
       {
-        Icon: BsBoxFill,
+        Icon: BiSupport,
         text: "24/7 phone, chat and email support",
         not: true,
       },
@@ -75,7 +81,7 @@ export const priceList: PriceList[] = [
     price: 1000,
     list: [
       {
-        Icon: BiSolidCreditCardFront,
+        Icon: BsBank,
         text: "Opening bank account",
       },
       {
@@ -87,7 +93,7 @@ export const priceList: PriceList[] = [
         text: "Multiple shareholders permitted",
       },
       {
-        Icon: TbSend,
+        Icon: MdNewReleases,
         text: "Lease agreement",
       },
       {
@@ -95,35 +101,36 @@ export const priceList: PriceList[] = [
         text: "100% foreign ownership",
       },
       {
-        Icon: MdOutlineReport,
+        Icon: MdLocalActivity,
         text: "1,000+ Professional Activities available",
       },
       {
-        Icon: BsFillChatDotsFill,
+        Icon: FaCcVisa,
         text: "Visa",
+        not: true,
       },
       {
-        Icon: BsBoxFill,
+        Icon: MdWorkHistory,
         text: "Valid work permit",
         not: true,
       },
       {
-        Icon: BsBoxFill,
+        Icon: MdPaid,
         text: "No paid-up share capital",
         not: true,
       },
       {
-        Icon: BsBoxFill,
+        Icon: FaCalendarCheck,
         text: "Guaranteed renewal rate for 1 years!",
         not: true,
       },
       {
-        Icon: BsBoxFill,
+        Icon: FaStamp,
         text: "Free company stamp",
         not: true,
       },
       {
-        Icon: BsBoxFill,
+        Icon: BiSupport,
         text: "24/7 phone, chat and email support",
         not: true,
       },
@@ -134,7 +141,7 @@ export const priceList: PriceList[] = [
     price: 1500,
     list: [
       {
-        Icon: BiSolidCreditCardFront,
+        Icon: BsBank,
         text: "Opening bank account",
       },
       {
@@ -146,7 +153,7 @@ export const priceList: PriceList[] = [
         text: "Multiple shareholders permitted",
       },
       {
-        Icon: TbSend,
+        Icon: MdNewReleases,
         text: "Lease agreement",
       },
       {
@@ -154,36 +161,32 @@ export const priceList: PriceList[] = [
         text: "100% foreign ownership",
       },
       {
-        Icon: MdOutlineReport,
+        Icon: MdLocalActivity,
         text: "1,000+ Professional Activities available",
       },
       {
-        Icon: BsFillChatDotsFill,
+        Icon: FaCcVisa,
         text: "Visa",
       },
       {
-        Icon: BsBoxFill,
+        Icon: MdWorkHistory,
         text: "Valid work permit",
       },
       {
-        Icon: BsBoxFill,
+        Icon: MdPaid,
         text: "No paid-up share capital",
-        not: true,
       },
       {
-        Icon: BsBoxFill,
+        Icon: FaCalendarCheck,
         text: "Guaranteed renewal rate for 1 years!",
-        not: true,
       },
       {
-        Icon: BsBoxFill,
+        Icon: FaStamp,
         text: "Free company stamp",
-        not: true,
       },
       {
-        Icon: BsBoxFill,
+        Icon: BiSupport,
         text: "24/7 phone, chat and email support",
-        not: true,
       },
     ],
   },

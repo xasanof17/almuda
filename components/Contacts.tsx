@@ -26,8 +26,6 @@ const Contacts = () => {
   const onSubmit: SubmitHandler<FormData> = (data, event) => {
     event?.preventDefault();
 
-    const { firstName, lastName, companyName, email, phoneNumber, message } =
-      data;
     try {
       sendEmail(data);
 

@@ -33,7 +33,7 @@ const PriceCard = ({ popular, title, price, list }: PriceList) => {
       <Button
         type="button"
         title="Get Started"
-        className="group-hover:btn-secondary my-6 w-full rounded-lg !border-2 bg-slate-600 !py-2 text-center text-base font-medium !normal-case text-white md:!text-lg"
+        className="group-hover:btn-secondary my-6 w-full rounded-lg !border-2 border-transparent bg-slate-600 !py-2 text-center text-base font-medium !normal-case text-white md:!text-lg"
         text="Get Started"
       />
 

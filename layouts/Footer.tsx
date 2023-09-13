@@ -131,7 +131,7 @@ const Footer = () => {
       </div>
       <div className="mt-8 flex w-full items-center justify-center space-x-1 border-t-2 py-5">
         <p className="muted text-base font-medium md:text-lg">
-          &copy; All rights reserved.
+          &copy; All rights reserved {currentYear}.
         </p>
         <Link
           href="https://portfoliowebapp.vercel.app"

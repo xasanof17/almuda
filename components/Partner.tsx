@@ -50,6 +50,7 @@ const Partner = () => {
                   alt="partner-logo"
                   fill
                   className="object-contain select-none grayscale transition-all duration-300 hover:cursor-pointer hover:grayscale-0"
+                  priority
                 />
               </div>
             </motion.div>

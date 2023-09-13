@@ -3,9 +3,7 @@ import emailjs from "@emailjs/browser";
 import { DialogData, FormData } from "@/types";
 import { templateBuilder } from ".";
 
-type sendEmailType = FormData | DialogData;
-
-export  const sendEmail = (data:any) => {
+export const sendEmail = (data: any) => {
   const serviceID = process.env.NEXT_PUBLIC_SERVICE_ID!;
   const templateID = process.env.NEXT_PUBLIC_TEMPLATE_ID!;
   const serviceKey = process.env.NEXT_PUBLIC_SERVICE_KEY!;
@@ -28,4 +26,4 @@ export  const sendEmail = (data:any) => {
     success: "Your message sent",
     error: "Faield to sent",
   });
-}
+};
