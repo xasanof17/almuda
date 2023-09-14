@@ -17,7 +17,7 @@ const Contacts = () => {
       firstName: "",
       lastName: "",
       email: "",
-      companyName: "",
+      subject: "",
       phoneNumber: "",
       message: "Hi there, ",
     },
@@ -58,7 +58,7 @@ const Contacts = () => {
           <TextFieldController
             label="Company"
             control={control}
-            name="companyName"
+            name="subject"
             className="sm:col-span-2"
           />
           <TextFieldController
@@ -86,6 +86,7 @@ const Contacts = () => {
             type="submit"
             className="btn-secondary w-full disabled:opacity-30"
             text="Let&apos;s Talk"
+            isLoading={isLoading}
           />
         </div>
       </form>

@@ -10,6 +10,7 @@ interface IButtonProps {
   title?: string;
   text?: string;
   Icon?: IconType;
+  isLoading?: boolean;
 }
 
 export const Button: FC<IButtonProps> = ({
@@ -19,15 +20,17 @@ export const Button: FC<IButtonProps> = ({
   title,
   text,
   Icon,
+  isLoading,
 }) => {
   return (
-    <button
-      title={title}
-      type={type}
-      onClick={onClick}
-      className={className}
-    >
-      {Icon ? <Icon className="h-7 w-7 text-black" /> : text}
+    <button title={title} type={type} onClick={onClick} className={className}>
+      {Icon ? (
+        <Icon className="h-7 w-7 text-black" />
+      ) : !isLoading ? (
+        text
+      ) : (
+        "Loading..."
+      )}
     </button>
   );
 };
