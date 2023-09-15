@@ -1,4 +1,4 @@
-import { JXLogo, Logo } from "@/assets";
+import { Logo } from "@/assets";
 import { links } from "@/constants";
 import Image from "next/image";
 import Link from "next/link";
@@ -9,7 +9,6 @@ import {
   FaInstagram,
   FaLinkedinIn,
   FaTelegramPlane,
-  FaTwitter,
 } from "react-icons/fa";
 import { FiMail, FiMapPin, FiPhone } from "react-icons/fi";
 
