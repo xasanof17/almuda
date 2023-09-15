@@ -38,7 +38,6 @@ export const Modal = ({ setIsOpen }: IModalProps) => {
       phoneNumber,
       email,
     } = data;
-    console.log(data);
 
     try {
       sendEmail(data);
