@@ -12,7 +12,7 @@ export const links = [
     href: "/careers",
   },
   {
-    title: "Contacts",
-    href: "/contacts",
+    title: "Contact",
+    href: "/contact",
   },
 ];
