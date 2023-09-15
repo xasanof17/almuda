@@ -5,7 +5,7 @@ export default function manifest(): MetadataRoute.Manifest {
     name: "almudacompany.com",
     short_name: "almudacompany.com",
     description:
-      "Quality, reliable and honest accounting services for your business.",
+      "Quality, reliable and honest accounting services for your business. Start your business in Uzbekistan.",
     start_url: "/",
     display: "browser",
     background_color: "#fff",

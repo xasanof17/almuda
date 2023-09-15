@@ -14,7 +14,7 @@ const inter = Inter({
 export const metadata: Metadata = {
   title: {
     default: "almudacompany.com",
-    template: "%s | Almuda",
+    template: "%s | almudacompany.com",
   },
   generator: "Next.js",
   description:
@@ -28,7 +28,7 @@ export const metadata: Metadata = {
   creator: "JX Team",
   abstract:
     "Quality, reliable and honest accounting services for your business.",
-  applicationName: "Almuda Company",
+  applicationName: "almudacompany.com",
   alternates: {
     canonical: "https://almudacompany.com",
   },
@@ -41,7 +41,7 @@ export const metadata: Metadata = {
     title: "Almuda Company",
     countryName: "Uzbekistan",
     description:
-      "Quality, reliable and honest accounting services for your business.",
+      "Quality, reliable and honest accounting services for your business. Start your business in Uzbekistan.",
     siteName: "www.almudacompany.com",
     url: "www.almudacompany.com",
     emails: ["info@almuda.uz", "xasanof17@gmail.com"],
