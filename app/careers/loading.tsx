@@ -1,5 +1,10 @@
 import { Logo } from "@/assets";
+import { Metadata } from "next";
 import Image from "next/image";
+
+export const metadata: Metadata = {
+  title: "Careers loading...",
+};
 
 export default function CareersLoading() {
   return (

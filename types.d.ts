@@ -5,7 +5,6 @@ interface Features {
   src: string | StaticImport;
   title: string;
   text: string;
-  href: string;
 }
 
 type PriceItem = {

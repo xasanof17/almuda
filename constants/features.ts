@@ -4,20 +4,22 @@ import { Features } from "@/types";
 export const features: Features[] = [
   {
     src: Discount,
-    title: "Affordable Pricing",
-    text: `A dictionary of over 200 Latin words,with a handful of model sentence. structures, to generate Lorem Ipsum`,
-    href: "/",
+    title: "Gather Information",
+    text: `Analyse your business & competition`,
   },
   {
     src: Reliability,
-    title: "Seamless Reliability",
-    text: `A dictionary of over 200 Latin words,with a handful of model sentence. structures, to generate Lorem Ipsum`,
-    href: "/",
+    title: "Register Your Business",
+    text: `Decide the category of your business and register it.`,
   },
   {
     src: Secure,
-    title: "Secure Collaboration",
-    text: `A dictionary of over 200 Latin words,with a handful of model sentence. structures, to generate Lorem Ipsum`,
-    href: "/",
+    title: "Launch Your Business",
+    text: `Renting office, Press Release, Website Design`,
+  },
+  {
+    src: Secure,
+    title: "Build Your Team",
+    text: `Recruit and train competent professionals.`,
   },
 ];

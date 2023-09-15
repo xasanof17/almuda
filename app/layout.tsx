@@ -13,7 +13,7 @@ const inter = Inter({
 
 export const metadata: Metadata = {
   title: {
-    default: "Almuda - Start Your Business in the Uzbekistan.",
+    default: "almudacompany.com",
     template: "%s | Almuda",
   },
   generator: "Next.js",
@@ -21,40 +21,37 @@ export const metadata: Metadata = {
     "Quality, reliable and honest accounting services for your business.",
   authors: [
     {
-      name: "Xasanov Javohir",
+      name: "JX Team",
       url: "https://portfoliowebapp.vercel.app",
     },
   ],
+  creator: "JX Team",
+  abstract:
+    "Quality, reliable and honest accounting services for your business.",
+  applicationName: "Almuda Company",
+  alternates: {
+    canonical: "https://almudacompany.com",
+  },
+  manifest: "https://almudacompany.com/manifest.json",
+  publisher: "Hostinger",
+  robots: "index, follow",
   keywords: keywords,
-  // robots: {
-  //   index: false,
-  //   follow: true,
-  //   nocache: true,
-  //   googleBot: {
-  //     index: true,
-  //     follow: false,
-  //     noimageindex: true,
-  //     "max-video-preview": -1,
-  //     "max-image-preview": "large",
-  //     "max-snippet": -1,
-  //   },
-  // },
-  // metadataBase: new URL(`${process.env.VERCEL_URL}`),
-  applicationName: "Almuda",
-  category: "accounting website",
-  creator: "Xasanov Javohir",
-  publisher: "Xasanov Javohir",
-  // openGraph: {
-  //   type: "website",
-  //   countryName: "Uzbekistan",
-  //   emails: ["info@almuda.uz", "xasanof17@gmail.com"],
-  //   description: "Start Your Business in the Uzbekistan.",
-  //   phoneNumbers: ["+998900186644", "+998900198505"],
-  //   siteName: "Almuda",
-  //   title: "Almuda",
-  //   url: "https://almuda.vercel.app",
-  //   images: "/vercel.svg",
-  // },
+  openGraph: {
+    type: "website",
+    title: "Almuda Company",
+    countryName: "Uzbekistan",
+    description:
+      "Quality, reliable and honest accounting services for your business.",
+    siteName: "www.almudacompany.com",
+    url: "www.almudacompany.com",
+    emails: ["info@almuda.uz", "xasanof17@gmail.com"],
+    phoneNumbers: ["+998900198505"],
+  },
+  icons: {
+    shortcut: "/icon.svg",
+    icon: "/icon.svg",
+    apple: "/apple-icon.svg",
+  },
 };
 
 export default function RootLayout({

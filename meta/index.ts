@@ -1,9 +1,10 @@
 const keywords = [
   "Almuda",
-  "almuda",
-  "almuda in uzbekistan",
-  "almuda uzbekistan",
-  "almuda accounting",
+  "Almuda company",
+  "almuda company",
+  "almuda company in uzbekistan",
+  "almuda company uzbekistan",
+  "almuda accounting service",
   "start business in uzbekistan",
   "accounting in uzbekistan",
   "accounting",
@@ -16,14 +17,8 @@ const keywords = [
   "bugalter servis",
   "bugalteriya xizmatlari",
   "buxgalteriya xizmatlari",
-  "xasanov javohir",
-  "web developer",
-  "nextjs applications",
   "accounting designs",
   "accounting websites designs",
-  "accounting website with nextjs",
-  "web developer",
-  "nextjs developer",
 ];
 
 export { keywords };

@@ -28,7 +28,7 @@ export default function Error({
         type="button"
         onClick={() => reset()}
         text="Try Again"
-        className="rounded-lg bg-primary px-4 py-3 text-lg text-white"
+        className="btn-primary"
       />
     </section>
   );
