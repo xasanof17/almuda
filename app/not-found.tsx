@@ -21,7 +21,7 @@ export default function NotFound() {
               Go back home
             </Link>
             <Link
-              href="/contacts"
+              href="/contact"
               className="text-lg font-semibold text-gray-900"
             >
               Contact support <span aria-hidden="true">&rarr;</span>

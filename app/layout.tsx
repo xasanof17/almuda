@@ -46,6 +46,12 @@ export const metadata: Metadata = {
     url: "www.almudacompany.com",
     emails: ["info@almuda.uz", "xasanof17@gmail.com"],
     phoneNumbers: ["+998900198505"],
+    images: {
+      url: "/opengraph-image.png",
+      type: "image/png",
+      width: 300,
+      height: 400,
+    },
   },
   icons: {
     shortcut: "/icon.svg",

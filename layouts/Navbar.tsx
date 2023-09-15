@@ -4,7 +4,7 @@ import { Logo } from "@/assets";
 import { links } from "@/constants";
 import { FiMenu } from "react-icons/fi";
 import { MdClose } from "react-icons/md";
-import { usePathname, useRouter } from "next/navigation";
+import { usePathname } from "next/navigation";
 import Image from "next/image";
 import Link from "next/link";
 import { Button } from "@/components/Button";
@@ -12,7 +12,6 @@ import { Button } from "@/components/Button";
 const Navbar = () => {
   const [toggleMenu, setMenu] = useState<boolean>(false);
   const pathname = usePathname();
-  const router = useRouter();
 
   return (
     <header className="sticky left-0 top-0 z-10 w-full py-3 backdrop-blur-lg sm:py-5">

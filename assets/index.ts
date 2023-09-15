@@ -1,4 +1,4 @@
-export { default as Logo } from "./almuda.png";
+export { default as Logo } from "./almuda.svg";
 export { default as HeroBg } from "./hero.svg";
 export { default as Discount } from "./discount.svg";
 export { default as Reliability } from "./reliability.svg";
