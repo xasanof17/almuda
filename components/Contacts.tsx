@@ -36,8 +36,12 @@ const Contacts = () => {
   };
   return (
     <div className="flex flex-col items-center justify-center">
-      <h2 className="title">Contact Us</h2>
-      <p className="txt">We will happy with your questions</p>
+      <h2 className="title" title="Contact Us">
+        Contact Us
+      </h2>
+      <p className="txt" title="We will happy with your questions">
+        We will happy with your questions
+      </p>
 
       <form
         onSubmit={handleSubmit(onSubmit)}
@@ -82,10 +86,10 @@ const Contacts = () => {
         </div>
         <div className="mt-6">
           <Button
-            title="Let&apos;s Talk"
+            title="Let's Talk"
             type="submit"
             className="btn-secondary w-full disabled:opacity-30"
-            text="Let&apos;s Talk"
+            text="Let's Talk"
             isLoading={isLoading}
           />
         </div>

@@ -28,17 +28,6 @@ export const Modal = ({ setIsOpen }: IModalProps) => {
   const onSubmit: SubmitHandler<DialogData> = (data, event) => {
     event?.preventDefault();
 
-    const {
-      businness_activity,
-      premises,
-      owners,
-      vizas,
-      firstName,
-      lastName,
-      phoneNumber,
-      email,
-    } = data;
-
     try {
       sendEmail(data);
 
@@ -96,10 +85,16 @@ export const Modal = ({ setIsOpen }: IModalProps) => {
             />
           </div>
           <div className="mb-3 flex w-full items-center justify-between border-b-2 border-gray-200 pb-4">
-            <h3 className="text-base font-medium text-gray-800 sm:text-xl">
+            <h3
+              title="Cost Calculator"
+              className="text-base font-medium text-gray-800 sm:text-xl"
+            >
               Cost Calculator
             </h3>
-            <p className="text-sm font-normal text-slate-700 sm:text-lg">
+            <p
+              title={`Step ${!tab ? "1 of 2" : "2 of 2"}`}
+              className="text-sm font-normal text-slate-700 sm:text-lg"
+            >
               Step {!tab ? "1 of 2" : "2 of 2"}
             </p>
           </div>

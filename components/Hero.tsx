@@ -14,16 +14,25 @@ const Hero = () => {
         <motion.div
           animate={{ x: 0, opacity: 1 }}
           initial={{ x: "-50%", opacity: 0 }}
-          transition={{ bounce: 0.25 }}
+          transition={{ bounce: 0.25, delay: 0.25, duration: 0.25 }}
           className="flex flex-col items-center md:items-start"
         >
-          <span className="mb-3 text-lg font-semibold text-primary md:text-2xl">
+          <span
+            title="It's time to get decisive"
+            className="mb-3 text-lg font-semibold text-primary md:text-2xl"
+          >
             It{"\u2019"}s time to get decisive!
           </span>
-          <h1 className="w-full max-w-[700px] text-center text-3xl font-semibold text-primary md:text-start md:text-5xl lg:text-7xl 2xl:max-w-3xl">
+          <h1
+            title="Start your business in the Uzbekistan"
+            className="w-full max-w-[700px] text-center text-3xl font-semibold text-primary md:text-start md:text-5xl lg:text-7xl 2xl:max-w-3xl"
+          >
             Start Your Business in the Uzbekistan
           </h1>
-          <p className="my-5 text-center text-base font-normal text-primary md:text-start md:text-xl">
+          <p
+            title="Company setup in Uzbekistan, residency, banking and much more..."
+            className="my-5 text-center text-base font-normal text-primary md:text-start md:text-xl"
+          >
             Company setup in Uzbekistan, residency, banking and much more...
           </p>
           <Button

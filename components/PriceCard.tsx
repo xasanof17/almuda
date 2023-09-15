@@ -26,6 +26,9 @@ const PriceCard = ({ popular, title, price, list }: PriceList) => {
       <span
         title={`$${price}`}
         className="text-4xl font-bold text-primary md:text-5xl"
+        style={{
+          fontVariantNumeric: "tabular-nums",
+        }}
       >
         ${price}
       </span>
@@ -39,19 +42,19 @@ const PriceCard = ({ popular, title, price, list }: PriceList) => {
 
       <ul className="flex w-full flex-col space-y-3">
         {list.map(({ Icon, text, not }, i) => (
-          <div title={text} key={i} className="flex items-start space-x-2">
+          <li title={text} key={i} className="flex items-start space-x-2">
             <Icon
               fontSize={20}
               className={`block ${not ? "muted" : "text-primary"}`}
             />
-            <p
+            <span
               className={`inline text-base font-normal ${
                 not ? "muted line-through" : "text-primary"
               }`}
             >
               {text}
-            </p>
-          </div>
+            </span>
+          </li>
         ))}
       </ul>
     </div>

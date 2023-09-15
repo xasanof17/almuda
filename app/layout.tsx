@@ -36,6 +36,7 @@ export const metadata: Metadata = {
   publisher: "Hostinger",
   robots: "index, follow",
   keywords: keywords,
+  metadataBase: new URL("https://almudacompany.com"),
   openGraph: {
     type: "website",
     title: "Almuda Company",

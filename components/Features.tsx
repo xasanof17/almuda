@@ -8,7 +8,11 @@ const Features = () => {
         <h2 title="Our special features" className="title">
           Our Special Features
         </h2>
-        <p className="txt">
+        <p
+          className="txt"
+          title="We are familiar with offline speed dating flow so we designed out
+          online platform considering all the requirements"
+        >
           We are familiar with offline speed dating flow so we designed out
           online platform considering all the requirements
         </p>
@@ -25,10 +29,16 @@ const Features = () => {
                 priority
               />
             </div>
-            <h3 className="mb-3 text-xl font-semibold text-primary sm:text-2xl">
+            <h3
+              title={title}
+              className="mb-3 text-xl font-semibold text-primary sm:text-2xl"
+            >
               {title}
             </h3>
-            <p className="mb-3 text-base font-normal text-primary md:mb-7">
+            <p
+              title={text}
+              className="mb-3 text-base font-normal text-primary md:mb-7"
+            >
               {text}
             </p>
           </div>

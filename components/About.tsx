@@ -31,7 +31,7 @@ const About = () => {
           </div>
         </div>
         <div className="flex flex-col justify-center lg:col-span-2">
-          <Image src={Quote} alt="Quote Icon" width={24} height={24} priority/>
+          <Image src={Quote} alt="Quote Icon" width={24} height={24} priority />
           <p className="text-grey my-4 text-left text-[17px] leading-6 tracking-wide sm:text-lg sm:leading-8">
             The healthcare industry has never been so advanced, and yet there
             are still so many patients who don&apos;t receive the right care at
@@ -41,10 +41,16 @@ const About = () => {
             which significantly improves patient flow and enhances patient
             satisfaction.
           </p>
-          <h3 className="text-xl font-bold tracking-wide text-secondary sm:text-2xl sm:leading-9">
+          <h3
+            title="Oisha Rakhimova"
+            className="text-xl font-bold tracking-wide text-secondary sm:text-2xl sm:leading-9"
+          >
             Oisha Rakhimova
           </h3>
-          <p className="text-grey text-left text-[17px] leading-6 tracking-wide sm:text-lg sm:leading-8">
+          <p
+            title="Almuda CEO"
+            className="text-grey text-left text-[17px] leading-6 tracking-wide sm:text-lg sm:leading-8"
+          >
             Almuda CEO
           </p>
         </div>

@@ -31,8 +31,13 @@ const Partner = () => {
     <section id="partner" className="my-32 md:my-40">
       <div className="container">
         <div className="flex flex-col items-center justify-center">
-          <h2 className="title">Our Partners</h2>
-          <p className="txt">
+          <h2 title="Our Partners" className="title">
+            Our Partners
+          </h2>
+          <p
+            title="You can believe us. We will improve your business skills."
+            className="txt"
+          >
             You can believe us. We will improve your business skills.
           </p>
         </div>
@@ -49,7 +54,7 @@ const Partner = () => {
                   src={item}
                   alt="partner-logo"
                   fill
-                  className="object-contain select-none grayscale transition-all duration-300 hover:cursor-pointer hover:grayscale-0"
+                  className="select-none object-contain grayscale transition-all duration-300 hover:cursor-pointer hover:grayscale-0"
                   priority
                 />
               </div>
