@@ -34,9 +34,16 @@ export const metadata: Metadata = {
   },
   manifest: "https://almudacompany.com/manifest.json",
   publisher: "Hostinger",
-  robots: "index, follow",
   keywords: keywords,
   metadataBase: new URL("https://almudacompany.com"),
+  verification: {
+    google:
+      "google-site-verification=uyYXlCrcokD1MeNuwaj9tMJVFJfd11f7d5-9HRtsaG0",
+    yandex: "3cea10c7008b5c14",
+    
+    me: "https://almudacompany.com",
+  },
+  referrer: "origin-when-cross-origin",
   openGraph: {
     type: "website",
     title: "Almuda Company",
@@ -54,6 +61,20 @@ export const metadata: Metadata = {
       height: 400,
     },
   },
+  robots: {
+    index: false,
+    follow: true,
+    nocache: true,
+    googleBot: {
+      index: true,
+      follow: false,
+      noimageindex: true,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
+  },
+  themeColor: "white",
   icons: {
     shortcut: "/icon.svg",
     icon: "/icon.svg",
