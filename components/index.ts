@@ -7,3 +7,6 @@ export { default as Analytics } from "./Analytics";
 export { default as About } from "./About";
 export { default as Careers } from "./Careers";
 export { default as Contacts } from "./Contacts";
+export { default as Faq } from "./Faq";
+export { default as Banner } from "./Banner";
+export { default as WhatWeCanDo } from "./WhatCanWeDo";

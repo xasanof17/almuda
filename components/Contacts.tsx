@@ -5,6 +5,7 @@ import { PhoneInputController, TextAreaController } from "./inputs";
 import { sendEmail } from "@/utils";
 import { FormData } from "@/types";
 import { Button } from "./Button";
+import { Banner } from ".";
 
 const Contacts = () => {
   const {
@@ -36,17 +37,7 @@ const Contacts = () => {
   };
   return (
     <div className="flex flex-col">
-      <div className="flex flex-col items-center justify-center">
-        <h2 className="title text-center" title="Contact Us">
-          Contact Us
-        </h2>
-        <p
-          className="txt text-center"
-          title="We will happy with your questions"
-        >
-          We will happy with your questions
-        </p>
-      </div>
+      <Banner title="Contact" text="Welcome to our Contact page" />
 
       <form
         onSubmit={handleSubmit(onSubmit)}

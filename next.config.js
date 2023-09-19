@@ -22,6 +22,9 @@ const nextConfig = {
   poweredByHeader: true,
   generateEtags: true,
   swcMinify: true,
+  images: {
+    domains: ["www.decisivezone.ae"],
+  },
 };
 
 module.exports = nextConfig;

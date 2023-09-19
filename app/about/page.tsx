@@ -16,9 +16,7 @@ export const metadata: Metadata = {
 export default function AboutPage() {
   return (
     <section id="about" className="my-20">
-      <div className="container">
-        <About />
-      </div>
+      <About />
     </section>
   );
 }
