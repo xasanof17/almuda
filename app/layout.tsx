@@ -38,7 +38,7 @@ export const metadata: Metadata = {
   metadataBase: new URL("https://almudacompany.com"),
   verification: {
     google:
-      "google-site-verification=uyYXlCrcokD1MeNuwaj9tMJVFJfd11f7d5-9HRtsaG0",
+      "uyYXlCrcokD1MeNuwaj9tMJVFJfd11f7d5-9HRtsaG0",
     yandex: "3cea10c7008b5c14",
     
     me: "https://almudacompany.com",
