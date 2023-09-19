@@ -2,4 +2,6 @@
 
 To see more about Almuda, take a look at the following resources:
 
-- [Almuda website](https://almuda.vercel.app/) - lear about Almuda's features and learn how to start business.
+- [Almuda website](https://almudacompany/) - learn about Almuda's features and learn how to start business.
+
+![OpenGraph image](https://www.almudacompany.com/opengraph-image.png)
