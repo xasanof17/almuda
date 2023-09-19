@@ -8,10 +8,7 @@ interface IDialogProps {
   setIsOpen: Dispatch<SetStateAction<boolean>>;
 }
 
-export const DialogComponent = ({
-  isOpen,
-  setIsOpen,
-}: IDialogProps) => {
+export const DialogComponent = ({ isOpen, setIsOpen }: IDialogProps) => {
   return (
     <AnimatePresence>
       <Dialog
@@ -20,7 +17,7 @@ export const DialogComponent = ({
         as="section"
         className="fixed inset-0 z-10 flex items-center justify-center overflow-y-hidden"
       >
-        <div className="flex flex-col px-4 py-8 text-center">
+        <div className="flex flex-col items-center justify-center px-2 py-8 text-center">
           <Dialog.Overlay />
           <div className="fixed inset-0 transition-opacity" aria-hidden="true">
             <div className="absolute inset-0 bg-primary/50 opacity-90"></div>
