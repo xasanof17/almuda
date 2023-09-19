@@ -129,7 +129,7 @@ const Footer = () => {
           </ul>
         </div>
       </div>
-      <div className="mt-8 flex w-full items-center justify-center space-x-1 border-t-2 py-5">
+      <div className="mt-8 flex w-full flex-col items-center justify-center space-x-1 border-t-2 py-5 md:flex-row">
         <p className="muted text-base font-medium md:text-lg">
           &copy; All rights reserved {currentYear}.
         </p>

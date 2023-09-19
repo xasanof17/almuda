@@ -15,10 +15,10 @@ const AboutProvides = () => {
           establishing a company in Uzbekistan: Not only do we advise you on the
           corporate structure and jurisdiction to choose from, but we also make
           sure to cover all technical, administrative and financial aspects of
-          Uzbekistan business setup Your business setup journey doesn't stop
+          Uzbekistan business setup Your business setup journey doesn&apos;t stop
           there, which is why we offer additional services to get your business
           up and running after the establishment. We can help you with your
-          company's accounting, marketing, HR and much more
+          company&apos;s accounting, marketing, HR and much more
         </p>
       </div>
       <div className="relative h-[400px] w-full sm:h-[480px] lg:h-[400px] xl:h-[450px]">
