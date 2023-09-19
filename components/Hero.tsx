@@ -18,7 +18,7 @@ const Hero = () => {
           className="flex flex-col items-center md:items-start"
         >
           <span
-            title="It's time to get decisive"
+            title="It&apos;s time to get decisive"
             className="mb-3 text-lg font-semibold text-primary md:text-2xl"
           >
             It{"\u2019"}s time to get decisive!

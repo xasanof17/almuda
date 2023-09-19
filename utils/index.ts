@@ -1,2 +1,2 @@
 export * from "./sendEmail";
-export * from './templateBuilder'
+export * from "./templateBuilder";
