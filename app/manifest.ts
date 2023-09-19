@@ -2,8 +2,8 @@ import { MetadataRoute } from "next";
 
 export default function manifest(): MetadataRoute.Manifest {
   return {
-    name: "almudacompany.com",
-    short_name: "almudacompany.com",
+    name: "Almuda Company",
+    short_name: "Almuda Company",
     description:
       "Quality, reliable and honest accounting services for your business. Start your business in Uzbekistan.",
     start_url: "/",

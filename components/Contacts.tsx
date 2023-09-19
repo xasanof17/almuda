@@ -35,17 +35,22 @@ const Contacts = () => {
     }
   };
   return (
-    <div className="flex flex-col items-center justify-center">
-      <h2 className="title" title="Contact Us">
-        Contact Us
-      </h2>
-      <p className="txt" title="We will happy with your questions">
-        We will happy with your questions
-      </p>
+    <div className="flex flex-col">
+      <div className="flex flex-col items-center justify-center">
+        <h2 className="title text-center" title="Contact Us">
+          Contact Us
+        </h2>
+        <p
+          className="txt text-center"
+          title="We will happy with your questions"
+        >
+          We will happy with your questions
+        </p>
+      </div>
 
       <form
         onSubmit={handleSubmit(onSubmit)}
-        className="mx-auto mt-16 max-w-xl sm:mt-20"
+        className="mt-16 max-w-xl sm:mx-auto sm:mt-20"
       >
         <div className="grid grid-cols-1 gap-x-8 gap-y-6 sm:grid-cols-2">
           <TextFieldController

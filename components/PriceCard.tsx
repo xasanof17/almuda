@@ -36,13 +36,13 @@ const PriceCard = ({ popular, title, price, list }: PriceList) => {
       <Button
         type="button"
         title="Get Started"
-        className="group-hover:btn-secondary my-6 w-full rounded-lg !border-2 border-transparent bg-slate-600 !py-2 text-center text-base font-medium !normal-case text-white md:!text-lg"
+        className="group-hover:btn-secondary my-6 w-full rounded-lg !border-2 border-transparent bg-slate-400 !py-2 text-center text-base font-medium !normal-case text-white md:!text-lg"
         text="Get Started"
       />
 
       <ul className="flex w-full flex-col space-y-3">
         {list.map(({ Icon, text, not }, i) => (
-          <li title={text} key={i} className="flex items-start space-x-2">
+          <li title={text} key={i} className="flex items-center space-x-2">
             <Icon
               fontSize={20}
               className={`block ${not ? "muted" : "text-primary"}`}
