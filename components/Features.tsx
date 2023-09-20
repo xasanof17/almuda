@@ -20,15 +20,6 @@ const data = [
   ],
 ];
 
-const Item = ({ item, key }: { item: string; key: number }) => {
-  return (
-    <li className="flex items-start space-x-2" key={key}>
-      <BiSolidCheckCircle className="block text-[20px] text-primary" />
-      <span className="inline-block text-base text-primary">{item}</span>
-    </li>
-  );
-};
-
 const Features = () => {
   return (
     <section className="container my-20 md:my-40">
@@ -80,7 +71,12 @@ const Features = () => {
               "Find and set up a new office as soon as possible",
               "Swiftly assemble and reinforce squads",
             ].map((item, i) => (
-              <Item item={item} key={i} />
+              <li className="flex items-start space-x-2" key={i}>
+                <BiSolidCheckCircle className="block text-[20px] text-primary" />
+                <span className="inline-block text-base text-primary">
+                  {item}
+                </span>
+              </li>
             ))}
           </ul>
         </div>
@@ -91,7 +87,12 @@ const Features = () => {
               "Secure paperwork and documentation.",
               "We promise a quick hassle free process",
             ].map((item, i) => (
-              <Item item={item} key={i} />
+              <li className="flex items-start space-x-2" key={i}>
+                <BiSolidCheckCircle className="block text-[20px] text-primary" />
+                <span className="inline-block text-base text-primary">
+                  {item}
+                </span>
+              </li>
             ))}
           </ul>
         </div>
@@ -101,7 +102,12 @@ const Features = () => {
               "Sustainability of the business and optimum ROI.",
               "Customised services that meet your precise needs.",
             ].map((item, i) => (
-              <Item item={item} key={i} />
+              <li className="flex items-start space-x-2" key={i}>
+                <BiSolidCheckCircle className="block text-[20px] text-primary" />
+                <span className="inline-block text-base text-primary">
+                  {item}
+                </span>
+              </li>
             ))}
           </ul>
         </div>
