@@ -1,4 +1,5 @@
 import "./globals.css";
+import { Analytics as VercelAnalytics } from "@vercel/analytics/react";
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import { Footer, Navbar } from "@/layouts";
@@ -97,6 +98,7 @@ export default function RootLayout({
         <Phone />
         <Footer />
         <Toaster position="top-right" reverseOrder gutter={1.5} />
+        <Analytics />
       </body>
     </html>
   );
