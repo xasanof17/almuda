@@ -7,7 +7,7 @@ declare global {
 
 export default function Analytics() {
   const token = process.env.NEXT_PUBLIC_BEAM_TOKEN;
-
+  const GTM_ID = process.env.NEXT_PUBLIC_GTM_ID;
   if (!token) {
     return null;
   }
@@ -15,7 +15,7 @@ export default function Analytics() {
     <>
       <script
         async={process.env.NODE_ENV === "production"}
-        src="https://www.googletagmanager.com/gtag/js?id=G-QLNVG5QJ02"
+        src={`https://www.googletagmanager.com/gtag/js?id=${GTM_ID}`}
       ></script>
       <script
         src="https://beamanalytics.b-cdn.net/beam.min.js"
