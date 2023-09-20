@@ -50,8 +50,8 @@ export const metadata: Metadata = {
     countryName: "Uzbekistan",
     description:
       "Quality, reliable and honest accounting services for your business. Start your business in Uzbekistan.",
-    siteName: "www.almudacompany.com",
-    url: "www.almudacompany.com",
+    siteName: "https://almudacompany.com",
+    url: "https://almudacompany.com",
     emails: ["info@almuda.uz", "xasanof17@gmail.com"],
     phoneNumbers: ["+998900198505"],
     images: {

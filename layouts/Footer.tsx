@@ -32,7 +32,7 @@ const socials: Social[] = [
   {
     Icon: FaLinkedinIn,
     name: "Linkedin",
-    href: "https://linkedin.com/almuda",
+    href: "https://t.me/xxvlw",
   },
   {
     Icon: FaTelegramPlane,

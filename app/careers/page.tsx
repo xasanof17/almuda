@@ -4,11 +4,11 @@ import { Careers } from "@/components";
 export const metadata: Metadata = {
   title: "Careers",
   description: "Careers of our company",
-  abstract: "https://www.almudacompany.com/careers",
+  abstract: "https://almudacompany.com/careers",
   openGraph: {
     title: "Careers | almudacompany.com",
     description: "Careers our company",
-    siteName: "www.almudacompany.com",
+    siteName: "almudacompany.com",
     url: "https://almudacompany.com/careers",
   },
 };

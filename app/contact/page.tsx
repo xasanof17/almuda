@@ -4,11 +4,11 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
   title: "Contact",
   description: "Contact to our company",
-  abstract: "https://www.almudacompany.com/contact",
+  abstract: "https://almudacompany.com/contact",
   openGraph: {
     title: "Contact | almudacompany.com",
     description: "Contact our company",
-    siteName: "www.almudacompany.com",
+    siteName: "almudacompany.com",
     url: "https://almudacompany.com/contact",
   },
 };

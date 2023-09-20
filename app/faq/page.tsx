@@ -4,11 +4,11 @@ import { Faq } from "@/components";
 export const metadata: Metadata = {
   title: "Faq",
   description: "FAQ of our company",
-  abstract: "https://www.almudacompany.com/faq",
+  abstract: "https://almudacompany.com/faq",
   openGraph: {
     title: "Faq | almudacompany.com",
     description: "Faq our company",
-    siteName: "www.almudacompany.com",
+    siteName: "almudacompany.com",
     url: "https://almudacompany.com/faq",
   },
 };
