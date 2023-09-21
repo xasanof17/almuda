@@ -18,3 +18,5 @@ export { default as JXLogo } from "./jx.svg";
 export { default as CEOlg } from "./ceo-lg.jpg";
 export { default as CEO } from "./ceo.jpg";
 export { default as Quote } from "./quote.svg";
+export { default as AlmudaBanner } from "./almuda_banner.jpg";
+export { default as AlmudaProvidesImg } from "./almuda_provides.jpg";

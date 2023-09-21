@@ -112,8 +112,8 @@ const Footer = () => {
             </li>
             <li className="flex items-center space-x-3">
               <FiPhone className="h-6 w-6 text-primary" />
-              <Link href="tel:+998900198505" className="link">
-                +998900198505
+              <Link href="tel:+998900186644" className="link">
+                +998900186644
               </Link>
             </li>
             <li className="flex items-center space-x-3">

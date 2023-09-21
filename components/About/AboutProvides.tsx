@@ -1,3 +1,4 @@
+import { AlmudaProvidesImg } from "@/assets";
 import Image from "next/image";
 
 const AboutProvides = () => {
@@ -15,18 +16,14 @@ const AboutProvides = () => {
           establishing a company in Uzbekistan: Not only do we advise you on the
           corporate structure and jurisdiction to choose from, but we also make
           sure to cover all technical, administrative and financial aspects of
-          Uzbekistan business setup Your business setup journey doesn&apos;t stop
-          there, which is why we offer additional services to get your business
-          up and running after the establishment. We can help you with your
-          company&apos;s accounting, marketing, HR and much more
+          Uzbekistan business setup Your business setup journey doesn&apos;t
+          stop there, which is why we offer additional services to get your
+          business up and running after the establishment. We can help you with
+          your company&apos;s accounting, marketing, HR and much more
         </p>
       </div>
-      <div className="relative h-[400px] w-full sm:h-[480px] lg:h-[400px] xl:h-[450px]">
-        <Image
-          src="https://www.decisivezone.ae/wp-content/uploads/2022/08/Infographic_3.png"
-          alt="image"
-          fill
-        />
+      <div className="relative h-[300px] w-full sm:h-[480px] lg:h-[400px] xl:h-[450px]">
+        <Image src={AlmudaProvidesImg} alt="image" fill />
       </div>
     </div>
   );

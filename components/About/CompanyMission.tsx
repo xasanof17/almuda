@@ -1,3 +1,4 @@
+import { AlmudaBanner } from "@/assets";
 import Image from "next/image";
 
 const CompanyMission = () => {
@@ -5,9 +6,10 @@ const CompanyMission = () => {
     <div className="my-10 flex grid-cols-2 flex-col sm:my-20 lg:grid">
       <div className="relative h-[360px] w-full sm:h-[400px] xl:h-[450px]">
         <Image
-          src="https://www.decisivezone.ae/wp-content/uploads/2022/08/Image-copyghhv.jpg"
+          src={AlmudaBanner}
           alt="image"
           fill
+          className="object-contain"
         />
       </div>
       <div className="mt-10 flex flex-col sm:mt-0 md:pl-10 md:pt-10">

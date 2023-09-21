@@ -1,6 +1,6 @@
-import { Banner } from ".";
+import { Banner } from "..";
 import { AboutCEO } from "./AboutCEO";
-import WhatCanWeDo from "./WhatCanWeDo";
+import WhatCanWeDo from "../WhatCanWeDo";
 import AboutProvides from "./AboutProvides";
 import CompanyMission from "./CompanyMission";
 
