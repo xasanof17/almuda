@@ -1,4 +1,4 @@
-import { CEO, CEOlg, Quote } from "@/assets";
+import { CEO, CEOlg, Quote } from "@/assets/img";
 import Image from "next/image";
 
 export const AboutCEO = () => {

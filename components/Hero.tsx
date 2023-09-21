@@ -1,5 +1,5 @@
 "use client";
-import { HeroBg, Illustration } from "@/assets";
+import { HeroBg, Illustration } from "@/assets/img";
 import { motion } from "framer-motion";
 import Image from "next/image";
 import { useState } from "react";
@@ -19,7 +19,7 @@ const Hero = () => {
         >
           <span
             title="It's time to get decisive"
-            className="mb-3 text-lg font-semibold text-primary md:text-2xl"
+            className="mb-3 text-lg font-medium text-primary md:text-2xl md:font-semibold"
           >
             It{"\u2019"}s time to get decisive!
           </span>

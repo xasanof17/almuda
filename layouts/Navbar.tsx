@@ -1,6 +1,6 @@
 "use client";
 import { useState } from "react";
-import { Logo } from "@/assets";
+import { Logo } from "@/assets/img";
 import { links } from "@/constants";
 import { FiMenu } from "react-icons/fi";
 import { MdClose } from "react-icons/md";

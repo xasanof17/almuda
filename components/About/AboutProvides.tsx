@@ -1,4 +1,4 @@
-import { AlmudaProvidesImg } from "@/assets";
+import { AlmudaProvidesImg } from "@/assets/img";
 import Image from "next/image";
 
 const AboutProvides = () => {
