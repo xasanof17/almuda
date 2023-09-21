@@ -2,24 +2,6 @@ import { features } from "@/constants";
 import Image from "next/image";
 import { BiSolidCheckCircle } from "react-icons/bi";
 
-const data = [
-  [
-    "In a day,set up your business",
-    "Find and set up a new office as soon as possible",
-    "Swiftly assemble and reinforce squads",
-  ],
-  [
-    "In a day,set up your business",
-    "Find and set up a new office as soon as possible",
-    "Swiftly assemble and reinforce squads",
-  ],
-  [
-    "In a day,set up your business",
-    "Find and set up a new office as soon as possible",
-    "Swiftly assemble and reinforce squads",
-  ],
-];
-
 const Features = () => {
   return (
     <section className="container my-20 md:my-40">
@@ -39,7 +21,7 @@ const Features = () => {
       <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 md:gap-12 lg:grid-cols-4 lg:gap-[60px]">
         {features.map(({ src, title, text }, i) => (
           <div className="flex flex-col" key={i}>
-            <div className="relative mb-7 h-[50px] w-[50px]">
+            <div className="relative mb-7 h-[80px] w-[80px]">
               <Image
                 src={src}
                 alt="icon"

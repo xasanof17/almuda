@@ -1,24 +1,29 @@
-import { Discount, Reliability, Secure } from "@/assets";
+import {
+  GatherInformation,
+  LaunchBusiness,
+  RegisterBusiness,
+  TeamIcon,
+} from "@/assets";
 import { Features } from "@/types";
 
 export const features: Features[] = [
   {
-    src: Discount,
+    src: GatherInformation,
     title: "Gather Information",
     text: `Analyse your business & competition`,
   },
   {
-    src: Reliability,
+    src: RegisterBusiness,
     title: "Register Your Business",
     text: `Decide the category of your business and register it.`,
   },
   {
-    src: Secure,
+    src: LaunchBusiness,
     title: "Launch Your Business",
     text: `Renting office, Press Release, Website Design`,
   },
   {
-    src: Secure,
+    src: TeamIcon,
     title: "Build Your Team",
     text: `Recruit and train competent professionals.`,
   },

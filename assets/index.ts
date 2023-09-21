@@ -1,8 +1,7 @@
 export { default as Logo } from "./almuda.svg";
 export { default as HeroBg } from "./hero.svg";
-export { default as Discount } from "./discount.svg";
-export { default as Reliability } from "./reliability.svg";
-export { default as Secure } from "./secure.svg";
+export { default as RegisterBusiness } from "./register_business.svg";
+export { default as TeamIcon } from "./team_icon.svg";
 export { default as Illustration } from "./mobile-hero.svg";
 export { default as AdliyaLogo } from "./adliya-logo.svg";
 export { default as AloqaBankLogo } from "./aloqa-bank.svg";
@@ -20,3 +19,5 @@ export { default as CEO } from "./ceo.jpg";
 export { default as Quote } from "./quote.svg";
 export { default as AlmudaBanner } from "./almuda_banner.jpg";
 export { default as AlmudaProvidesImg } from "./almuda_provides.jpg";
+export { default as LaunchBusiness } from "./launch_business.svg";
+export { default as GatherInformation } from "./gather_information.svg";
