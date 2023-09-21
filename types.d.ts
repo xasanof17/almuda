@@ -44,3 +44,8 @@ interface DialogData {
   phoneNumber?: string;
   email?: string;
 }
+
+interface FaqData {
+  question: string;
+  answer: string;
+}
