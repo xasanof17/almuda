@@ -49,7 +49,7 @@ export const metadata: Metadata = {
     countryName: "Uzbekistan",
     description:
       "Quality, reliable and honest accounting services for your business. Start your business in Uzbekistan.",
-    siteName: "Almuda Company",
+    siteName: "almudacompany.com",
     url: "https://almudacompany.com",
     emails: ["info@almuda.uz", "xasanof17@gmail.com"],
     phoneNumbers: ["+998900198505"],
@@ -87,7 +87,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en">
+    <html lang="en" prefix="og:https://ogp.me/ns#">
       <head>
         <Analytics />
       </head>

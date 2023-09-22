@@ -5,7 +5,7 @@ export { default as Pricing } from "./Pricing";
 export { default as Partner } from "./Partner";
 export { default as Analytics } from "./Analytics";
 export { default as About } from "./About/About";
-export { default as Careers } from "./Careers";
+export { default as Careers } from "./Careers/Careers";
 export { default as Contacts } from "./Contacts";
 export { default as Faq } from "./Faq/Faq";
 export { default as Banner } from "./Banner";

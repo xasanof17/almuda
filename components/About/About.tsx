@@ -11,7 +11,7 @@ const About = () => {
       <AboutCEO />
       <AboutProvides />
       <CompanyMission />
-      <WhatCanWeDo />
+      <WhatCanWeDo text />
     </div>
   );
 };
