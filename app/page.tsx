@@ -43,7 +43,7 @@ export default function Home() {
                 company, there are a number of company-type choices. The most
                 commonly used forms by foreign businesses are Joint Stock
                 Companies (JSC - "Aksiyadorlik Jamiyati") and Limited Liability
-                Companies (LLC - "Mas'uliyati Cheklangan Jamiyat").
+                Companies (LLC - "Mas&apos;uliyati Cheklangan Jamiyat").
               </p>
               <p className="text-base text-primary/80 sm:text-[17px] lg:text-lg">
                 Either type of company can be wholly owned by a foreign investor
@@ -57,7 +57,7 @@ export default function Home() {
                 flexible rules on corporate governance, raising capital and
                 other matters. A joint-stock company (JSC) is generally
                 recommended as a legal form only in cases where you are planning
-                a public offering of the company's shares.
+                a public offering of the company&apos;s shares.
               </p>
             </div>
           </div>
