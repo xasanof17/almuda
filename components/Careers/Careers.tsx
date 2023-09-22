@@ -9,10 +9,10 @@ const Careers = () => {
         title="Careers"
         text="Be a part of the ever growing Almuda Company and watch your career thrive."
       />
-      <section className="flex w-full max-w-[750px] flex-col py-20 lg:py-40">
+      <div className="flex w-full max-w-[750px] flex-col py-20 lg:py-40">
         <div className="mb-6 flex items-center justify-start border-l-4 border-bright p-3 md:mb-10">
           <h2 className="text-start text-2xl font-semibold leading-9 text-primary">
-            About Careers
+            About Mainland
           </h2>
         </div>
         <div className="flex flex-col">
@@ -36,7 +36,7 @@ const Careers = () => {
           />
         </div>
         <WhatCanWeDo list />
-      </section>
+      </div>
     </>
   );
 };

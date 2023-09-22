@@ -10,3 +10,4 @@ export { default as Contacts } from "./Contacts";
 export { default as Faq } from "./Faq/Faq";
 export { default as Banner } from "./Banner";
 export { default as WhatWeCanDo } from "./WhatCanWeDo";
+export { default as WhyAlmuda } from "./WhyAlmuda";

@@ -1,5 +1,5 @@
 import { AlmudaBanner, AlmudaProvidesImg } from "@/assets/img";
-import { Features, Hero, Partner, Pricing } from "@/components";
+import { Features, Hero, Partner, Pricing, WhyAlmuda } from "@/components";
 import Image from "next/image";
 
 const RunningBusiness = () => {
@@ -77,6 +77,7 @@ export default function Home() {
       <Partner />
       <TypesCompanies />
       <Pricing />
+      <WhyAlmuda />
     </main>
   );
 }
