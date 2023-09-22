@@ -54,7 +54,7 @@ const Footer = () => {
     <footer className="shadow">
       <iframe
         title="Google Maps"
-        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d95942.48002518046!2d69.19696640291602!3d41.282697074634214!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x38ae8b0cc379e9c3%3A0xa5a9323b4aa5cb98!2sTashkent%2C%20Uzbekistan!5e0!3m2!1sen!2s!4v1693639724123!5m2!1sen!2s"
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2995.9430512387935!2d69.26116897659249!3d41.33185169943735!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x38ae8baf9219ea7d%3A0xe5521350ed061692!2sIMAN%20Invest!5e0!3m2!1sru!2s!4v1695394628698!5m2!1sru!2s"
         style={{ border: 0, width: "100%", height: 500 }}
         allowFullScreen={true}
         loading="lazy"
@@ -119,7 +119,7 @@ const Footer = () => {
             <li className="flex items-center space-x-3">
               <FiMapPin className="h-6 w-6 text-primary" />
               <Link
-                href="https://goo.gl/maps/Rsm4ZGvht66GDrJcA"
+                href="https://maps.app.goo.gl/GEi6X99WJmtM97zEA"
                 className="link"
                 target="_blank"
               >
