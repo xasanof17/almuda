@@ -17,7 +17,7 @@ const RunningBusiness = () => {
             </p>
           </div>
           <div className="flex items-center justify-center">
-            <div className="relative h-[360px] w-full sm:h-[400px] xl:h-[450px]">
+            <div className="relative h-[300px] w-full sm:h-[400px] xl:h-[450px]">
               <Image src={AlmudaBanner} alt="banner of almuda" fill />
             </div>
           </div>

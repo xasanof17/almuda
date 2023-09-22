@@ -25,7 +25,7 @@ export const AboutCEO = () => {
       </div>
       <div className="flex flex-col justify-center lg:col-span-2">
         <Image src={Quote} alt="Quote Icon" width={24} height={24} priority />
-        <p className="text-muted xs:text-[17px] xs:text-left my-4 w-full text-center text-base sm:text-lg sm:leading-6 sm:tracking-wide md:leading-8">
+        <p className="text-muted xs:text-[17px] my-4 w-full text-left text-base sm:text-lg sm:leading-6 sm:tracking-wide md:leading-8">
           The healthcare industry has never been so advanced, and yet there are
           still so many patients who don&apos;t receive the right care at the
           right time. Infermedica thrives in the face of this global challenge
