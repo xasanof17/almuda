@@ -42,8 +42,8 @@ export default function Home() {
                 If you would like to establish a subsidiary or a joint-venture
                 company, there are a number of company-type choices. The most
                 commonly used forms by foreign businesses are Joint Stock
-                Companies (JSC - "Aksiyadorlik Jamiyati") and Limited Liability
-                Companies (LLC - "Mas&apos;uliyati Cheklangan Jamiyat").
+                Companies (JSC - &quot;Aksiyadorlik Jamiyati&quot;) and Limited Liability
+                Companies (LLC - &quot;Mas&apos;uliyati Cheklangan Jamiyat&quot;).
               </p>
               <p className="text-base text-primary/80 sm:text-[17px] lg:text-lg">
                 Either type of company can be wholly owned by a foreign investor
