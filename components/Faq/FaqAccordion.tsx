@@ -24,7 +24,7 @@ const FaqAccordion = ({ faqData }: { faqData: FaqData }) => {
         >
           {faqData.question}
         </h2>
-        <button onClick={toggleAccordion}>
+        <button onClick={() => setOpen((prev) => !prev)}>
           {open ? (
             <BsChevronUp className="text-xl text-primary" />
           ) : (

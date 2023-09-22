@@ -17,6 +17,9 @@ const config: Config = {
         secondary: "#10a0e8",
         bright: "#00ECD0",
       },
+      screens: {
+        xs: "370px",
+      },
     },
   },
   plugins: [
