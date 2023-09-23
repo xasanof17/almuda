@@ -7,12 +7,19 @@ const FaqAccordion = ({ faqData }: { faqData: FaqData }) => {
   const [open, setOpen] = useState(false);
   return (
     <div
-      role="accordion"
+      role="region"
+      aria-labelledby={`faq-question`}
+      aria-expanded={open}
       className={`flex flex-col rounded-xl border p-3 transition-all duration-300 hover:cursor-pointer sm:p-4 ${
         open ? "bg-slate-50" : ""
       }`}
     >
-      <div role="accordion-body" className="flex items-center justify-between">
+      <div
+        tabIndex={0}
+        role="button"
+        aria-label="accordion-button"
+        className="flex items-center justify-between"
+      >
         <h2
           title={faqData.question}
           className={`${
@@ -22,7 +29,8 @@ const FaqAccordion = ({ faqData }: { faqData: FaqData }) => {
           {faqData.question}
         </h2>
         <button
-          aria-label="accordion-btn"
+          aria-label={`Toggle ${open ? "Collapse" : "Expand"}`}
+          tabIndex={-1}
           className="flex items-center justify-center rounded-full bg-primary/20 p-2 md:p-3"
           onClick={() => setOpen((prev) => !prev)}
         >

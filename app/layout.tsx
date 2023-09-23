@@ -1,5 +1,4 @@
 import "./globals.css";
-import { Analytics as VercelAnalytics } from "@vercel/analytics/react";
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import { Footer, Navbar } from "@/layouts";
@@ -9,13 +8,13 @@ import { Toaster } from "react-hot-toast";
 
 const inter = Inter({
   subsets: ["latin"],
-  weight: ["100", "200", "300", "400", "500", "600", "700", "800", "900"],
+  weight: ["300", "400", "500", "600", "700", "800"],
 });
 
 export const metadata: Metadata = {
   title: {
-    default: "almudacompany.com",
-    template: "%s | almudacompany.com",
+    default: "Almuda Company - Accounting Services",
+    template: "%s - Almuda Company - Accounting Services",
   },
   generator: "Next.js",
   description:
@@ -54,7 +53,7 @@ export const metadata: Metadata = {
     emails: ["info@almuda.uz", "xasanof17@gmail.com"],
     phoneNumbers: ["+998900198505"],
     images: {
-      url: "/opengraph-image.png",
+      url: "/og.png",
       type: "image/png",
       width: 300,
       height: 400,

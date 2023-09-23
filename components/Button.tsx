@@ -23,7 +23,7 @@ export const Button: FC<IButtonProps> = ({
   isLoading,
 }) => {
   return (
-    <button title={title} type={type} onClick={onClick} className={className}>
+    <button role="button" title={title} type={type} onClick={onClick} className={className}>
       {Icon ? (
         <Icon className="h-7 w-7 text-black" />
       ) : !isLoading ? (

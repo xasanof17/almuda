@@ -18,12 +18,14 @@ const Hero = () => {
           className="flex flex-col items-center md:items-start"
         >
           <span
+            aria-labelledby="section-title"
             title="It's time to get decisive"
             className="mb-3 text-lg font-medium text-primary md:text-2xl md:font-semibold"
           >
             It&apos;s time to get decisive!
           </span>
           <h1
+            aria-labelledby="title"
             title="Start your business in the Uzbekistan"
             className="w-full max-w-[700px] text-center text-3xl font-semibold text-primary md:text-start md:text-5xl lg:text-7xl 2xl:max-w-3xl"
           >

@@ -14,9 +14,13 @@ const Navbar = () => {
   const pathname = usePathname();
 
   return (
-    <header className="sticky left-0 top-0 z-10 w-full py-3 backdrop-blur-lg sm:py-5">
-      <nav className="container flex items-center">
+    <header
+      role="header"
+      className="sticky left-0 top-0 z-10 w-full py-3 backdrop-blur-lg sm:py-5"
+    >
+      <nav role="navigation" className="container flex items-center">
         <Link
+          title="Almuda"
           href="/"
           className={`${
             toggleMenu ? "fixed left-4 top-3 z-20 md:top-5" : ""
@@ -33,9 +37,9 @@ const Navbar = () => {
           </div>
         </Link>
         <div className="flex flex-1 items-center justify-end lg:ml-[100px] lg:justify-between">
-          <ul className="hidden items-center space-x-8 lg:flex">
+          <ul role="menu" className="hidden items-center space-x-8 lg:flex">
             {links.map(({ href, title }, i) => (
-              <li key={i}>
+              <li key={i} role="list">
                 <Link
                   title={title}
                   href={href}

@@ -14,7 +14,7 @@ const config: DefaultSeoProps = {
       "Quality, reliable and honest accounting services for your business.",
     images: [
       {
-        url: "/opengraph-image.png",
+        url: "/og.png",
         type: "image/png",
         width: 300,
       },
