@@ -7,14 +7,15 @@ const variants = {
   accordion:
     "flex flex-col rounded-xl border p-3 transition-all duration-300 hover:cursor-pointer sm:p-4",
   btn: "flex items-center justify-center rounded-full bg-primary/20 p-2 md:p-3",
-  accordionText: "pt-5 text-[15px] tracking-wide text-gray-800 transition-all duration-150 md:text-lg",
+  accordionText:
+    "pt-5 text-[15px] tracking-wide text-gray-800 transition-all duration-150 md:text-lg",
 };
 
 const FaqAccordion = ({ faqData }: { faqData: FaqData }) => {
   const [open, setOpen] = useState(false);
   return (
     <div
-      role="region"
+      role="banner"
       aria-labelledby={`faq-question`}
       aria-expanded={open}
       className={`${variants.accordion} ${open ? "bg-slate-50" : ""}`}
