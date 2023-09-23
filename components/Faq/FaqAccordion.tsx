@@ -12,54 +12,62 @@ const variants = {
 };
 
 const FaqAccordion = ({ faqData }: { faqData: FaqData }) => {
-  const [open, setOpen] = useState(false);
+  const [isExpanded, setIsExpanded] = useState(false);
   return (
     <div
-      role="banner"
+      role="region"
       aria-labelledby={`faq-question`}
-      aria-expanded={open}
-      className={`${variants.accordion} ${open ? "bg-slate-50" : ""}`}
+      aria-expanded={isExpanded}
+      className={`${variants.accordion} ${isExpanded ? "bg-slate-50" : ""}`}
     >
       <div
         tabIndex={0}
-        role="button"
-        aria-label="accordion-button"
+        role="accordion-heading"
+        aria-label="accordion-heading"
         className="flex items-center justify-between"
       >
         <h2
           title={faqData.question}
           className={`${
-            !open ? "truncate" : ""
+            !isExpanded ? "truncate" : ""
           } text-base font-medium text-primary md:text-xl`}
         >
           {faqData.question}
         </h2>
         <button
-          aria-label={`Toggle ${open ? "Collapse" : "Expand"}`}
+          aria-label={`Toggle ${isExpanded ? "Collapse" : "Expand"}`}
           tabIndex={-1}
           className={variants.btn}
-          onClick={() => setOpen((prev) => !prev)}
+          onClick={() => setIsExpanded((prev) => !prev)}
+          aria-labelledby="accordion-heading"
+          id="accordion-content"
         >
-          {open ? (
+          {isExpanded ? (
             <BsChevronUp className="text-xl text-primary" />
           ) : (
             <BsChevronDown className="text-xl" />
           )}
         </button>
       </div>
-      {open && (
-        <p
-          role="accordion-text"
-          aria-expanded={open ? "true" : "false"}
-          aria-label="accordion-text"
-          aria-roledescription="accordion-text"
-          title={faqData.answer}
-          aria-description={faqData.answer}
-          aria-describedby={faqData.answer}
-          className={variants.accordionText}
+      {isExpanded && (
+        <div
+          role="region"
+          aria-labelledby="accordion-heading"
+          id="accordion-content"
         >
-          {faqData.answer}
-        </p>
+          <p
+            role="accordion-text"
+            aria-expanded={isExpanded ? "true" : "false"}
+            aria-label="accordion-text"
+            aria-roledescription="accordion-text"
+            title={faqData.answer}
+            aria-description={faqData.answer}
+            aria-describedby={faqData.answer}
+            className={variants.accordionText}
+          >
+            {faqData.answer}
+          </p>
+        </div>
       )}
     </div>
   );
