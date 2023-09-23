@@ -5,26 +5,27 @@ import { FaqData } from "@/types";
 
 const FaqAccordion = ({ faqData }: { faqData: FaqData }) => {
   const [open, setOpen] = useState(false);
-
-  const toggleAccordion = () => {
-    setOpen((prev) => !prev);
-  };
   return (
     <div
-      className={`flex flex-col rounded-xl border p-3 transition-all duration-300 hover:cursor-pointer sm:p-5 ${
-        open ? "bg-slate-100" : ""
+      role="accordion"
+      className={`flex flex-col rounded-xl border p-3 transition-all duration-300 hover:cursor-pointer sm:p-4 ${
+        open ? "bg-slate-50" : ""
       }`}
-      onClick={toggleAccordion}
     >
-      <div className="flex items-center justify-between">
+      <div role="accordion-body" className="flex items-center justify-between">
         <h2
+          title={faqData.question}
           className={`${
             !open ? "truncate" : ""
-          } text-base font-medium text-primary md:text-lg`}
+          } text-base font-medium text-primary md:text-xl`}
         >
           {faqData.question}
         </h2>
-        <button onClick={() => setOpen((prev) => !prev)}>
+        <button
+          aria-label="accordion-btn"
+          className="flex items-center justify-center rounded-full bg-primary/20 p-2 md:p-3"
+          onClick={() => setOpen((prev) => !prev)}
+        >
           {open ? (
             <BsChevronUp className="text-xl text-primary" />
           ) : (
@@ -33,7 +34,16 @@ const FaqAccordion = ({ faqData }: { faqData: FaqData }) => {
         </button>
       </div>
       {open && (
-        <p className="pt-5 text-[15px] text-gray-500 transition-all duration-150 md:text-base">
+        <p
+          role="accordion-text"
+          aria-expanded={open ? "true" : "false"}
+          aria-label="accordion-text"
+          aria-roledescription="accordion-text"
+          title={faqData.answer}
+          aria-description={faqData.answer}
+          aria-describedby={faqData.answer}
+          className="pt-5 text-[15px] tracking-wide text-gray-800 transition-all duration-150 md:text-lg"
+        >
           {faqData.answer}
         </p>
       )}
