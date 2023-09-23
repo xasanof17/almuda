@@ -15,7 +15,6 @@ const FaqAccordion = ({ faqData }: { faqData: FaqData }) => {
   const [isExpanded, setIsExpanded] = useState(false);
   return (
     <div
-      role="region"
       aria-labelledby={`faq-question`}
       aria-expanded={isExpanded}
       className={`${variants.accordion} ${isExpanded ? "bg-slate-50" : ""}`}
@@ -50,11 +49,7 @@ const FaqAccordion = ({ faqData }: { faqData: FaqData }) => {
         </button>
       </div>
       {isExpanded && (
-        <div
-          role="region"
-          aria-labelledby="accordion-heading"
-          id="accordion-content"
-        >
+        <div aria-labelledby="accordion-heading" id="accordion-content">
           <p
             role="accordion-text"
             aria-expanded={isExpanded ? "true" : "false"}
