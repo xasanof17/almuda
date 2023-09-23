@@ -45,7 +45,7 @@ const CompanyMission = () => {
         </p>
         <p className={variants.text}>
           With a focus on excellence, Almuda is your partner in achieving
-          business success. We're here to simplify your journey, so you can
+          business success. We&apos;re here to simplify your journey, so you can
           thrive and prosper.
         </p>
       </div>

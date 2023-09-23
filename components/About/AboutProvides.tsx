@@ -32,7 +32,7 @@ const AboutProvides = () => {
           We go beyond merely advising you on corporate structures and
           jurisdiction selection. We ensure comprehensive coverage of all
           technical, administrative, and financial aspects of your Uzbekistan
-          business setup journey. But our commitment doesn't stop there. We
+          business setup journey. But our commitment doesn&apos;t stop there. We
           offer a range of additional services to ensure your business thrives
           even after establishment.
         </p>
@@ -41,7 +41,7 @@ const AboutProvides = () => {
           solutions and more, we provide the support you need to drive your
           business to success. Partner with Almuda, and let us be your trusted
           companion on your path to business excellence. Your success is our
-          success, and we're here to make it happen.
+          success, and we&apos;re here to make it happen.
         </p>
       </div>
       <div className="relative h-[300px] w-full sm:h-[480px] lg:h-[400px] xl:h-[450px]">
