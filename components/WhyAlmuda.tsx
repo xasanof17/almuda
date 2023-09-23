@@ -55,10 +55,10 @@ const WhyAlmuda = () => {
           the right choice for you:"
           className="txt"
         >
-          At Almuda Company, we're committed to being your partner in success.
-          We understand that when it comes to critical business decisions, you
-          need a trusted advisor by your side. Here's why we believe Almuda is
-          the right choice for you:
+          At Almuda Company, we&apos;re committed to being your partner in
+          success. We understand that when it comes to critical business
+          decisions, you need a trusted advisor by your side. Here&apos;s why we
+          believe Almuda is the right choice for you:
         </p>
       </div>
       <div className="grid grid-cols-1 py-20 md:grid-cols-2">
@@ -85,8 +85,8 @@ const WhyAlmuda = () => {
           >
             Our commitment is to provide you with unparalleled service,
             transparent processes, and responsive support throughout your
-            business journey. We're not just here to assist you; we're here to
-            help you thrive.
+            business journey. We&apos;re not just here to assist you; we&apos;re
+            here to help you thrive.
           </p>
           <p
             className={variants.text}
