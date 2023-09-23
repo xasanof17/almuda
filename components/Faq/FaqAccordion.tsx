@@ -3,6 +3,13 @@ import { BsChevronDown, BsChevronUp } from "react-icons/bs";
 import { useState } from "react";
 import { FaqData } from "@/types";
 
+const variants = {
+  accordion:
+    "flex flex-col rounded-xl border p-3 transition-all duration-300 hover:cursor-pointer sm:p-4",
+  btn: "flex items-center justify-center rounded-full bg-primary/20 p-2 md:p-3",
+  accordionText: "pt-5 text-[15px] tracking-wide text-gray-800 transition-all duration-150 md:text-lg",
+};
+
 const FaqAccordion = ({ faqData }: { faqData: FaqData }) => {
   const [open, setOpen] = useState(false);
   return (
@@ -10,9 +17,7 @@ const FaqAccordion = ({ faqData }: { faqData: FaqData }) => {
       role="region"
       aria-labelledby={`faq-question`}
       aria-expanded={open}
-      className={`flex flex-col rounded-xl border p-3 transition-all duration-300 hover:cursor-pointer sm:p-4 ${
-        open ? "bg-slate-50" : ""
-      }`}
+      className={`${variants.accordion} ${open ? "bg-slate-50" : ""}`}
     >
       <div
         tabIndex={0}
@@ -31,7 +36,7 @@ const FaqAccordion = ({ faqData }: { faqData: FaqData }) => {
         <button
           aria-label={`Toggle ${open ? "Collapse" : "Expand"}`}
           tabIndex={-1}
-          className="flex items-center justify-center rounded-full bg-primary/20 p-2 md:p-3"
+          className={variants.btn}
           onClick={() => setOpen((prev) => !prev)}
         >
           {open ? (
@@ -50,7 +55,7 @@ const FaqAccordion = ({ faqData }: { faqData: FaqData }) => {
           title={faqData.answer}
           aria-description={faqData.answer}
           aria-describedby={faqData.answer}
-          className="pt-5 text-[15px] tracking-wide text-gray-800 transition-all duration-150 md:text-lg"
+          className={variants.accordionText}
         >
           {faqData.answer}
         </p>
