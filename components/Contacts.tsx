@@ -40,10 +40,14 @@ const Contacts = () => {
       <Banner title="Contact" text="Welcome to our Contact page" />
 
       <form
+        role="form"
         onSubmit={handleSubmit(onSubmit)}
         className="mt-16 max-w-xl sm:mx-auto sm:mt-20"
       >
-        <div className="grid grid-cols-1 gap-x-8 gap-y-6 sm:grid-cols-2">
+        <div
+          role="grid"
+          className="grid grid-cols-1 gap-x-8 gap-y-6 sm:grid-cols-2"
+        >
           <TextFieldController
             label="First Name"
             control={control}
@@ -87,6 +91,7 @@ const Contacts = () => {
             className="btn-secondary w-full disabled:opacity-30"
             text="Let's Talk"
             isLoading={isLoading}
+            aria-label="Submit Contact Form"
           />
         </div>
       </form>

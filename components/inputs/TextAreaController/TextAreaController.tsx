@@ -23,13 +23,18 @@ export const TextAreaController: FC<ITextAreaController> = ({
       rules={{ required: true }}
       render={({ field }) => (
         <div className={`flex flex-col ${className}`}>
-          <label className="label">{label}</label>
+          <label htmlFor={name} className="label">
+            {label}
+          </label>
           <textarea
             {...field}
+            role="textbox"
+            id={name}
             placeholder={placeholder}
             rows={4}
             className="input resize-y"
             autoComplete="true"
+            aria-required={true}
           />
         </div>
       )}

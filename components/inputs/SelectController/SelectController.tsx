@@ -23,7 +23,14 @@ export const SelectController: FC<ISelectController> = ({
         rules={{ required: true }}
         control={control}
         render={({ field }) => (
-          <Select {...field} options={options} closeMenuOnSelect isSearchable />
+          <Select
+            {...field}
+            options={options}
+            closeMenuOnSelect
+            isSearchable
+            aria-label={name}
+            required={true}
+          />
         )}
       />
     </div>

@@ -6,7 +6,6 @@ const Faq = () => {
   return (
     <>
       <Banner title="FAQ" text="Welcome to our FAQ page" />
-
       <div
         role="main"
         aria-label="Frequently Asked Questions"

@@ -6,7 +6,10 @@ import CompanyMission from "./CompanyMission";
 
 const About = () => {
   return (
-    <div className="container flex flex-col items-center justify-center">
+    <div
+      role="banner"
+      className="container flex flex-col items-center justify-center"
+    >
       <Banner title="About" text="Welcome to our About page" />
       <AboutCEO />
       <AboutProvides />

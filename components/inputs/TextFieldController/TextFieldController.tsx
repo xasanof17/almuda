@@ -23,12 +23,17 @@ export const TextFieldController: FC<ITextFieldController> = ({
       rules={{ required: true }}
       render={({ field }) => (
         <div className={`flex flex-col ${className}`}>
-          <label className="label">{label}</label>
+          <label htmlFor={name} className="label">
+            {label}
+          </label>
           <input
             {...field}
+            id={name}
             placeholder={placeholder}
             className="input"
             autoComplete="true"
+            aria-label={`Input Label for: ${name}`}
+            aria-required={true}
           />
         </div>
       )}
