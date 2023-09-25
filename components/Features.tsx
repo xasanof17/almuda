@@ -117,6 +117,9 @@ const Features = () => {
           </ul>
         </div>
       </div>
+      <div className="my-3">
+        <p></p>
+      </div>
     </section>
   );
 };

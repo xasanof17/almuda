@@ -38,4 +38,37 @@ export const faqData: FaqData[] = [
     "permanent establishment" on an ad hoc basis. In general, it is obligatory to establish a taxable 'permanent establishment', if the foreign-registered company do work or provide services in Uzbekistan for more than 183 days in a consecutive 12-month beriod.
     Depending on whether or not the company's home state has a double taxation treaty with Uzbekistan, this may present an effective means of doing business.`,
   },
+  {
+    question: "How much does it cost to set up a company in Uzbekistan?",
+    answer: `Fees and timelines in 2023
+    Uzbekistan company incorporation costs in Year 1 amount to US$500 and annual company costs in Year 2 and thereafter amount to US$0. The average fee per Uzbekistan engagement amounts to US$1500 which includes Uzbekistan company incorporation, opening a local corporate bank account, Visa and all government fees.
+    Timelines
+    The average Uzbekistan company formation engagement period is 2 working day.`,
+  },
+  {
+    question: "How to tax clearance in Uzbekistan?",
+    answer: `Tax clearance: If you are buying company shares, you are likely to be treated as a tax agent for withholding corporate profit tax in respect of monies to be paid to the seller of the shares. Make sure that you are prepared to comply with your obligations as a tax agent in Uzbekistan.`,
+  },
+  {
+    question: "Special Economic Zones",
+    answer: `Special Economic Zones: Uzbekistan has 12 Free Economic Zones (FEZs) in the industrial sector (Navoi, Angren, Jizzakh, Urgut, Gijduvan, Kokand, Khazarasp, Sirdaryo, Namangan, Termez, Nukus, Chirakchi), 7 FEZs in the pharmaceutical industry (Zomin-farm, Kosonsoy-farm, Sirdaryo-farm, Boysun-farm, Bustonlik-farm, Parkent-farm, and Andijon-farm) and 2 FEZs in the agricultural sector (Bukhara-agro and fish producer). Besides, there is also a special economic zone "Sport" and a free tourist zone "Charvak". They provide substantial privileges in terms of taxation and facility services to their members, as well as a number of special foreign exchange and customs benefits. The term of benefits depends on the value of the private foreign direct investment: US$ 300,000 to US$ 3 million: for a period of three years; US$ 3 to US$ 5 million: for a period of five years; US$ 5 million to US$ 10 million: for a period of seven years; More than US$10 million: for a period of 10 years.`,
+  },
+  {
+    question: "Sectoral FDI benefits in the form of tax exemptions",
+    answer: `Companies with foreign investments of at least US$ 300.000 in the following targeted industries are exempt from a number of taxes: Computer technology products Textile, apparel, and silk Construction materials Food Chemicals Petrochemicals Medical and pharmacy Engineering and metalworking Machinery and tools Glass and porcelain Packaging Renewable energy plants Coal industry Microbiology Toy production Tourism services Hospitality Waste management`,
+  },
+  {
+    question: "FDI incentives for individual (non-corporate) investors",
+    answer: `From September 2019, Uzbekistan introduced an "investment visa" for founders of enterprises with foreign investment who have invested the equivalent of at least 8,500 Basic Calculation Units ("BCU") (UZS 1,895,500,000 or approx. US$ 182,000)
+    (at the time of investment). Such invesments may take the form of buying shares of exsting businesses, as well creating a new company with foreign investment. An investment visa is issued for a period of three years, which is extendable unlimited times, without the need to leave the country.
+    Foreign citizens, including founders (participants) of enterprises with foreign investment, who have invested not less than US$ 3 million in the organization of enterprises for production of goods and delivery of services in Uzbekistan, are entitled for a simplified residence permit of 10 years.`,
+  },
+  {
+    question: "What should do after opening a company in Uzbekistan?",
+    answer: `Valid work permits: When you employ expats (as directors or emplovees) in vour local company, make sure that you first obtain and maintain valid work permits for such expats (to work in Uzbekistan). You will also need to file for the extension of such work permits on a timely basis -at least 20 business days in advance.`,
+  },
+  {
+    question: "How is postal address important in Uzbekistan?",
+    answer: `Postal Address: At the time of company formation, the local company needs to declare its office address that will be used as its postal/legal address. Most commonlv companies lease and sometimes purchase the office space`,
+  },
 ];

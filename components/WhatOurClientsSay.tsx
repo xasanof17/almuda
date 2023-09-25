@@ -14,10 +14,10 @@ const WhatOurClientsSay = () => {
           <div className="flex flex-col rounded-md border bg-slate-100 px-5 py-7">
             <p className={variants.text}>
               I was having issues getting my visa approved. I got support from
-              Bizvisor, who also showed me how to fix it. Following this
-              positive experience, I used them for a few additional services,
-              the most important of which was business setup and license
-              renewal. It happened quickly. extremely competent service.
+              Almuda, who also showed me how to fix it. Following this positive
+              experience, I used them for a few additional services, the most
+              important of which was business setup and license renewal. It
+              happened quickly. extremely competent service.
             </p>
             <h3 className={variants.title}>Dr.Ezzaldin Alyousef</h3>
             <div className="flex items-center space-x-2">

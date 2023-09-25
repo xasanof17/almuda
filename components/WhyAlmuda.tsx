@@ -3,7 +3,7 @@ const whyAlmuda: { title: string; text: string }[] = [
     title: "1. Unmatched Expertise:",
     text: `Our team boasts industry-leading expertise in mainland and
     offshore company formation. With years of experience, we possess
-    in-depth knowledge of the intricacies of business setup,
+    in - depth knowledge of the intricacies of business setup,
     ensuring that you make informed decisions every step of the way.`,
   },
   {
@@ -20,7 +20,7 @@ const whyAlmuda: { title: string; text: string }[] = [
   },
   {
     title: "5. Cost Savings:",
-    text: "With Almuda, you'll benefit from exemption from customs duties on imports and exports. No need to lease office space, minimal paperwork, and auditing requirements—these factors reduce your overhead costs.",
+    text: "With Almuda, you'll benefit from exemption from customs duties on imports and exports. No need to lease office space, minimal paperwork, and auditing requirements — these factors reduce your overhead costs.",
   },
   {
     title: "6. Global Reach",
