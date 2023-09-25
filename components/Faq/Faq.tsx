@@ -5,16 +5,26 @@ import FaqAccordion from "./FaqAccordion";
 const Faq = () => {
   return (
     <>
-      <Banner title="FAQ" text="Welcome to our FAQ page" />
-      <div
+      <section
+        id="faq"
         role="main"
-        aria-label="Frequently Asked Questions"
-        className="flex flex-col space-y-4 py-20"
+        aria-label="Frequently Asked Questions at Almuda Company"
+        className="my-20"
       >
-        {faqData.map((faq, index) => (
-          <FaqAccordion key={index} faqData={faq} />
-        ))}
-      </div>
+        <div className="container">
+          <Banner title="FAQ" text="Frequently Asked Questions" />
+
+          <div
+            role="main"
+            aria-label="Frequently Asked Questions"
+            className="flex flex-col space-y-4 py-10 md:py-20"
+          >
+            {faqData.map((faq, index) => (
+              <FaqAccordion key={index} faqData={faq} />
+            ))}
+          </div>
+        </div>
+      </section>
     </>
   );
 };

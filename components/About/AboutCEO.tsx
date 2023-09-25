@@ -34,13 +34,13 @@ export const AboutCEO = () => {
           height={24}
           loading="lazy"
         />
-        <p className="text-muted my-4 w-full text-left text-base xs:text-[17px] sm:text-lg sm:leading-6 sm:tracking-wide md:leading-8">
-          The healthcare industry has never been so advanced, and yet there are
-          still so many patients who don&apos;t receive the right care at the
-          right time. Infermedica thrives in the face of this global challenge
-          by focusing on leading-edge technology to create patient-oriented
-          solutions, including reliable symptom assessment, which significantly
-          improves patient flow and enhances patient satisfaction.
+        <p aria-label="Quote of CEO" className="text-muted my-4 w-full text-left text-base xs:text-[17px] sm:text-lg sm:leading-6 sm:tracking-wide md:leading-8">
+          <span className="font-medium text-secondary">Almuda</span> provides a
+          wide range of business setup services in{" "}
+          <span className="font-medium text-secondary">Uzbekistan</span> for
+          startups, medium-sized companies, and large corporations. Our
+          extensive experience in company formation services sets us apart from
+          the pack.
         </p>
         <h3
           aria-label="CEO of Almuda Company"

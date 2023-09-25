@@ -1,8 +1,10 @@
-import { Banner } from "..";
+import { Banner, WhyAlmuda } from "..";
 import { AboutCEO } from "./AboutCEO";
 import WhatCanWeDo from "../WhatCanWeDo";
 import AboutProvides from "./AboutProvides";
 import CompanyMission from "./CompanyMission";
+import RunningBusiness from "./RunningBusiness";
+import TypesCompanies from "./TypesCompanies";
 
 const About = () => {
   return (
@@ -14,7 +16,10 @@ const About = () => {
       <AboutCEO />
       <AboutProvides />
       <CompanyMission />
+      <TypesCompanies />
       <WhatCanWeDo text />
+      <RunningBusiness />
+      <WhyAlmuda />
     </div>
   );
 };

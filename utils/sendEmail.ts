@@ -3,7 +3,7 @@ import emailjs from "@emailjs/browser";
 import { DialogData, FormData } from "@/types";
 import { templateBuilder } from ".";
 
-export const sendEmail = (data: any) => {
+export const sendEmail = (data: DialogData | FormData) => {
   const serviceID = process.env.NEXT_PUBLIC_SERVICE_ID!;
   const templateID = process.env.NEXT_PUBLIC_TEMPLATE_ID!;
   const serviceKey = process.env.NEXT_PUBLIC_SERVICE_KEY!;
