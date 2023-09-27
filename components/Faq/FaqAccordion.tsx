@@ -27,7 +27,6 @@ const FaqAccordion = ({ faqData }: { faqData: FaqData }) => {
         <button
           type="button"
           title="toggle"
-          tabIndex={-1}
           className={variants.btn}
           onClick={() => setIsExpanded((prev) => !prev)}
         >
@@ -42,12 +41,8 @@ const FaqAccordion = ({ faqData }: { faqData: FaqData }) => {
         <div id="accordion-content">
           <p
             role="accordion-text"
-            aria-expanded={isExpanded ? "true" : "false"}
             aria-label="accordion-text"
-            aria-roledescription="accordion-text"
             title={faqData.answer}
-            aria-description={faqData.answer}
-            aria-describedby={faqData.answer}
             className={variants.accordionText}
           >
             {faqData.answer}
