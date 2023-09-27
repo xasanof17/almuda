@@ -7,7 +7,7 @@ const Features = () => {
     <section role="banner" id="features" className="container py-20 md:py-56">
       <div className="mx-auto mb-14 flex w-full max-w-lg flex-col">
         <h2
-          role="title"
+          role="heading"
           aria-label="title"
           title="Our special features"
           className="title"
