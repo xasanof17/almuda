@@ -14,17 +14,8 @@ const variants = {
 const FaqAccordion = ({ faqData }: { faqData: FaqData }) => {
   const [isExpanded, setIsExpanded] = useState(false);
   return (
-    <div
-      aria-labelledby={`faq-question`}
-      aria-expanded={isExpanded}
-      className={`${variants.accordion} ${isExpanded ? "bg-slate-50" : ""}`}
-    >
-      <div
-        tabIndex={0}
-        role="accordion-heading"
-        aria-label="accordion-heading"
-        className="flex items-center justify-between"
-      >
+    <div className={`${variants.accordion} ${isExpanded ? "bg-slate-50" : ""}`}>
+      <div tabIndex={0} className="flex items-center justify-between">
         <h2
           title={faqData.question}
           className={`${
@@ -34,12 +25,10 @@ const FaqAccordion = ({ faqData }: { faqData: FaqData }) => {
           {faqData.question}
         </h2>
         <button
-          aria-label={`Toggle ${isExpanded ? "Collapse" : "Expand"}`}
-          tabIndex={-1}
+          type="button"
+          title="toggle"
           className={variants.btn}
           onClick={() => setIsExpanded((prev) => !prev)}
-          aria-labelledby="accordion-heading"
-          id="accordion-content"
         >
           {isExpanded ? (
             <BsChevronUp className="text-xl text-primary" />
@@ -49,15 +38,11 @@ const FaqAccordion = ({ faqData }: { faqData: FaqData }) => {
         </button>
       </div>
       {isExpanded && (
-        <div aria-labelledby="accordion-heading" id="accordion-content">
+        <div id="accordion-content">
           <p
             role="accordion-text"
-            aria-expanded={isExpanded ? "true" : "false"}
             aria-label="accordion-text"
-            aria-roledescription="accordion-text"
             title={faqData.answer}
-            aria-description={faqData.answer}
-            aria-describedby={faqData.answer}
             className={variants.accordionText}
           >
             {faqData.answer}

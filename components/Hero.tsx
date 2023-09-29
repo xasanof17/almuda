@@ -1,6 +1,5 @@
 "use client";
 import { HeroBg, Illustration } from "@/assets/img";
-import { motion } from "framer-motion";
 import Image from "next/image";
 import { useState } from "react";
 import { DialogComponent } from "./dialog";
@@ -11,10 +10,10 @@ const Hero = () => {
   return (
     <section id="hero" className="container md:my-20">
       <div className="py-14 md:py-20 xl:relative">
-        <motion.div
-          animate={{ x: 0, opacity: 1 }}
-          initial={{ x: "-50%", opacity: 0 }}
-          transition={{ bounce: 0.25, delay: 0.25, duration: 0.25 }}
+        <div
+          // animate={{ x: 0, opacity: 1 }}
+          // initial={{ x: "-50%", opacity: 0 }}
+          // transition={{ bounce: 0.25, delay: 0.25, duration: 0.25 }}
           className="flex flex-col items-center md:items-start"
         >
           <span
@@ -47,11 +46,11 @@ const Hero = () => {
             text="Calculate cost"
             className="btn-secondary uppercase"
           />
-        </motion.div>
-        <motion.div
-          transition={{ bounce: 0.25 }}
-          animate={{ y: 0, opacity: 1 }}
-          initial={{ y: "-30%", opacity: 0 }}
+        </div>
+        <div
+          // transition={{ bounce: 0.25 }}
+          // animate={{ y: 0, opacity: 1 }}
+          // initial={{ y: "-30%", opacity: 0 }}
           className="hidden md:inline"
         >
           <Image
@@ -61,10 +60,10 @@ const Hero = () => {
             priority
             role="img"
           />
-        </motion.div>
-        <motion.div
-          animate={{ y: 0, opacity: 1 }}
-          initial={{ y: "-30%", opacity: 0 }}
+        </div>
+        <div
+          // animate={{ y: 0, opacity: 1 }}
+          // initial={{ y: "-30%", opacity: 0 }}
           className="relative block h-[400px] w-full sm:h-[600px] md:hidden"
         >
           <Image
@@ -72,9 +71,9 @@ const Hero = () => {
             alt="illustration"
             fill
             className="object-contain"
-            loading="lazy"
+            priority
           />
-        </motion.div>
+        </div>
       </div>
       <DialogComponent isOpen={isOpen} setIsOpen={setIsOpen} />
     </section>
