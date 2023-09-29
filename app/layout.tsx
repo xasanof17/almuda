@@ -11,6 +11,8 @@ const inter = Inter({
   weight: ["300", "400", "500", "600", "700", "800"],
 });
 
+const baseUrl = process.env.NEXT_PUBLIC_SITE_URL;
+
 export const metadata: Metadata = {
   title: {
     default: "Almuda Company - Accounting Services",
@@ -30,16 +32,16 @@ export const metadata: Metadata = {
     "Quality, reliable and honest accounting services for your business.",
   applicationName: "almudacompany.com",
   alternates: {
-    canonical: "https://almudacompany.com",
+    canonical: `${baseUrl}`,
   },
-  manifest: "https://almudacompany.com/manifest.json",
+  manifest: `${baseUrl}/manifest.json`,
   publisher: "Hostinger",
   keywords: keywords,
-  metadataBase: new URL("https://almudacompany.com"),
+  metadataBase: new URL(`${baseUrl}`),
   verification: {
     google: "uyYXlCrcokD1MeNuwaj9tMJVFJfd11f7d5-9HRtsaG0",
     yandex: "3cea10c7008b5c14",
-    me: "https://almudacompany.com",
+    me: `${baseUrl}`,
   },
   referrer: "origin-when-cross-origin",
   openGraph: {
@@ -49,13 +51,13 @@ export const metadata: Metadata = {
     description:
       "Quality, reliable and honest accounting services for your business. Start your business in Uzbekistan.",
     siteName: "almudacompany.com",
-    url: "https://almudacompany.com",
+    url: `${baseUrl}`,
     emails: ["info@almuda.uz", "xasanof17@gmail.com"],
-    phoneNumbers: ["+998900198505"],
+    phoneNumbers: ["+998900198505", "+998900186644"],
     images: {
       url: "/og.png",
       type: "image/png",
-      width: 300,
+      width: 400,
       height: 400,
     },
   },
