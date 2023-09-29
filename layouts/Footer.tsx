@@ -9,12 +9,19 @@ import {
   FaInstagram,
   FaLinkedinIn,
   FaTelegramPlane,
+  FaWhatsapp,
 } from "react-icons/fa";
 import { FiMail, FiMapPin, FiPhone } from "react-icons/fi";
 
 type Social = {
   Icon: IconType;
-  name: "Telegram" | "Instagram" | "Facebook" | "Linkedin" | "Github";
+  name:
+    | "Telegram"
+    | "Whatsapp"
+    | "Instagram"
+    | "Facebook"
+    | "Linkedin"
+    | "Github";
   href: string;
 };
 
@@ -23,6 +30,11 @@ const socials: Social[] = [
     Icon: FaFacebook,
     name: "Facebook",
     href: "https://facebook.com/almuda",
+  },
+  {
+    Icon: FaWhatsapp,
+    name: "Whatsapp",
+    href: "https://whatsapp.com",
   },
   {
     Icon: FaInstagram,
@@ -55,11 +67,11 @@ const Footer = () => {
       <iframe
         title="Google Maps"
         src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2995.9430512387935!2d69.26116897659249!3d41.33185169943735!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x38ae8baf9219ea7d%3A0xe5521350ed061692!2sIMAN%20Invest!5e0!3m2!1sru!2s!4v1695394628698!5m2!1sru!2s"
-        style={{ border: 0, width: "100%", height: 500 }}
         allowFullScreen={true}
         loading="lazy"
         referrerPolicy="no-referrer-when-downgrade"
-      ></iframe>
+        className="h-[400px] w-full border-0 md:h-[500px]"
+      />
       <div className="container grid grid-cols-1 gap-5 pt-6 md:grid-cols-3">
         <div className="flex flex-col items-start">
           <Link href="/" title="Al-Muda Logo">
@@ -88,7 +100,9 @@ const Footer = () => {
           </ul>
         </div>
         <div className="flex flex-col">
-          <h3 className="mb-6 text-xl font-semibold text-secondary">Company</h3>
+          <h3 className="mb-3 text-xl font-semibold text-secondary md:mb-6">
+            Company
+          </h3>
           <ul className="flex flex-col items-start space-y-2">
             {links.map(({ href, title }, i) => (
               <li key={i}>
@@ -100,7 +114,7 @@ const Footer = () => {
           </ul>
         </div>
         <div className="flex flex-col">
-          <h3 className="mb-6 text-xl font-semibold text-secondary">
+          <h3 className="mb-3 text-xl font-semibold text-secondary md:mb-6">
             Contact Us
           </h3>
           <ul className="flex flex-col items-start">
@@ -129,7 +143,7 @@ const Footer = () => {
           </ul>
         </div>
       </div>
-      <div className="mt-8 flex w-full flex-col items-center justify-center space-x-1 border-t-2 py-5 md:flex-row">
+      <div className="mt-8 flex w-full flex-col items-center justify-center space-x-1 border-t-2 py-3 md:flex-row md:py-5">
         <p className="muted text-base font-medium md:text-lg">
           &copy; All rights reserved {currentYear}.
         </p>

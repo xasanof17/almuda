@@ -27,17 +27,14 @@ const Features = () => {
       <div className="grid grid-cols-1 gap-9 sm:grid-cols-2 md:gap-7 lg:grid-cols-4 xl:gap-[60px]">
         {features.map(({ src, title, text }, i) => (
           <div className="flex flex-col items-center md:items-start" key={i}>
-            <figure>
-              <div className="relative mb-7 h-[80px] w-[80px]">
-                <Image
-                  src={src}
-                  alt="icon"
-                  fill
-                  className="object-contain"
-                  priority
-                />
-              </div>
-              <figcaption>{title}</figcaption>
+            <figure className="relative mb-7 flex h-[80px] w-[80px] items-center justify-center">
+              <Image
+                src={src}
+                alt="icon"
+                fill
+                className="object-contain"
+                priority
+              />
             </figure>
             <h3
               aria-label={title}
@@ -116,9 +113,6 @@ const Features = () => {
             ))}
           </ul>
         </div>
-      </div>
-      <div className="my-3">
-        <p></p>
       </div>
     </section>
   );

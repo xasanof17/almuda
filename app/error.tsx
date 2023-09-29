@@ -21,14 +21,14 @@ export default function Error({
   }, [error]);
   return (
     <section className="max-w-screen flex h-full min-h-screen w-full flex-col items-center justify-center bg-white">
-      <h1 className="mb-3 text-2xl font-bold text-black lg:text-5xl">
+      <h1 className="mb-3 text-xl font-bold text-black sm:text-2xl lg:text-5xl">
         500! Something went wrong!
       </h1>
       <Button
         type="button"
         onClick={() => reset()}
         text="Try Again"
-        className="btn-primary"
+        className="btn-secondary"
       />
     </section>
   );

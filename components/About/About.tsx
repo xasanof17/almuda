@@ -1,10 +1,11 @@
-import { Banner, WhyAlmuda } from "..";
+import { Banner } from "..";
 import { AboutCEO } from "./AboutCEO";
 import WhatCanWeDo from "../WhatCanWeDo";
 import AboutProvides from "./AboutProvides";
 import CompanyMission from "./CompanyMission";
 import RunningBusiness from "./RunningBusiness";
 import TypesCompanies from "./TypesCompanies";
+import WhyAlmuda from "./WhyAlmuda";
 
 const data = [
   {
@@ -28,7 +29,7 @@ const data = [
   },
   {
     title: "UZBEKISTAN CORPORATE PROFILE REPORT",
-    text: `PROFILE REPORT Verification of the available company registration
+    text: `Profile report Verification of the available company registration
     details, description and contact information of a subject entity.
     Due to the varying disclosure requirements between jurisdictions the
     content of a profile report may differ. Profile reports are usually
@@ -58,11 +59,25 @@ const About = () => {
       <RunningBusiness />
       <WhyAlmuda />
       <div className="flex flex-col">
-        <h2 className="title mb-5">UZBEKISTAN BUSINESS INFORMATION SERVICES</h2>
+        <h2 role="heading" className="title mb-5 capitalize">
+          Uzbekistan business information services
+        </h2>
         {data.map(({ title, text }, i) => (
           <div key={i} className="my-3">
-            <h2 className="text-lg font-bold text-primary/90">{title}</h2>
-            <p className="text-base font-medium text-primary/80">{text}</p>
+            <h3
+              aria-label={title}
+              role="heading"
+              className="text-center text-base font-bold text-primary/90 md:text-lg"
+            >
+              {title}
+            </h3>
+            <p
+              aria-label={text}
+              role="textbox"
+              className="text-justify text-base font-medium text-primary/80"
+            >
+              {text}
+            </p>
           </div>
         ))}
       </div>

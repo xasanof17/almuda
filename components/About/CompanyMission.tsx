@@ -12,7 +12,7 @@ const CompanyMission = () => {
       role="banner"
       className="my-10 flex grid-cols-2 flex-col sm:my-20 lg:grid"
     >
-      <div className="relative h-[360px] w-full sm:h-[400px] xl:h-[450px]">
+      <div className="relative h-[340px] w-full sm:h-[400px] xl:h-[450px]">
         <Image
           role="img"
           src={AlmudaBanner}

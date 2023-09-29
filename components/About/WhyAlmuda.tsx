@@ -34,11 +34,11 @@ const variants = {
 
 const WhyAlmuda = () => {
   return (
-    <section
+    <div
       id="whyAlmuda"
       role="region"
       aria-labelledby="why-almuda-heading"
-      className="container lg:py-40"
+      className="lg:py-40"
     >
       <div className="flex flex-col items-center justify-center">
         <h2
@@ -100,7 +100,7 @@ const WhyAlmuda = () => {
           Image
         </div>
       </div>
-    </section>
+    </div>
   );
 };
 
