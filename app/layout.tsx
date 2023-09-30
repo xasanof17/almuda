@@ -39,8 +39,8 @@ export const metadata: Metadata = {
   keywords: keywords,
   metadataBase: new URL(`${baseUrl}`),
   verification: {
-    google: "uyYXlCrcokD1MeNuwaj9tMJVFJfd11f7d5-9HRtsaG0",
-    yandex: "3cea10c7008b5c14",
+    google: `${process.env.NEXT_PUBLIC_GOOGLE_VERIFICATION}`,
+    yandex: `${process.env.NEXT_PUBLIC_YANDEX_VERIFICATION}`,
     me: `${baseUrl}`,
   },
   referrer: "origin-when-cross-origin",
