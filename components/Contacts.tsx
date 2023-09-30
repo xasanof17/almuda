@@ -1,11 +1,12 @@
 "use client";
-import { SubmitHandler, useForm } from "react-hook-form";
+import { SubmitHandler, useForm, useFormState } from "react-hook-form";
 import { TextFieldController } from "./inputs/TextFieldController";
 import { PhoneInputController, TextAreaController } from "./inputs";
-import { sendEmail } from "@/utils";
 import { FormData } from "@/types";
 import { Button } from "./Button";
 import { Banner } from ".";
+import { toast } from "react-hot-toast";
+import emailjs from "@emailjs/browser";
 
 const Contacts = () => {
   const {
@@ -18,17 +19,53 @@ const Contacts = () => {
       firstName: "",
       lastName: "",
       email: "",
-      subject: "",
+      companyName: "",
       phoneNumber: "",
       message: "Hi there, ",
     },
   });
 
+  const { dirtyFields, isValid } = useFormState({
+    control,
+  });
+  const isDirty = Object.keys(dirtyFields).length > 0;
+
   const onSubmit: SubmitHandler<FormData> = (data, event) => {
     event?.preventDefault();
+    const { email, firstName, lastName, companyName, phoneNumber, message } =
+      data;
 
     try {
-      sendEmail(data);
+      const serviceID = process.env.NEXT_PUBLIC_SERVICE_ID!;
+      const templateID = process.env.NEXT_PUBLIC_TEMPLATE_ID!;
+      const serviceKey = process.env.NEXT_PUBLIC_SERVICE_KEY!;
+
+      const template = {
+        from_name: email,
+        message: `
+        Hi my name is ${firstName} ${lastName}.
+        My Company name is ${companyName}.
+        My contacts: ${phoneNumber}.
+        Message: ${message}.
+      `,
+      };
+
+      const emailjsData = emailjs
+        .send(serviceID, templateID, template, serviceKey)
+        .then(
+          (result) => {
+            console.log(result.text);
+          },
+          (error) => {
+            console.log(error.text);
+          },
+        );
+
+      toast.promise(emailjsData, {
+        loading: "Sending...",
+        success: "Your message sent",
+        error: "Faield to sent",
+      });
 
       reset();
     } catch (error) {
@@ -60,7 +97,7 @@ const Contacts = () => {
             name="lastName"
           />
           <TextFieldController
-            label="Company"
+            label="Subject"
             control={control}
             name="subject"
             className="sm:col-span-2"
@@ -88,10 +125,11 @@ const Contacts = () => {
           <Button
             title="Let's Talk"
             type="submit"
-            className="btn-secondary w-full disabled:opacity-30"
+            className="btn-secondary w-full"
             text="Let's Talk"
             isLoading={isLoading}
             aria-label="Submit Contact Form"
+            disabled={!isDirty || !isValid}
           />
         </div>
       </form>

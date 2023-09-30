@@ -1,14 +1,20 @@
+"use client";
 import { PhoneInputController, TextFieldController } from "@/components/inputs";
 import { Dispatch, FC, SetStateAction } from "react";
-import { Control } from "react-hook-form";
+import { Control, useFormState } from "react-hook-form";
 import { Button } from "../Button";
+import { FormDataTypes } from "@/types";
 
 interface ITabTwo {
-  control: Control<any>;
+  control: Control<FormDataTypes>;
   setTab: Dispatch<SetStateAction<boolean>>;
 }
 
 export const TabTwo: FC<ITabTwo> = ({ control, setTab }) => {
+  const { isValid, dirtyFields } = useFormState<FormDataTypes>({ control });
+
+  const isDirty = Object.keys(dirtyFields).length > 0;
+
   return (
     <div className="flex flex-col space-y-5">
       <div className="grid grid-cols-2 gap-4 md:gap-6">
@@ -51,6 +57,7 @@ export const TabTwo: FC<ITabTwo> = ({ control, setTab }) => {
           title="Submit"
           className="btn-secondary rounded-none !py-2"
           text="Submit"
+          disabled={!isDirty || !isValid}
         />
       </div>
     </div>

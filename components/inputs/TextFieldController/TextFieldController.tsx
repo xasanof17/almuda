@@ -20,7 +20,7 @@ export const TextFieldController: FC<ITextFieldController> = ({
     <Controller
       control={control}
       name={name}
-      rules={{ required: true }}
+      rules={{ required: true, minLength: 3 }}
       render={({ field }) => (
         <div className={`flex flex-col ${className}`}>
           <label htmlFor={name} className="label">

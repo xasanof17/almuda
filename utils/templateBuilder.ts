@@ -1,3 +1,5 @@
+import { DialogData, FormData, FormDataTypes } from "@/types";
+
 export function templateBuilder<T extends {}>(data: any): T {
   if (Object.keys(data).includes("companyName")) {
     return {

@@ -24,7 +24,7 @@ interface FormData {
   firstName: string;
   lastName: string;
   email: string;
-  subject?: string;
+  companyName?: string;
   phoneNumber: string;
   message?: string;
 }

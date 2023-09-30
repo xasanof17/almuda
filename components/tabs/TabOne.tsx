@@ -1,10 +1,10 @@
-'use client'
+"use client";
 import { SelectController, TextFieldController } from "@/components/inputs";
 import { dialogData } from "@/constants/dialogData";
-import { FormDataTypes } from "@/types";
 import { Dispatch, FC, SetStateAction } from "react";
-import { Control } from "react-hook-form";
+import { Control, useFormState } from "react-hook-form";
 import { Button } from "../Button";
+import { FormDataTypes } from "@/types";
 
 interface ITabOne {
   control: Control<FormDataTypes>;
@@ -12,8 +12,10 @@ interface ITabOne {
 }
 
 export const TabOne: FC<ITabOne> = ({ control, setTab }) => {
-  // const { isValid, dirtyFields } = useFormState<FormDataTypes>();
-  // const isDirty = Object.keys(dirtyFields).length > 0;
+  const { dirtyFields } = useFormState<FormDataTypes>({ control });
+
+  const isDirty = Object.keys(dirtyFields).length > 0;
+
   return (
     <div className="flex flex-col space-y-5">
       <SelectController
@@ -47,7 +49,7 @@ export const TabOne: FC<ITabOne> = ({ control, setTab }) => {
         onClick={() => setTab((prev) => !prev)}
         className="btn-secondary mt-5 w-full !p-2"
         text="Next"
-        // disabled={!isDirty || !isValid}
+        disabled={!isDirty}
       />
     </div>
   );

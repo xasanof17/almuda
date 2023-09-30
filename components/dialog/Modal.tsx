@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 import { Dispatch, SetStateAction, useState } from "react";
 import { MdClose } from "react-icons/md";
 import { SubmitHandler, useForm } from "react-hook-form";
-import { DialogData } from "@/types";
+import { DialogData, FormDataTypes } from "@/types";
 import { TabOne, TabTwo } from "../tabs";
 import { Button } from "../Button";
 import { sendEmail } from "@/utils";
@@ -14,7 +14,7 @@ interface IModalProps {
 
 export const Modal = ({ setIsOpen }: IModalProps) => {
   const [tab, setTab] = useState(false);
-  const { handleSubmit, control, reset } = useForm<DialogData>({
+  const { handleSubmit, control, reset } = useForm<FormDataTypes>({
     defaultValues: {
       firstName: "",
       lastName: "",
@@ -25,7 +25,7 @@ export const Modal = ({ setIsOpen }: IModalProps) => {
     },
   });
 
-  const onSubmit: SubmitHandler<DialogData> = (data, event) => {
+  const onSubmit: SubmitHandler<FormDataTypes> = (data, event) => {
     event?.preventDefault();
 
     try {
