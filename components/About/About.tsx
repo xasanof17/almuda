@@ -56,7 +56,7 @@ const About = () => {
       <CompanyMission />
       <TypesCompanies />
       <WhatCanWeDo text />
-      <RunningBusiness />
+      {/* <RunningBusiness /> */}
       <WhyAlmuda />
       <div className="flex flex-col">
         <h2 role="heading" className="title mb-5 capitalize">

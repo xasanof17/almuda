@@ -61,7 +61,7 @@ const WhyAlmuda = () => {
           believe Almuda is the right choice for you:
         </p>
       </div>
-      <div className="grid grid-cols-1 py-20 md:grid-cols-2">
+      <div className="py-20">
         <div className="flex flex-col">
           <ul
             role="list"

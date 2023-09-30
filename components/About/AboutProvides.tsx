@@ -44,8 +44,10 @@ const AboutProvides = () => {
           success, and we&apos;re here to make it happen.
         </p>
       </div>
-      <div className="relative h-[300px] w-full sm:h-[480px] lg:h-[400px] xl:h-[450px]">
-        <Image role="img" src={AlmudaProvidesImg} alt="image" fill />
+      <div className="flex items-center justify-center">
+        <div className="relative h-[300px] w-full sm:h-[480px] lg:h-[400px] xl:h-[450px]">
+          <Image role="img" src={AlmudaProvidesImg} alt="image" fill />
+        </div>
       </div>
     </div>
   );
