@@ -1,15 +1,19 @@
+'use client'
 import { SelectController, TextFieldController } from "@/components/inputs";
 import { dialogData } from "@/constants/dialogData";
+import { FormDataTypes } from "@/types";
 import { Dispatch, FC, SetStateAction } from "react";
 import { Control } from "react-hook-form";
 import { Button } from "../Button";
 
 interface ITabOne {
-  control: Control<any>;
+  control: Control<FormDataTypes>;
   setTab: Dispatch<SetStateAction<boolean>>;
 }
 
 export const TabOne: FC<ITabOne> = ({ control, setTab }) => {
+  // const { isValid, dirtyFields } = useFormState<FormDataTypes>();
+  // const isDirty = Object.keys(dirtyFields).length > 0;
   return (
     <div className="flex flex-col space-y-5">
       <SelectController
@@ -43,6 +47,7 @@ export const TabOne: FC<ITabOne> = ({ control, setTab }) => {
         onClick={() => setTab((prev) => !prev)}
         className="btn-secondary mt-5 w-full !p-2"
         text="Next"
+        // disabled={!isDirty || !isValid}
       />
     </div>
   );

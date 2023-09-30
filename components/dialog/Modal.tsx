@@ -16,10 +16,10 @@ export const Modal = ({ setIsOpen }: IModalProps) => {
   const [tab, setTab] = useState(false);
   const { handleSubmit, control, reset } = useForm<DialogData>({
     defaultValues: {
-      vizas: "",
-      owners: "",
       firstName: "",
       lastName: "",
+      vizas: 0,
+      owners: 0,
       phoneNumber: "",
       email: "",
     },

@@ -49,3 +49,5 @@ interface FaqData {
   question: string;
   answer: string;
 }
+
+type FormDataTypes = FormData | DialogData;
