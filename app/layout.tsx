@@ -8,7 +8,8 @@ import { Toaster } from "react-hot-toast";
 
 const inter = Inter({
   subsets: ["latin"],
-  weight: ["300", "400", "500", "600", "700", "800"],
+  weight: ["400", "500", "600", "700"],
+  display: "auto",
 });
 
 const baseUrl = process.env.NEXT_PUBLIC_SITE_URL;
@@ -30,11 +31,11 @@ export const metadata: Metadata = {
   creator: "JX Team",
   abstract:
     "Quality, reliable and honest accounting services for your business.",
-  applicationName: "almudacompany.com",
+  applicationName: "Almuda Company",
   alternates: {
     canonical: `${baseUrl}`,
   },
-  manifest: `${baseUrl}/manifest.json`,
+  manifest: `${baseUrl}/manifest.webmanifest`,
   publisher: "Hostinger",
   keywords: keywords,
   metadataBase: new URL(`${baseUrl}`),
@@ -43,23 +44,54 @@ export const metadata: Metadata = {
     yandex: `${process.env.NEXT_PUBLIC_YANDEX_VERIFICATION}`,
     me: `${baseUrl}`,
   },
-  referrer: "origin-when-cross-origin",
+  referrer: "origin",
   openGraph: {
     type: "website",
-    title: "Almuda Company",
+    title: "Almuda Company - Accounting Services",
     countryName: "Uzbekistan",
     description:
       "Quality, reliable and honest accounting services for your business. Start your business in Uzbekistan.",
     siteName: "almudacompany.com",
     url: `${baseUrl}`,
-    emails: ["info@almudacompany.com", "xasanof17@gmail.com"],
+    emails: [
+      "info@almudacompany.com",
+      "xasanof17@gmail.com",
+      "oisha.151115@gmail.com",
+      "info@almuda.uz",
+    ],
     phoneNumbers: ["+998900198505", "+998900186644"],
-    images: {
-      url: "/og.png",
-      type: "image/png",
-      width: 400,
-      height: 400,
-    },
+    images: [
+      {
+        url: `${baseUrl}/og.png`,
+        width: 300,
+        height: 300,
+        type: "image/png",
+      },
+      {
+        url: `${baseUrl}/twitter-image.png`,
+        width: 300,
+        height: 300,
+        type: "image/png",
+      },
+      {
+        url: "/apple-icon.svg",
+        width: 16,
+        height: 16,
+        type: "image/svg+xml",
+      },
+      {
+        url: "/icon.svg",
+        width: 16,
+        height: 16,
+        type: "image/svg+xml",
+      },
+      {
+        url: "/favicon.ico",
+        width: 16,
+        height: 16,
+        type: "image/ico",
+      },
+    ],
   },
   robots: {
     index: false,
@@ -77,8 +109,15 @@ export const metadata: Metadata = {
   themeColor: "white",
   icons: {
     shortcut: "/icon.svg",
-    icon: "/icon.svg",
+    icon: "/favicon.ico",
     apple: "/apple-icon.svg",
+  },
+  assets: `${baseUrl}/assets`,
+  twitter: {
+    card: "summary_large_image",
+    description:
+      "Quality, reliable and honest accounting services for your business. Start your business in Uzbekistan.",
+    site: `${baseUrl}`,
   },
 };
 

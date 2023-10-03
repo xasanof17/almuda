@@ -110,6 +110,15 @@ const Footer = () => {
                 </Link>
               </li>
             ))}
+            <li>
+              <Link
+                href="/certificates/certificate.pdf"
+                className="link"
+                target="_blank"
+              >
+                Certificates
+              </Link>
+            </li>
           </ul>
         </div>
         <div className="flex flex-col">
