@@ -3,10 +3,11 @@ import { motion } from "framer-motion";
 import { Dispatch, SetStateAction, useState } from "react";
 import { MdClose } from "react-icons/md";
 import { SubmitHandler, useForm } from "react-hook-form";
-import { DialogData, FormDataTypes } from "@/types";
+import { FormDataTypes } from "@/types";
 import { TabOne, TabTwo } from "../tabs";
 import { Button } from "../Button";
 import { sendEmail } from "@/utils";
+import { useRouter } from "next/navigation";
 
 interface IModalProps {
   setIsOpen: Dispatch<SetStateAction<boolean>>;
@@ -14,6 +15,7 @@ interface IModalProps {
 
 export const Modal = ({ setIsOpen }: IModalProps) => {
   const [tab, setTab] = useState(false);
+  const router = useRouter();
   const { handleSubmit, control, reset } = useForm<FormDataTypes>({
     defaultValues: {
       firstName: "",
@@ -32,6 +34,8 @@ export const Modal = ({ setIsOpen }: IModalProps) => {
       sendEmail(data);
 
       reset();
+      setIsOpen((prev) => !prev);
+      router.push("/about", { scroll: false });
     } catch (error) {
       console.log(error);
     }

@@ -43,11 +43,11 @@ const Contacts = () => {
       const template = {
         from_name: email,
         message: `
-        Hi my name is ${firstName} ${lastName}.
-        My Company name is ${companyName}.
-        My contacts: ${phoneNumber}.
-        Message: ${message}.
-      `,
+          Hi my name is ${firstName} ${lastName}.
+          My Company name is ${companyName}.
+          My contacts: ${phoneNumber}.
+          Message: ${message}.
+        `,
       };
 
       const emailjsData = emailjs

@@ -29,27 +29,27 @@ const socials: Social[] = [
   {
     Icon: FaFacebook,
     name: "Facebook",
-    href: "https://facebook.com/almuda",
+    href: "https://wa.me/998900186644",
   },
   {
     Icon: FaWhatsapp,
     name: "Whatsapp",
-    href: "https://whatsapp.com",
+    href: "https://wa.me/998900186644",
   },
   {
     Icon: FaInstagram,
     name: "Instagram",
-    href: "https://instagram.com/almuda",
+    href: "https://instagram.com/buxgalteriya_xizmatlari_",
   },
   {
     Icon: FaLinkedinIn,
     name: "Linkedin",
-    href: "https://t.me/xxvlw",
+    href: "https://www.linkedin.com/in/javohir-xasanov-40a186237",
   },
   {
     Icon: FaTelegramPlane,
     name: "Telegram",
-    href: "https://t.me/xasanof17",
+    href: "https://t.me/oisha_rakhimova",
   },
   {
     Icon: FaGithub,
@@ -60,7 +60,6 @@ const socials: Social[] = [
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
-  const currentDate = new Date().getHours();
 
   return (
     <footer className="shadow">
