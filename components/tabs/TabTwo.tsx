@@ -41,7 +41,7 @@ export const TabTwo: FC<ITabTwo> = ({ control, setTab }) => {
           control={control}
           name="email"
           label="Email Address"
-          placeholder="info@almuda.uz"
+          placeholder="info@almudacompany.com"
         />
       </div>
       <div className="grid grid-cols-2 gap-4 md:gap-6">

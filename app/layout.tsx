@@ -52,7 +52,7 @@ export const metadata: Metadata = {
       "Quality, reliable and honest accounting services for your business. Start your business in Uzbekistan.",
     siteName: "almudacompany.com",
     url: `${baseUrl}`,
-    emails: ["info@almuda.uz", "xasanof17@gmail.com"],
+    emails: ["info@almudacompany.com", "xasanof17@gmail.com"],
     phoneNumbers: ["+998900198505", "+998900186644"],
     images: {
       url: "/og.png",

@@ -1,9 +1,5 @@
 /** @type {import('next').NextConfig} */
 
-// const NextPWA = require("next-pwa")({
-//   dest: "public",
-// });
-
 const nextConfig = {
   reactStrictMode: true,
   compress: true,

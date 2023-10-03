@@ -1,17 +1,19 @@
 import { Contacts } from "@/components";
 import type { Metadata } from "next";
 
+const baseUrl = process.env.NEXT_PUBLIC_SITE_URL;
+
 export const metadata: Metadata = {
   title: "Contact",
   description:
     "Get in touch with Almuda Company for inquiries, support, or collaboration. We're here to assist you.",
-  abstract: "https://almudacompany.com/contact",
+  abstract: `${baseUrl}/contact`,
   openGraph: {
     title: "Contact - Almuda Company",
     description:
       "Contact Almuda Company for inquiries, support, or collaboration. We're here to assist you.",
     siteName: "almudacompany.com",
-    url: "https://almudacompany.com/contact",
+    url: `${baseUrl}/contact`,
   },
 };
 

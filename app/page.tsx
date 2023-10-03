@@ -5,11 +5,11 @@ import {
   Partner,
   Pricing,
   WhatOurClientsSay,
-} from "@/components"; 
+} from "@/components";
 
 export default function Home() {
   return (
-    <main>
+    <main role="main">
       <Hero />
       <Features />
       <Partner />

@@ -120,8 +120,8 @@ const Footer = () => {
           <ul className="flex flex-col items-start">
             <li className="flex items-center space-x-3">
               <FiMail className="h-6 w-6 text-primary" />
-              <Link href="mailto:info@almuda.uz" className="link">
-                info@almuda.uz
+              <Link href="mailto:info@almudacompany.com" className="link">
+                info@almudacompany.com
               </Link>
             </li>
             <li className="flex items-center space-x-3">
