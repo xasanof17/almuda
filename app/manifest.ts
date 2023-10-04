@@ -2,15 +2,36 @@ import { MetadataRoute } from "next";
 
 export default function manifest(): MetadataRoute.Manifest {
   return {
-    name: "Almuda Company - Accounting Services",
-    short_name: "Almuda Company",
+    theme_color: "#fff",
+    background_color: "#fff",
+    display: "browser",
+    scope: "/",
+    start_url: "/",
+    name: "Almuda Company",
+    short_name: "Almuda",
     description:
       "Quality, reliable and honest accounting services for your business. Start your business in Uzbekistan.",
-    start_url: "/",
-    display: "standalone",
-    background_color: "#fff",
-    theme_color: "#fff",
     icons: [
+      {
+        src: "icons/icon-192x192.png",
+        sizes: "192x192",
+        type: "image/png",
+      },
+      {
+        src: "icons/icon-256x256.png",
+        sizes: "256x256",
+        type: "image/png",
+      },
+      {
+        src: "icons/icon-384x384.png",
+        sizes: "384x384",
+        type: "image/png",
+      },
+      {
+        src: "icons/icon-512x512.png",
+        sizes: "512x512",
+        type: "image/png",
+      },
       {
         src: "/apple-icon.svg",
         sizes: "16x16",
@@ -22,5 +43,9 @@ export default function manifest(): MetadataRoute.Manifest {
         type: "image/ico",
       },
     ],
+    serviceworker: {
+      src: "/generate-sw.js",
+      update_via_cache: "all",
+    },
   };
 }

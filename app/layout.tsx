@@ -105,7 +105,8 @@ export const metadata: Metadata = {
       "max-snippet": -1,
     },
   },
-  themeColor: "white",
+  themeColor: "#fff",
+  colorScheme: "light",
   icons: {
     shortcut: "/icon.svg",
     icon: "/favicon.ico",
