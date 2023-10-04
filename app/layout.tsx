@@ -61,13 +61,13 @@ export const metadata: Metadata = {
     phoneNumbers: ["+998900198505", "+998900186644"],
     images: [
       {
-        url: `${baseUrl}/og.png`,
+        url: "/og.png",
         width: 300,
         height: 300,
         type: "image/png",
       },
       {
-        url: `${baseUrl}/twitter-image.png`,
+        url: "/twitter-image.png",
         width: 300,
         height: 300,
         type: "image/png",
