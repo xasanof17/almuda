@@ -9,7 +9,6 @@ import { Toaster } from "react-hot-toast";
 const inter = Inter({
   subsets: ["latin"],
   weight: ["400", "500", "600", "700"],
-  display: "auto",
 });
 
 const baseUrl = process.env.NEXT_PUBLIC_SITE_URL;
