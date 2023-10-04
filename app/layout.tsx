@@ -72,24 +72,6 @@ export const metadata: Metadata = {
         height: 300,
         type: "image/png",
       },
-      {
-        url: "/apple-icon.svg",
-        width: 16,
-        height: 16,
-        type: "image/svg+xml",
-      },
-      {
-        url: "/icon.svg",
-        width: 16,
-        height: 16,
-        type: "image/svg+xml",
-      },
-      {
-        url: "/favicon.ico",
-        width: 16,
-        height: 16,
-        type: "image/ico",
-      },
     ],
   },
   robots: {
