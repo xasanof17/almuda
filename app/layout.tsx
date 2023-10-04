@@ -61,7 +61,7 @@ export const metadata: Metadata = {
     phoneNumbers: ["+998900198505", "+998900186644"],
     images: [
       {
-        url: "/og.png",
+        url: "/opengraph-image.png",
         width: 300,
         height: 300,
         type: "image/png",
