@@ -14,13 +14,13 @@ export default function Analytics() {
   return (
     <>
       <script
-        async={process.env.NODE_ENV === "production"}
+        async
         src={`https://www.googletagmanager.com/gtag/js?id=${GTM_ID}`}
-      ></script>
+      />
       <script
         src="https://beamanalytics.b-cdn.net/beam.min.js"
         data-token={token}
-        async={process.env.NODE_ENV === "production"}
+        async
       />
     </>
   );
