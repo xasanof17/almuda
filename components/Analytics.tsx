@@ -13,6 +13,14 @@ export default function Analytics() {
   }
   return (
     <>
+      <noscript>
+        <iframe
+          style={{ display: "none", visibility: "hidden" }}
+          src="https://www.googletagmanager.com/ns.html?id=GTM-K7LJQ6QV"
+          height="0"
+          width="0"
+        ></iframe>
+      </noscript>
       <script
         async
         src={`https://www.googletagmanager.com/gtag/js?id=${GTM_ID}`}
