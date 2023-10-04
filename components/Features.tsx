@@ -33,7 +33,7 @@ const Features = () => {
                 alt="icon"
                 fill
                 className="object-contain"
-                priority
+                loading="lazy"
               />
             </figure>
             <h3
