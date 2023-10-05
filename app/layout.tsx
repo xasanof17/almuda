@@ -33,6 +33,9 @@ export const metadata: Metadata = {
   applicationName: "Almuda Company",
   alternates: {
     canonical: `${baseUrl}`,
+    languages: {
+      en: `${baseUrl}`,
+    },
   },
   manifest: `${baseUrl}/manifest.webmanifest`,
   publisher: "Hostinger",
