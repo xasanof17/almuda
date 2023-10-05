@@ -69,12 +69,6 @@ export const metadata: Metadata = {
         height: 300,
         type: "image/png",
       },
-      {
-        url: `${baseUrl}/twitter-image.png`,
-        width: 300,
-        height: 300,
-        type: "image/png",
-      },
     ],
   },
   robots: {
