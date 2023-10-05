@@ -87,7 +87,7 @@ export const metadata: Metadata = {
   themeColor: "#fff",
   colorScheme: "light",
   icons: {
-    shortcut: "/icon.svg",
+    shortcut: "/icons/icon-192x192.png",
     icon: "/favicon.ico",
     apple: "/apple-icon.svg",
   },
