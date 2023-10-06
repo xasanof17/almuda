@@ -35,9 +35,9 @@ export const AboutCEO = () => {
           loading="lazy"
         />
         <p aria-label="Quote of CEO" className="text-muted my-4 w-full text-left text-base xs:text-[17px] sm:text-lg sm:leading-6 sm:tracking-wide md:leading-8">
-          <span className="font-medium text-secondary">Almuda</span> provides a
+          <span className="font-medium text-blue">Almuda</span> provides a
           wide range of business setup services in{" "}
-          <span className="font-medium text-secondary">Uzbekistan</span> for
+          <span className="font-medium text-blue">Uzbekistan</span> for
           startups, medium-sized companies, and large corporations. Our
           extensive experience in company formation services sets us apart from
           the pack.
@@ -45,7 +45,7 @@ export const AboutCEO = () => {
         <h3
           aria-label="CEO of Almuda Company"
           title="Oisha Rakhimova"
-          className="text-xl font-bold tracking-wide text-secondary sm:text-2xl sm:leading-9 md:mx-0"
+          className="text-xl font-bold tracking-wide text-blue sm:text-2xl sm:leading-9 md:mx-0"
         >
           Oisha Rakhimova
         </h3>

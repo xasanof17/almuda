@@ -99,7 +99,7 @@ const Footer = () => {
           </ul>
         </div>
         <div className="flex flex-col">
-          <h3 className="mb-3 text-xl font-semibold text-secondary md:mb-6">
+          <h3 className="mb-3 text-xl font-semibold text-blue md:mb-6">
             Company
           </h3>
           <ul className="flex flex-col items-start space-y-2">
@@ -122,7 +122,7 @@ const Footer = () => {
           </ul>
         </div>
         <div className="flex flex-col">
-          <h3 className="mb-3 text-xl font-semibold text-secondary md:mb-6">
+          <h3 className="mb-3 text-xl font-semibold text-blue md:mb-6">
             Contact Us
           </h3>
           <ul className="flex flex-col items-start">
@@ -161,7 +161,7 @@ const Footer = () => {
           target="_blank"
         >
           Made by{" "}
-          <span className="font-bold text-secondary underline">JX Team</span>
+          <span className="font-bold text-blue underline">JX Team</span>
         </Link>
       </div>
     </footer>

@@ -52,7 +52,7 @@ const Navbar = () => {
                   href={href}
                   aria-label={``}
                   className={`${
-                    pathname == href ? "link text-secondary" : "link"
+                    pathname == href ? "link text-blue" : "link"
                   }`}
                 >
                   {title}
@@ -92,7 +92,7 @@ const Navbar = () => {
                     title={title}
                     href={href}
                     className={`${
-                      pathname == href ? "link text-secondary" : "link"
+                      pathname == href ? "link text-blue" : "link"
                     } text-xl`}
                   >
                     {title}

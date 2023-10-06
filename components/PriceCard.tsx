@@ -5,11 +5,11 @@ const PriceCard = ({ popular, title, price, list }: PriceList) => {
   return (
     <div
       className={`group flex w-full flex-col items-center rounded-xl border md:border-2 ${
-        popular ? "border-secondary" : "border-slate-200"
+        popular ? "border-blue" : "border-slate-200"
       } px-4 py-5 transition-all duration-200 ease-out md:px-5 md:py-7 ${
         popular
-          ? "shadow-md hover:border-blue hover:bg-transparent"
-          : "shadow hover:border-blue"
+          ? "hover:border-blue shadow-md hover:bg-transparent"
+          : "hover:border-blue shadow"
       }`}
     >
       {popular ? (
@@ -36,7 +36,7 @@ const PriceCard = ({ popular, title, price, list }: PriceList) => {
       <Button
         type="button"
         title="Get Started"
-        className="group-hover:btn-primary my-6 w-full rounded-lg !border-2 border-transparent bg-slate-400 !py-2 text-center text-base font-medium !normal-case text-white md:!text-lg"
+        className="group-hover:btn-primary my-6 w-full rounded-lg !border-2 border-transparent bg-slate-600 !py-2 text-center text-base font-medium !normal-case text-white md:!text-lg"
         text="Get Started"
       />
 
