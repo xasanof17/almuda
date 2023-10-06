@@ -47,7 +47,7 @@ export const TabOne: FC<ITabOne> = ({ control, setTab }) => {
         type="button"
         title="Next"
         onClick={() => setTab((prev) => !prev)}
-        className="btn-secondary mt-5 w-full !p-2"
+        className="btn-primary mt-5 w-full !p-2"
         text="Next"
         disabled={!isDirty}
       />

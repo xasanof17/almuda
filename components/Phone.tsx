@@ -8,7 +8,7 @@ const Phone = () => {
         title="+998900186644"
         about="Phone number"
         href="tel:+998900186644"
-        className="flex animate-bounce items-center justify-center rounded-full bg-teal-500 p-4"
+        className="flex animate-bounce items-center justify-center rounded-full bg-blue-500 p-4"
       >
         <FaPhone className="h-7 w-7 text-white" />
       </Link>

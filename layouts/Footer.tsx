@@ -92,7 +92,7 @@ const Footer = () => {
                   href={href}
                   className="flex items-center justify-center"
                 >
-                  <Icon className="muted h-6 w-6 transition-colors duration-300 hover:text-bright md:h-7 md:w-7" />
+                  <Icon className="muted h-6 w-6 transition-colors duration-300 hover:text-blue-500 md:h-7 md:w-7" />
                 </Link>
               </li>
             ))}

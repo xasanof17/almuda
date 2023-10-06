@@ -39,7 +39,7 @@ const Hero = () => {
             type="button"
             onClick={() => setIsOpen((prev) => !prev)}
             text="Calculate cost"
-            className="btn-secondary uppercase"
+            className="btn-primary uppercase"
           />
         </div>
         <div className="hidden md:inline">

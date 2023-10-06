@@ -8,8 +8,8 @@ const PriceCard = ({ popular, title, price, list }: PriceList) => {
         popular ? "border-secondary" : "border-slate-200"
       } px-4 py-5 transition-all duration-200 ease-out md:px-5 md:py-7 ${
         popular
-          ? "shadow-md hover:border-bright hover:bg-transparent"
-          : "shadow hover:border-bright"
+          ? "shadow-md hover:border-blue-500 hover:bg-transparent"
+          : "shadow hover:border-blue-500"
       }`}
     >
       {popular ? (
@@ -36,7 +36,7 @@ const PriceCard = ({ popular, title, price, list }: PriceList) => {
       <Button
         type="button"
         title="Get Started"
-        className="group-hover:btn-secondary my-6 w-full rounded-lg !border-2 border-transparent bg-slate-400 !py-2 text-center text-base font-medium !normal-case text-white md:!text-lg"
+        className="group-hover:btn-primary my-6 w-full rounded-lg !border-2 border-transparent bg-slate-400 !py-2 text-center text-base font-medium !normal-case text-white md:!text-lg"
         text="Get Started"
       />
 

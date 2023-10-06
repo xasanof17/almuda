@@ -40,7 +40,7 @@ const data = [
 
 const WhatCanWeDo = ({ text, list }: Props) => {
   return (
-    <div className="border-l-8 border-bright bg-slate-100 px-5 py-7 md:px-10">
+    <div className="border-l-8 border-blue-500 bg-slate-100 px-5 py-7 md:px-10">
       <h2 className="mb-3 text-xl font-bold uppercase text-primary md:text-2xl">
         What can we do for you
       </h2>

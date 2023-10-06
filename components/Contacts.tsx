@@ -125,7 +125,7 @@ const Contacts = () => {
           <Button
             title="Let's Talk"
             type="submit"
-            className="btn-secondary w-full"
+            className="btn-primary w-full"
             text="Let's Talk"
             isLoading={isLoading}
             aria-label="Submit Contact Form"

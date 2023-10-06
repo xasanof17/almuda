@@ -28,7 +28,7 @@ export default function Error({
         type="button"
         onClick={() => reset()}
         text="Try Again"
-        className="btn-secondary"
+        className="btn-primary"
       />
     </section>
   );

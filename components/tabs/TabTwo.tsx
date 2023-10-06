@@ -55,7 +55,7 @@ export const TabTwo: FC<ITabTwo> = ({ control, setTab }) => {
         <Button
           type="submit"
           title="Submit"
-          className="btn-secondary rounded-none !py-2"
+          className="btn-primary rounded-none !py-2"
           text="Submit"
           disabled={!isDirty || !isValid}
         />
