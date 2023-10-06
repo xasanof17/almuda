@@ -111,6 +111,14 @@ export default function RootLayout({
         <Analytics />
       </head>
       <body className={inter.className}>
+        <noscript>
+          <iframe
+            style={{ display: "none", visibility: "hidden" }}
+            src="https://www.googletagmanager.com/ns.html?id=GTM-K7LJQ6QV"
+            height="0"
+            width="0"
+          ></iframe>
+        </noscript>
         <Navbar />
         {children}
         <Phone />
