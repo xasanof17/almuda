@@ -13,7 +13,7 @@
     @apply mx-auto w-full max-w-[1320px] px-4;
   }
   .link {
-    @apply text-lg font-medium text-primary duration-300 hover:text-secondary;
+    @apply text-lg font-medium text-primary drop-shadow-md duration-300 hover:text-secondary;
   }
   .btn-primary {
     @apply rounded-md border-2 border-transparent bg-primary px-4 py-3 text-base font-medium text-white transition-all duration-300 ease-in-out hover:border-secondary hover:bg-white hover:text-secondary md:text-lg;

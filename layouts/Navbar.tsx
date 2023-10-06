@@ -40,7 +40,7 @@ const Navbar = () => {
         </Link>
         <div className="flex flex-1 items-center justify-end lg:ml-[100px] lg:justify-between">
           <ul
-            role="menu"
+            role="listbox"
             aria-label="Main Navigation Menu"
             className="hidden items-center space-x-8 lg:flex"
           >
