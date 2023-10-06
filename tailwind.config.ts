@@ -15,6 +15,7 @@ const config: Config = {
       colors: {
         primary: "#002c6d",
         secondary: "#10a0e8",
+        blue: "#094FC3",
       },
       screens: {
         xs: "370px",

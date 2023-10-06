@@ -8,8 +8,8 @@ const PriceCard = ({ popular, title, price, list }: PriceList) => {
         popular ? "border-secondary" : "border-slate-200"
       } px-4 py-5 transition-all duration-200 ease-out md:px-5 md:py-7 ${
         popular
-          ? "shadow-md hover:border-blue-500 hover:bg-transparent"
-          : "shadow hover:border-blue-500"
+          ? "shadow-md hover:border-blue hover:bg-transparent"
+          : "shadow hover:border-blue"
       }`}
     >
       {popular ? (
