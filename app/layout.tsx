@@ -24,7 +24,7 @@ export const metadata: Metadata = {
   authors: [
     {
       name: "JX Team",
-      url: "https://portfoliowebapp.vercel.app",
+      url: "https://bit.ly/javohir",
     },
   ],
   creator: "JX Team",

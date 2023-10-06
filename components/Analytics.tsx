@@ -21,10 +21,10 @@ export default function Analytics() {
           width="0"
         ></iframe>
       </noscript>
-      {/* <script
+      <script
         async
         src={`https://www.googletagmanager.com/gtag/js?id=${GTM_ID}`}
-      /> */}
+      />
       <script
         src="https://beamanalytics.b-cdn.net/beam.min.js"
         data-token={token}

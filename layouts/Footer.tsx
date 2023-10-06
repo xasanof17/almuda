@@ -156,11 +156,12 @@ const Footer = () => {
           &copy; All rights reserved {currentYear}.
         </p>
         <Link
-          href="https://portfoliowebapp.vercel.app"
+          href="https://bit.ly/javohir"
           className="text-base font-medium md:text-lg"
           target="_blank"
         >
-          Made by <span className="font-bold text-secondary underline">JX</span>
+          Made by{" "}
+          <span className="font-bold text-secondary underline">JX Team</span>
         </Link>
       </div>
     </footer>
