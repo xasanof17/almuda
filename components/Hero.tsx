@@ -1,21 +1,16 @@
 "use client";
 import { HeroBg, Illustration } from "@/assets/img";
-import Image from "next/image";
 import { useState } from "react";
 import { DialogComponent } from "./dialog";
 import { Button } from "./Button";
+import Image from "next/image";
 
 const Hero = () => {
   const [isOpen, setIsOpen] = useState(false);
   return (
     <section id="hero" className="container md:my-20">
       <div className="py-14 md:py-20 xl:relative">
-        <div
-          // animate={{ x: 0, opacity: 1 }}
-          // initial={{ x: "-50%", opacity: 0 }}
-          // transition={{ bounce: 0.25, delay: 0.25, duration: 0.25 }}
-          className="flex flex-col items-center md:items-start"
-        >
+        <div className="flex flex-col items-center md:items-start">
           <span
             aria-labelledby="hero"
             title="It's time to get decisive"
@@ -47,12 +42,7 @@ const Hero = () => {
             className="btn-secondary uppercase"
           />
         </div>
-        <div
-          // transition={{ bounce: 0.25 }}
-          // animate={{ y: 0, opacity: 1 }}
-          // initial={{ y: "-30%", opacity: 0 }}
-          className="hidden md:inline"
-        >
+        <div className="hidden md:inline">
           <Image
             className="xl:heroImg pointer-events-none mt-5"
             src={HeroBg}
@@ -61,11 +51,7 @@ const Hero = () => {
             role="img"
           />
         </div>
-        <div
-          // animate={{ y: 0, opacity: 1 }}
-          // initial={{ y: "-30%", opacity: 0 }}
-          className="relative block h-[400px] w-full sm:h-[600px] md:hidden"
-        >
+        <div className="relative block h-[400px] w-full sm:h-[600px] md:hidden">
           <Image
             src={Illustration}
             alt="illustration"
