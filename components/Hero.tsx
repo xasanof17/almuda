@@ -44,20 +44,21 @@ const Hero = () => {
         </div>
         <div className="hidden md:inline">
           <Image
-            className="xl:heroImg pointer-events-none mt-5"
+            role="img"
             src={HeroBg}
             alt="hero"
-            priority
-            role="img"
+            className="xl:heroImg pointer-events-none mt-5"
+            loading="lazy"
           />
         </div>
         <div className="relative block h-[400px] w-full sm:h-[600px] md:hidden">
           <Image
+            role="img"
             src={Illustration}
             alt="illustration"
-            fill
             className="object-contain"
-            priority
+            loading="lazy"
+            fill
           />
         </div>
       </div>
