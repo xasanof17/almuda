@@ -20,29 +20,29 @@ export async function generateMetadata(): Promise<Metadata> {
       default: "Almuda Company - Accounting Services",
       template: "%s - Almuda Company - Accounting Services",
     },
-    generator: "Next.js",
     description:
       "Quality, reliable and honest accounting services for your business.",
+    generator: "Next.js",
+    abstract:
+      "Quality, reliable and honest accounting services for your business.",
+    applicationName: "Almuda Company",
+    creator: "JX Team",
+    manifest: `${baseUrl}/manifest.webmanifest`,
+    publisher: "Hostinger",
+    keywords: keywords,
+    metadataBase: new URL(`${baseUrl}`),
+    alternates: {
+      canonical: `${baseUrl}/`,
+      languages: {
+        en: `${baseUrl}/`,
+      },
+    },
     authors: [
       {
         name: "JX Team",
         url: "https://bit.ly/javohir",
       },
     ],
-    creator: "JX Team",
-    abstract:
-      "Quality, reliable and honest accounting services for your business.",
-    applicationName: "Almuda Company",
-    alternates: {
-      canonical: `${baseUrl}`,
-      languages: {
-        en: `${baseUrl}/`,
-      },
-    },
-    manifest: `${baseUrl}/manifest.webmanifest`,
-    publisher: "Hostinger",
-    keywords: keywords,
-    metadataBase: new URL(`${baseUrl}`),
     verification: {
       google: `${process.env.NEXT_PUBLIC_GOOGLE_VERIFICATION}`,
       yandex: `${process.env.NEXT_PUBLIC_YANDEX_VERIFICATION}`,
@@ -67,8 +67,8 @@ export async function generateMetadata(): Promise<Metadata> {
       images: [
         {
           url: `${baseUrl}/og.png`,
-          width: 300,
-          height: 300,
+          width: 1920,
+          height: 400,
           type: "image/png",
         },
       ],
@@ -76,7 +76,6 @@ export async function generateMetadata(): Promise<Metadata> {
     robots: {
       index: true,
       follow: true,
-
       googleBot: {
         index: true,
         follow: true,
@@ -86,9 +85,9 @@ export async function generateMetadata(): Promise<Metadata> {
     themeColor: "#fff",
     colorScheme: "light",
     icons: {
-      shortcut: "/icons/apple-icon.svg",
-      icon: "/favicon.ico",
-      apple: "/apple-icon.svg",
+      shortcut: `${baseUrl}/favicon.ico`,
+      icon: `${baseUrl}/icon.svg`,
+      apple: `${baseUrl}/apple-icon.svg`,
     },
     assets: `${baseUrl}/assets`,
     twitter: {

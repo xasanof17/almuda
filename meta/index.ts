@@ -1,4 +1,5 @@
 const keywordsStrings = [
+  "Accounting Uzbekistan",
   "Financial Planning",
   "Accounting Services",
   "Tax Preparation",
@@ -43,4 +44,4 @@ const keywordsStrings = [
 
 const keywords = keywordsStrings.join(", ");
 
-export {keywords};
+export { keywords };
