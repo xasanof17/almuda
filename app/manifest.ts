@@ -43,9 +43,5 @@ export default function manifest(): MetadataRoute.Manifest {
         type: "image/ico",
       },
     ],
-    serviceworker: {
-      src: "/generate-sw.js",
-      update_via_cache: "all",
-    },
   };
 }

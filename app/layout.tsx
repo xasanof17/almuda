@@ -12,93 +12,91 @@ const inter = Inter({
 });
 
 const baseUrl = process.env.NEXT_PUBLIC_SITE_URL;
+const GTM_ID = process.env.NEXT_PUBLIC_GTM_ID;
 
-export const metadata: Metadata = {
-  title: {
-    default: "Almuda Company - Accounting Services",
-    template: "%s - Almuda Company - Accounting Services",
-  },
-  generator: "Next.js",
-  description:
-    "Quality, reliable and honest accounting services for your business.",
-  authors: [
-    {
-      name: "JX Team",
-      url: "https://bit.ly/javohir",
+export async function generateMetadata(): Promise<Metadata> {
+  return {
+    title: {
+      default: "Almuda Company - Accounting Services",
+      template: "%s - Almuda Company - Accounting Services",
     },
-  ],
-  creator: "JX Team",
-  abstract:
-    "Quality, reliable and honest accounting services for your business.",
-  applicationName: "Almuda Company",
-  alternates: {
-    canonical: `${baseUrl}`,
-    languages: {
-      en: `${baseUrl}`,
-    },
-  },
-  manifest: `${baseUrl}/manifest.webmanifest`,
-  publisher: "Hostinger",
-  keywords: keywords,
-  metadataBase: new URL(`${baseUrl}`),
-  verification: {
-    google: `${process.env.NEXT_PUBLIC_GOOGLE_VERIFICATION}`,
-    yandex: `${process.env.NEXT_PUBLIC_YANDEX_VERIFICATION}`,
-    me: `${baseUrl}`,
-  },
-  referrer: "origin",
-  openGraph: {
-    type: "website",
-    title: "Almuda Company - Accounting Services",
-    countryName: "Uzbekistan",
+    generator: "Next.js",
     description:
-      "Quality, reliable and honest accounting services for your business. Start your business in Uzbekistan.",
-    siteName: "almudacompany.com",
-    url: `${baseUrl}`,
-    emails: [
-      "info@almudacompany.com",
-      "xasanof17@gmail.com",
-      "oisha.151115@gmail.com",
-      "info@almuda.uz",
-    ],
-    phoneNumbers: ["+998900198505", "+998900186644"],
-    images: [
+      "Quality, reliable and honest accounting services for your business.",
+    authors: [
       {
-        url: `${baseUrl}/opengraph-image.png`,
-        width: 300,
-        height: 300,
-        type: "image/png",
+        name: "JX Team",
+        url: "https://bit.ly/javohir",
       },
     ],
-  },
-  robots: {
-    index: true,
-    follow: true,
-    // nocache: true,
-    googleBot: {
+    creator: "JX Team",
+    abstract:
+      "Quality, reliable and honest accounting services for your business.",
+    applicationName: "Almuda Company",
+    alternates: {
+      canonical: `${baseUrl}`,
+      languages: {
+        en: `${baseUrl}/`,
+      },
+    },
+    manifest: `${baseUrl}/manifest.webmanifest`,
+    publisher: "Hostinger",
+    keywords: keywords,
+    metadataBase: new URL(`${baseUrl}`),
+    verification: {
+      google: `${process.env.NEXT_PUBLIC_GOOGLE_VERIFICATION}`,
+      yandex: `${process.env.NEXT_PUBLIC_YANDEX_VERIFICATION}`,
+      me: `${baseUrl}`,
+    },
+    referrer: "origin",
+    openGraph: {
+      type: "website",
+      title: "Almuda Company - Accounting Services",
+      countryName: "Uzbekistan",
+      description:
+        "Quality, reliable and honest accounting services for your business. Start your business in Uzbekistan.",
+      siteName: "almudacompany.com",
+      url: `${baseUrl}`,
+      emails: [
+        "info@almudacompany.com",
+        "xasanof17@gmail.com",
+        "oisha.151115@gmail.com",
+        "info@almuda.uz",
+      ],
+      phoneNumbers: ["+998900198505", "+998900186644"],
+      images: [
+        {
+          url: `${baseUrl}/og.png`,
+          type: "image/png",
+        },
+      ],
+    },
+    robots: {
       index: true,
       follow: true,
-      noimageindex: false,
-      "max-video-preview": -1,
-      "max-image-preview": "large",
-      "max-snippet": -1,
+
+      googleBot: {
+        index: true,
+        follow: true,
+        "max-image-preview": "large",
+      },
     },
-  },
-  themeColor: "#fff",
-  colorScheme: "light",
-  icons: {
-    shortcut: "/icons/icon-192x192.png",
-    icon: "/favicon.ico",
-    apple: "/apple-icon.svg",
-  },
-  assets: `${baseUrl}/assets`,
-  twitter: {
-    card: "summary_large_image",
-    description:
-      "Quality, reliable and honest accounting services for your business. Start your business in Uzbekistan.",
-    site: `${baseUrl}`,
-  },
-};
+    themeColor: "#fff",
+    colorScheme: "light",
+    icons: {
+      shortcut: "/icons/apple-icon.svg",
+      icon: "/favicon.ico",
+      apple: "/apple-icon.svg",
+    },
+    assets: `${baseUrl}/assets`,
+    twitter: {
+      card: "summary_large_image",
+      description:
+        "Quality, reliable and honest accounting services for your business. Start your business in Uzbekistan.",
+      site: `${baseUrl}`,
+    },
+  };
+}
 
 export default function RootLayout({
   children,
@@ -114,7 +112,7 @@ export default function RootLayout({
         <noscript>
           <iframe
             style={{ display: "none", visibility: "hidden" }}
-            src="https://www.googletagmanager.com/ns.html?id=GTM-K7LJQ6QV"
+            src={`https://www.googletagmanager.com/ns.html?id=${GTM_ID}`}
             height="0"
             width="0"
           ></iframe>

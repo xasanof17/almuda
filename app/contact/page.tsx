@@ -7,7 +7,11 @@ export const metadata: Metadata = {
   title: "Contact",
   description:
     "Get in touch with Almuda Company for inquiries, support, or collaboration. We're here to assist you.",
-  abstract: `${baseUrl}/contact`,
+  abstract:
+    "Get in touch with Almuda Company for inquiries, support, or collaboration. We're here to assist you.",
+  alternates: {
+    canonical: `${baseUrl}/contact`,
+  },
   openGraph: {
     title: "Contact - Almuda Company",
     description:
