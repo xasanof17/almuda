@@ -112,7 +112,7 @@ const Footer = () => {
             ))}
             <li>
               <Link
-                href="/certificates/certificate.pdf"
+                href="/certificate.pdf"
                 className="link"
                 target="_blank"
               >
