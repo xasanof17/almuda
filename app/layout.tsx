@@ -67,6 +67,8 @@ export async function generateMetadata(): Promise<Metadata> {
       images: [
         {
           url: `${baseUrl}/og.png`,
+          width: 300,
+          height: 300,
           type: "image/png",
         },
       ],

@@ -1,4 +1,4 @@
-const keywords = [
+const keywordsStrings = [
   "Financial Planning",
   "Accounting Services",
   "Tax Preparation",
@@ -38,7 +38,9 @@ const keywords = [
   "Accounting Software Reviews",
   "Family Financial Planning",
   "Retirement Accounts (e.g., 401(k), IRA)",
-  "Risk Management in Finance"
+  "Risk Management in Finance",
 ];
 
-const keywordsString = keywords.join(", ");
+const keywords = keywordsStrings.join(", ");
+
+export {keywords};
