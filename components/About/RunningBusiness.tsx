@@ -1,4 +1,4 @@
-import { AlmudaBanner } from "@/assets/img";
+import { AlmudaBanner } from "@/public/assets/img";
 import Image from "next/image";
 
 const RunningBusiness = () => {

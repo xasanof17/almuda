@@ -1,4 +1,4 @@
-import { AlmudaProvidesImg } from "@/assets/img";
+import { AlmudaProvidesImg } from "@/public/assets/img";
 import Image from "next/image";
 
 const variants = {

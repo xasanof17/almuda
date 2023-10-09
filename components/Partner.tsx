@@ -10,7 +10,7 @@ import {
   MinistryofForeign,
   MyGovLogo,
   SoliqLogo,
-} from "@/assets/img";
+} from "@/public/assets/img";
 import Image from "next/image";
 import { motion } from "framer-motion";
 

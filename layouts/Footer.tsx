@@ -1,4 +1,4 @@
-import { Logo } from "@/assets/img";
+import { Logo } from "@/public/assets/img";
 import { links } from "@/constants";
 import Image from "next/image";
 import Link from "next/link";

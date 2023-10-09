@@ -1,5 +1,5 @@
 "use client";
-import { HeroBg, Illustration } from "@/assets/img";
+import { HeroBg, Illustration } from "@/public/assets/img";
 import { useState } from "react";
 import { DialogComponent } from "./dialog";
 import { Button } from "./Button";

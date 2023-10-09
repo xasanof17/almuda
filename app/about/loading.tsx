@@ -1,4 +1,4 @@
-import { Logo } from "@/assets/img";
+import { Logo } from "@/public/assets/img";
 import { Metadata } from "next";
 import Image from "next/image";
 

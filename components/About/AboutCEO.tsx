@@ -1,4 +1,4 @@
-import { CEO, CEOlg, Quote } from "@/assets/img";
+import { CEO, CEOlg, Quote } from "@/public/assets/img";
 import Image from "next/image";
 
 export const AboutCEO = () => {
@@ -34,9 +34,12 @@ export const AboutCEO = () => {
           height={24}
           loading="lazy"
         />
-        <p aria-label="Quote of CEO" className="text-muted my-4 w-full text-left text-base xs:text-[17px] sm:text-lg sm:leading-6 sm:tracking-wide md:leading-8">
-          <span className="font-medium text-blue">Almuda</span> provides a
-          wide range of business setup services in{" "}
+        <p
+          aria-label="Quote of CEO"
+          className="text-muted my-4 w-full text-left text-base xs:text-[17px] sm:text-lg sm:leading-6 sm:tracking-wide md:leading-8"
+        >
+          <span className="font-medium text-blue">Almuda</span> provides a wide
+          range of business setup services in{" "}
           <span className="font-medium text-blue">Uzbekistan</span> for
           startups, medium-sized companies, and large corporations. Our
           extensive experience in company formation services sets us apart from

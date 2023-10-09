@@ -1,6 +1,6 @@
 "use client";
 import { useState } from "react";
-import { Logo } from "@/assets/img";
+import { Logo } from "@/public/assets/img";
 import { links } from "@/constants";
 import { FiMenu } from "react-icons/fi";
 import { MdClose } from "react-icons/md";
@@ -52,7 +52,7 @@ const Navbar = () => {
                   href={href}
                   aria-label={``}
                   className={`${
-                    pathname == href ? "link text-blue" : "link"
+                    pathname == href ? "link text-blue" : "link text-slate-500"
                   }`}
                 >
                   {title}

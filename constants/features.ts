@@ -3,7 +3,7 @@ import {
   LaunchBusiness,
   RegisterBusiness,
   TeamIcon,
-} from "@/assets/img";
+} from "@/public/assets/img";
 import { Features } from "@/types";
 
 export const features: Features[] = [
