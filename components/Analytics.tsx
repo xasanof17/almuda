@@ -7,7 +7,6 @@ declare global {
 
 export default function Analytics() {
   const token = process.env.NEXT_PUBLIC_BEAM_TOKEN;
-  const GTM_ID = process.env.NEXT_PUBLIC_GTM_ID;
   if (!token) {
     return null;
   }
