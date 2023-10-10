@@ -48,7 +48,8 @@ const Hero = () => {
             src={HeroBg}
             alt="hero"
             className="xl:heroImg pointer-events-none mt-5"
-            loading="lazy"
+            priority
+            sizes="100vw"
           />
         </div>
         <div className="relative block h-[400px] w-full sm:h-[600px] md:hidden">
@@ -57,8 +58,9 @@ const Hero = () => {
             src={Illustration}
             alt="illustration"
             className="object-contain"
-            loading="lazy"
             fill
+            priority
+            sizes="100vw"
           />
         </div>
       </div>

@@ -40,19 +40,19 @@ const Navbar = () => {
         </Link>
         <div className="flex flex-1 items-center justify-end lg:ml-[100px] lg:justify-between">
           <ul
-            role="listbox"
+            role="menu"
             aria-label="Main Navigation Menu"
             className="hidden items-center space-x-8 lg:flex"
           >
             {links.map(({ href, title }, i) => (
-              <li key={i} role="list">
+              <li key={i} role="menuitem">
                 <Link
                   role="link"
                   title={title}
                   href={href}
-                  aria-label={``}
+                  aria-label={`${title}`}
                   className={`${
-                    pathname == href ? "link text-blue" : "link text-slate-500"
+                    pathname == href ? "link text-blue" : "link text-gray-700"
                   }`}
                 >
                   {title}

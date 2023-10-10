@@ -32,9 +32,9 @@ export async function generateMetadata(): Promise<Metadata> {
     keywords: keywords,
     metadataBase: new URL(`${baseUrl}`),
     alternates: {
-      canonical: `${baseUrl}/`,
+      canonical: `${baseUrl}`,
       languages: {
-        en: `${baseUrl}/`,
+        en: `${baseUrl}`,
       },
     },
     authors: [
@@ -66,7 +66,7 @@ export async function generateMetadata(): Promise<Metadata> {
       phoneNumbers: ["+998900198505", "+998900186644"],
       images: [
         {
-          url: `${baseUrl}/og.png`,
+          url: `/og.png`,
           width: 1920,
           height: 400,
           type: "image/png",
@@ -85,9 +85,9 @@ export async function generateMetadata(): Promise<Metadata> {
     themeColor: "#fff",
     colorScheme: "light",
     icons: {
-      shortcut: `${baseUrl}/favicon.ico`,
-      icon: `${baseUrl}/icon.svg`,
-      apple: `${baseUrl}/apple-icon.svg`,
+      shortcut: `/icon.svg`,
+      icon: `/favicon.ico`,
+      apple: `/apple-icon.svg`,
     },
     assets: `${baseUrl}/assets`,
     twitter: {

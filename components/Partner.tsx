@@ -12,7 +12,6 @@ import {
   SoliqLogo,
 } from "@/public/assets/img";
 import Image from "next/image";
-import { motion } from "framer-motion";
 
 const Partner = () => {
   const partners = [
@@ -41,24 +40,22 @@ const Partner = () => {
             You can believe us. We will improve your business skills.
           </p>
         </div>
-        <div className="mt-10 grid grid-cols-2 gap-3 md:grid-cols-3 md:gap-5 lg:grid-cols-4">
+        <div className="mt-10 grid grid-cols-1 gap-2 xs:grid-cols-2 sm:gap-3 md:grid-cols-3 md:gap-5 lg:grid-cols-4">
           {partners.map((item, i) => (
-            <motion.div
-              initial={{ opacity: 0, y: "-20%" }}
-              animate={{ opacity: 1, y: 0 }}
-              className="flex items-center justify-center rounded-xl border border-slate-100 bg-white px-3 py-4 hover:border-transparent hover:shadow-lg md:px-2"
+            <div
+              className="flex items-center justify-center rounded-xl border border-slate-100 bg-white p-2 px-3 hover:border-transparent hover:shadow-lg sm:px-3 sm:py-4 md:px-2"
               key={i}
             >
-              <div className="relative h-10 w-full md:w-2/3">
+              <div className="relative h-10 w-full xs:h-12 md:h-20 md:w-2/3">
                 <Image
                   src={item}
                   alt="partner-logo"
                   fill
                   className="select-none object-contain grayscale transition-all duration-300 hover:cursor-pointer hover:grayscale-0"
-                  loading="lazy"
+                  priority
                 />
               </div>
-            </motion.div>
+            </div>
           ))}
         </div>
       </div>

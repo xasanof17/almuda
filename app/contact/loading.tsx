@@ -1,6 +1,6 @@
-import { Logo } from "@/public/assets/img";
+// import { Logo } from "@/public/assets/img";
 import { Metadata } from "next";
-import Image from "next/image";
+// import Image from "next/image";
 
 export const metadata: Metadata = {
   title: "Contact loading...",
@@ -9,7 +9,7 @@ export const metadata: Metadata = {
 export default function ContactLoading() {
   return (
     <section className="max-w-screen fixed left-0 top-0 z-50 flex h-full min-h-screen w-full flex-col items-center justify-center overflow-x-hidden overflow-y-scroll bg-white">
-      <div className="relative mb-5 h-12 w-[150px]">
+      {/* <div className="relative mb-5 h-12 w-[150px]">
         <Image
           src={Logo}
           alt="Al-Muda"
@@ -17,7 +17,7 @@ export default function ContactLoading() {
           className="object-contain"
           loading="lazy"
         />
-      </div>
+      </div> */}
       <p className="text-lg font-semibold text-primary md:text-xl">
         Contact page is loading...
       </p>

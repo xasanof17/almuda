@@ -8,12 +8,12 @@ const PriceCard = ({ popular, title, price, list }: PriceList) => {
         popular ? "border-blue" : "border-slate-200"
       } px-4 py-5 transition-all duration-200 ease-out md:px-5 md:py-7 ${
         popular
-          ? "hover:border-blue shadow-md hover:bg-transparent"
-          : "hover:border-blue shadow"
+          ? "shadow-md hover:border-blue hover:bg-transparent"
+          : "shadow hover:border-blue"
       }`}
     >
       {popular ? (
-        <span className="text-normal mb-3 rounded-md bg-blue-100 px-2 py-1 text-sm text-blue-400">
+        <span className="text-normal mb-3 rounded-md bg-blue/90 px-2 py-1 text-sm text-white">
           Most Popular
         </span>
       ) : null}
