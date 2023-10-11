@@ -31,11 +31,12 @@
     "react-hook-form": "^7.46.0",
     "react-select": "^5.7.4",
     "react-select-country-list": "^2.2.3",
-    "sharp": "^0.32.5",
+    "sharp": "^0.32.6",
     "tailwindcss": "3.3.3",
     "typescript": "5.2.2"
   },
   "devDependencies": {
+    "@builder.io/partytown": "^0.8.1",
     "@types/nodemailer": "^6.4.10",
     "@types/react-select-country-list": "^2.2.1",
     "nextjs-progressbar": "^0.0.16",

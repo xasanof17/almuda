@@ -1,5 +1,5 @@
-import { About } from "@/components";
 import type { Metadata } from "next";
+import { About } from "@/components";
 
 const baseUrl = process.env.NEXT_PUBLIC_SITE_URL;
 

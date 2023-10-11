@@ -1,12 +1,6 @@
 "use client";
 import { Button } from "@/components/Button";
-import type { Metadata } from "next";
 import { useEffect } from "react";
-
-export const metadata: Metadata = {
-  title: "500! Something went wrong!",
-  description: "Something went wrong",
-};
 
 export default function Error({
   error,
