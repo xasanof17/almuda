@@ -2,6 +2,8 @@ const keywordsStrings = [
   "Almuda",
   "Accounting Uzbekistan",
   "Almuda Company",
+  "almuda company",
+  "buxgalteriya xizmatlari",
   "Financial Planning",
   "Accounting Services",
   "Tax Preparation",
