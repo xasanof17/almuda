@@ -7,28 +7,16 @@ const variants = {
 
 const clients = [
   {
-    text: `I was having issues getting my visa approved. I got support from
-    Almuda, who also showed me how to fix it. Following this positive
-    experience, I used them for a few additional services, the most
-    important of which was business setup and license renewal. It
-    happened quickly. extremely competent service.`,
+    text: `Almuda turned my visa approval woes into a success story! Their support and expert guidance were instrumental. Impressed by the positive experience, I continued with them for additional services, notably business setup and license renewal. The speed and competence they exhibited were truly outstanding`,
     username: "Dr.Ezzaldin Alyousef",
   },
   {
-    text: `I was having issues getting my visa approved. I got support from
-    Almuda, who also showed me how to fix it. Following this positive
-    experience, I used them for a few additional services, the most
-    important of which was business setup and license renewal. It
-    happened quickly. extremely competent service.`,
-    username: "Dr.Ezzaldin Alyousef",
+    text: `Securing my visa approval seemed like an uphill battle until I found Almuda. Their support not only resolved the issue but also enlightened me on how to fix it. This positive encounter led me to trust them with more services, including business setup and license renewal, all handled with remarkable speed and competence.`,
+    username: "Mr.Javohir",
   },
   {
-    text: `I was having issues getting my visa approved. I got support from
-    Almuda, who also showed me how to fix it. Following this positive
-    experience, I used them for a few additional services, the most
-    important of which was business setup and license renewal. It
-    happened quickly. extremely competent service.`,
-    username: "Dr.Ezzaldin Alyousef",
+    text: `Grateful for Almuda's support in overcoming visa approval challenges. Their proactive assistance and problem-solving approach set them apart. Encouraged by this, I engaged them for business setup and license renewal—services executed with remarkable speed and competence. Highly recommended!`,
+    username: "Mrs.Maylihol",
   },
 ];
 

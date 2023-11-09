@@ -1,5 +1,6 @@
 const keywordsStrings = [
   "Almuda",
+  "Almuda uz",
   "Accounting Uzbekistan",
   "Almuda Company",
   "almuda company",

@@ -26,11 +26,11 @@ type Social = {
 };
 
 const socials: Social[] = [
-  {
-    Icon: FaFacebook,
-    name: "Facebook",
-    href: "https://wa.me/998900186644",
-  },
+  // {
+  //   Icon: FaFacebook,
+  //   name: "Facebook",
+  //   href: "https://www.facebook.com/profile.php?id=100085719865259",
+  // },
   {
     Icon: FaWhatsapp,
     name: "Whatsapp",
@@ -39,7 +39,7 @@ const socials: Social[] = [
   {
     Icon: FaInstagram,
     name: "Instagram",
-    href: "https://instagram.com/buxgalteriya_xizmatlari_",
+    href: "https://www.instagram.com/buxgalteriya_xizmati_/",
   },
   {
     Icon: FaLinkedinIn,
@@ -128,7 +128,7 @@ const Footer = () => {
           <ul className="flex flex-col items-start">
             <li className="flex items-center space-x-3">
               <FiMail className="h-6 w-6 text-primary" />
-              <Link href="mailto:info@almudacompany.com" className="link">
+              <Link target="_blank" href="mailto:info@almudacompany.com" className="link">
                 info@almudacompany.com
               </Link>
             </li>
