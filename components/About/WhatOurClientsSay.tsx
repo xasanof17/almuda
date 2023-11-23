@@ -12,11 +12,11 @@ const clients = [
   },
   {
     text: `Securing my visa approval seemed like an uphill battle until I found Almuda. Their support not only resolved the issue but also enlightened me on how to fix it. This positive encounter led me to trust them with more services, including business setup and license renewal, all handled with remarkable speed and competence.`,
-    username: "Mr.Javohir",
+    username: "Ms.Rahima",
   },
   {
     text: `Grateful for Almuda's support in overcoming visa approval challenges. Their proactive assistance and problem-solving approach set them apart. Encouraged by this, I engaged them for business setup and license renewal—services executed with remarkable speed and competence. Highly recommended!`,
-    username: "Mrs.Maylihol",
+    username: "Mrs.Odil",
   },
 ];
 
