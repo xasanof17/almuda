@@ -46,7 +46,7 @@ const AboutProvides = () => {
       </div>
       <div className="flex items-center justify-center">
         <div className="relative h-[300px] w-full sm:h-[480px] lg:h-[400px] xl:h-[450px]">
-          <Image role="img" src={AlmudaProvidesImg} alt="image" fill />
+          <Image role="img" src={AlmudaProvidesImg} alt="image" fill loading="lazy" />
         </div>
       </div>
     </div>

@@ -48,7 +48,7 @@ const Hero = () => {
             src={HeroBg}
             alt="hero"
             className="xl:heroImg pointer-events-none mt-5"
-            priority
+            loading="lazy"
             sizes="100vw"
           />
         </div>
@@ -59,7 +59,7 @@ const Hero = () => {
             alt="illustration"
             className="object-contain"
             fill
-            priority
+            loading="lazy"
             sizes="100vw"
           />
         </div>

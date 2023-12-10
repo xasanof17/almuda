@@ -11,6 +11,7 @@ export const AboutCEO = () => {
             src={CEOlg}
             alt="CEO of Almuda"
             fill
+            loading="lazy"
             className="rounded-3xl bg-top object-contain sm:object-cover lg:object-contain"
           />
         </div>
@@ -21,7 +22,7 @@ export const AboutCEO = () => {
             alt="CEO of Almuda"
             fill
             className="rounded-3xl bg-top object-contain"
-            loading="lazy"
+            priority
           />
         </div>
       </div>

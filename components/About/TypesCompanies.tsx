@@ -11,7 +11,7 @@ const TypesCompanies = () => {
       <div className="grid grid-cols-1 gap-7 lg:grid-cols-2">
         <div className="flex items-center justify-center">
           <div className="relative h-[300px] w-full sm:h-[480px] lg:h-[400px] xl:h-[450px]">
-            <Image src={AlmudaProvidesImg} alt="banner of almuda" fill />
+            <Image src={AlmudaProvidesImg} alt="banner of almuda" fill loading="lazy"/>
           </div>
         </div>
         <div className="flex flex-col justify-center">
