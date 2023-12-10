@@ -8,6 +8,7 @@ import { usePathname } from "next/navigation";
 import Image from "next/image";
 import Link from "next/link";
 import { Button } from "@/components/Button";
+import classNames from 'classnames'
 
 const Navbar = () => {
   const [toggleMenu, setMenu] = useState<boolean>(false);
@@ -17,16 +18,14 @@ const Navbar = () => {
     <header
       role="banner"
       aria-label="Almuda Company Website Navigation"
-      className="sticky left-0 top-0 z-10 w-full py-3 backdrop-blur-lg sm:py-5"
+      className="sticky left-0 top-0 z-10 w-full py-3 bg-white sm:py-5"
     >
       <nav role="navigation" className="container flex items-center">
         <Link
           aria-label="Logo of Almuda Company"
           title="Almuda"
           href="/"
-          className={`${
-            toggleMenu ? "fixed left-4 top-3 z-20 md:top-5" : ""
-          } flex items-center justify-center`}
+          className={classNames(toggleMenu && "fixed left-4 top-3 z-20 md:top-5","flex items-center justify-center")}
         >
           <div className="relative h-12 w-[150px]">
             <Image

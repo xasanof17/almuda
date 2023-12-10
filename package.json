@@ -1,10 +1,16 @@
 {
   "name": "almuda",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "private": true,
+  "author": {
+    "name": "Javohir",
+    "url": "https://portfoliowebapp.vercel.app",
+    "email": "xasanof17@gmail.com"
+  },
   "scripts": {
     "dev": "next dev",
     "build": "next build",
+    "preview": "next build && next start",
     "start": "next start",
     "lint": "next lint"
   },
@@ -39,6 +45,7 @@
     "@builder.io/partytown": "^0.8.1",
     "@types/nodemailer": "^6.4.10",
     "@types/react-select-country-list": "^2.2.1",
+    "classnames": "^2.3.2",
     "nextjs-progressbar": "^0.0.16",
     "prettier": "^3.0.3",
     "prettier-plugin-tailwindcss": "^0.5.4",

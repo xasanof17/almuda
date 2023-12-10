@@ -92,7 +92,7 @@ const Footer = () => {
                   href={href}
                   className="flex items-center justify-center"
                 >
-                  <Icon className="muted h-6 w-6 transition-colors duration-300 hover:text-blue md:h-7 md:w-7" />
+                  <Icon className="muted h-7 w-7 transition-colors duration-300 hover:text-blue" />
                 </Link>
               </li>
             ))}
@@ -112,10 +112,11 @@ const Footer = () => {
             ))}
             <li>
               <Link
-                href="#"
+                href="/assets/files/certificate.pdf"
                 className="link"
                 target="_blank"
-                download={true}
+                rel="noopener noreferrer"
+                download
               >
                 Certificates
               </Link>
@@ -156,16 +157,19 @@ const Footer = () => {
           </ul>
         </div>
       </div>
-      <div className="mt-8 flex w-full flex-col items-center justify-center space-x-1 border-t-2 py-3 md:flex-row md:py-5">
+      <div className="mt-8 flex w-full flex-col items-center justify-center space-x-1 border-t-2 py-4 sm:py-3 md:flex-row md:py-5">
         <p className="muted text-base font-medium md:text-lg">
-          &copy; All rights reserved {currentYear}.
+          Copyright &copy; {currentYear} Almuda Inc. All rights reserved.
         </p>
         <Link
-          href="https://bit.ly/javohir"
+          href="https://milleniumcompany.tech"
           className="text-base font-medium md:text-lg"
           target="_blank"
         >
-          Made by <span className="font-bold text-blue underline">JX Team</span>
+          Developed &{" "}
+          <span className="font-bold tracking-wide text-blue underline underline-offset-4">
+            Millenium Company
+          </span>
         </Link>
       </div>
     </footer>

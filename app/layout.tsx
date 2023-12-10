@@ -8,6 +8,7 @@ import { Toaster } from "react-hot-toast";
 
 const inter = Inter({
   subsets: ["latin"],
+  preload: true,
   weight: ["400", "500", "600", "700"],
 });
 
@@ -38,7 +39,7 @@ export const metadata: Metadata = {
   abstract:
     "Quality, reliable and honest accounting services for your business.",
   applicationName: "Almuda Company",
-  creator: "JX Team",
+  creator: "Millenium Company",
   manifest: `${baseUrl}/manifest.webmanifest`,
   publisher: "Hostinger",
   keywords: keywords,
@@ -51,8 +52,8 @@ export const metadata: Metadata = {
   },
   authors: [
     {
-      name: "JX Team",
-      url: "https://bit.ly/javohir",
+      name: "Millenium Company",
+      url: "https://milleniumcompany.tech",
     },
   ],
   verification: {
