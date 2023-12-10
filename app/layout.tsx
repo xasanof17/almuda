@@ -14,6 +14,19 @@ const inter = Inter({
 const baseUrl = process.env.NEXT_PUBLIC_SITE_URL;
 const GTM_ID = process.env.NEXT_PUBLIC_GTM_ID;
 
+import { Viewport } from "next";
+
+export const viewport: Viewport = {
+  width: "device-width",
+  initialScale: 1,
+  maximumScale: 1,
+  themeColor: [
+    { media: "(prefers-color-scheme: light)", color: "white" },
+    { media: "(prefers-color-scheme: dark)", color: "black" },
+  ],
+  colorScheme: "light",
+};
+
 export const metadata: Metadata = {
   title: {
     default: "Almuda Company - Accounting Services",
@@ -81,8 +94,6 @@ export const metadata: Metadata = {
       "max-image-preview": "large",
     },
   },
-  themeColor: "#fff",
-  colorScheme: "light",
   icons: {
     shortcut: `/icon.svg`,
     icon: `/favicon.ico`,
@@ -103,7 +114,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" prefix="og:https://ogp.me/ns#">
+    <html lang="en" prefix="og:https://ogp.me/ns#" suppressHydrationWarning>
       <head>
         <Analytics />
       </head>

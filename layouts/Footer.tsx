@@ -112,9 +112,10 @@ const Footer = () => {
             ))}
             <li>
               <Link
-                href="/certificate.pdf"
+                href="#"
                 className="link"
                 target="_blank"
+                download={true}
               >
                 Certificates
               </Link>
@@ -128,7 +129,11 @@ const Footer = () => {
           <ul className="flex flex-col items-start">
             <li className="flex items-center space-x-3">
               <FiMail className="h-6 w-6 text-primary" />
-              <Link target="_blank" href="mailto:info@almudacompany.com" className="link">
+              <Link
+                target="_blank"
+                href="mailto:info@almudacompany.com"
+                className="link"
+              >
                 info@almudacompany.com
               </Link>
             </li>
@@ -160,8 +165,7 @@ const Footer = () => {
           className="text-base font-medium md:text-lg"
           target="_blank"
         >
-          Made by{" "}
-          <span className="font-bold text-blue underline">JX Team</span>
+          Made by <span className="font-bold text-blue underline">JX Team</span>
         </Link>
       </div>
     </footer>
