@@ -9,7 +9,7 @@ export const metadata: Metadata = {
     "Learn about Almuda Company's journey in the realm of accounting. Uncover our commitment to precision, operational efficiency, and financial excellence. We are the trusted partner of businesses and individuals for all their accounting requirements.",
   abstract:
     "Learn about Almuda Company's journey in the realm of accounting. Uncover our commitment to precision, operational efficiency, and financial excellence. We are the trusted partner of businesses and individuals for all their accounting requirements.",
-  keywords: ["almuad information", "about almuda", "about"],
+  keywords: ["Almuda information", "about almuda", "about almuda company"],
   alternates: {
     canonical: `${baseUrl}/about`,
   },

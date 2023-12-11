@@ -9,7 +9,7 @@ export const metadata: Metadata = {
     "Get in touch with Almuda Company for inquiries, support, or collaboration. We're here to assist you.",
   abstract:
     "Get in touch with Almuda Company for inquiries, support, or collaboration. We're here to assist you.",
-  keywords: ["almuad contact", "contact almuda", "contact"],
+  keywords: ["Almuda contact", "contact almuda", "contact", "almuda company contact"],
   alternates: {
     canonical: `${baseUrl}/contact`,
   },
