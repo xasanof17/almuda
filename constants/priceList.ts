@@ -138,7 +138,7 @@ export const priceList: PriceList[] = [
   },
   {
     title: "Enterprise",
-    price: 1500,
+    price: 2800,
     list: [
       {
         Icon: BsBank,
